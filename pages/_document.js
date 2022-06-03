@@ -23,6 +23,12 @@ class MyDocument extends Document {
             as="font"
             crossOrigin="anonymous"
           ></link>
+          <link
+            rel="preload"
+            href="/fonts/PassionOne-Bold.ttf"
+            as="font"
+            crossOrigin="anonymous"
+          ></link>
         </Head>
         <body>
           <Main></Main>
