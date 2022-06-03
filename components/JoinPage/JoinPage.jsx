@@ -122,6 +122,7 @@ const JoinPage = () => {
               <option>IT Engineering</option>
               <option>AI&DS Engineering</option>
               <option>Mechanical Engineering</option>
+              <option>Robotics and Automation</option>
               <option>ENTC Engineering</option>
               <option>Civil Engineering</option>
               <option>Instrumental Engineering</option>
