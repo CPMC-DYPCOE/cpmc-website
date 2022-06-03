@@ -26,7 +26,7 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       });
-      console.log(res);
+
       if (!res.ok) {
         toast.error('Something Went Wrong');
       }
@@ -34,7 +34,6 @@ const Contact = () => {
         toast.success('Submitted successfully');
       }
       const data = await res.json();
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
