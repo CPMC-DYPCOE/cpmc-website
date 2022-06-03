@@ -7,7 +7,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap"
+            href="/fonts/PaytoneOne-Regular.ttf"
             as="font"
             crossOrigin="anonymous"
           ></link>
