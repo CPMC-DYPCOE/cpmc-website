@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import t4 from '../assets/t4.svg';
 
-
 import classes from '../LandingSlide/LandingSlide.module.css';
 import styles from './AboutTeam.module.css';
 
@@ -16,7 +15,7 @@ const AboutTeam = () => {
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <div className="flex flex-col justify-center lg:mt-[180px] lg:pl-16 lg:pr-16">
+        <div className="mt-0 flex flex-col justify-center lg:mt-[0px] lg:pl-16 lg:pr-16">
           <div className="pl-8 pr-8">
             <h2 className="text-center text-sm font-semibold  text-[#89BAEE] lg:pl-0 lg:text-left">
               About the Team
@@ -42,7 +41,6 @@ const AboutTeam = () => {
               </button>
             </Link>
           </div>
-          
         </div>
         <div className="flex flex-col lg:mt-[180px] lg:pl-16 lg:pr-16">
           <div className=" flex h-[300px] cursor-pointer items-center justify-center md:mr-auto md:h-[500px] md:w-[100vw] lg:mr-auto lg:h-[700px]  lg:w-[700px]">
