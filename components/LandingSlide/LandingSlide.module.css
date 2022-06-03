@@ -31,7 +31,7 @@
 }
 
 .btn:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -45,11 +45,12 @@
 
 .btn .span {
   position: relative;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #fff;
+  white-space: nowrap;
 }
 
 .btn svg {
@@ -82,7 +83,7 @@
   transform: scale(0.95);
 }
 .down_arrow {
-  position: absolute ;
+  position: absolute;
   top: 67vh;
   left: 48vw;
   cursor: pointer;

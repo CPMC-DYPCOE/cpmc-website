@@ -1,8 +1,6 @@
 import classes from './ClubOperations.module.css';
-
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
-
 const data = [
   {
     number: 1,
@@ -25,10 +23,21 @@ const data = [
 ];
 
 const ClubOperations = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const dec = () => {
+    let res = currentIndex - 1 < 0 ? 2 : currentIndex - 1;
+    setCurrentIndex(res);
+  };
+  const inc = () => {
+    let res = currentIndex + 1 > 2 ? 0 : currentIndex + 1;
+    setCurrentIndex(res);
+  };
+
   return (
     <div className={classes.mainDiv}>
       <div className={classes.hero}>
-        <h1 className={classes.smallTitle}>Why we are doing this!</h1>
+        <h1 className={classes.smallTitle}>How do we operate?</h1>
         <h1 className={classes.title}>
           HOW DOES THIS <span>CLUB WORK?</span>
         </h1>
@@ -39,9 +48,26 @@ const ClubOperations = () => {
         </p>
       </div>
       <div className={classes.scroll}>
-        {data.map((item, index) => (
-          <Card number={item.number} content={item.content} color={item.color} key={index} />
-        ))}
+        {data.map((items, index) => {
+          if (index === currentIndex)
+            return (
+              <Card
+                key={items.number}
+                number={items.number}
+                color={items.color}
+                content={items.content}
+                className={classes.card}
+              />
+            );
+        })}
+      </div>
+      <div className={classes.buttonContainer}>
+        <div className={classes.button} onClick={dec}>
+          prev
+        </div>
+        <div className={classes.button} onClick={inc}>
+          next
+        </div>
       </div>
     </div>
   );

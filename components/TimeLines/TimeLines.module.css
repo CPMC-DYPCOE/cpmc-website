@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Passion+One:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Passion+One:wght@400&display=swap');
 
 .main {
   margin-top: 100px;
@@ -26,16 +26,16 @@
 .number {
   color: white;
   font-size: 3rem;
-  font-family: "Passion One", cursive;
+  font-family: 'Passion One', cursive;
 }
 .heading {
-  font-family: "Passion One", cursive;
+  font-family: 'Passion One', cursive;
   font-size: 3.5rem;
   line-height: 3.5rem;
   color: #a8ecf0;
 }
 .sub_heading {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: white;
 }
 
@@ -67,18 +67,18 @@
   .number {
     color: white;
     font-size: 2rem;
-    font-family: "Passion One", cursive;
+    font-family: 'Passion One', cursive;
   }
   .heading {
-    font-family: "Passion One", cursive;
+    font-family: 'Passion One', cursive;
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #a8ecf0;
   }
   .sub_heading {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -110,17 +110,17 @@
   .number {
     color: white;
     font-size: 1.8rem;
-    font-family: "Passion One", cursive;
+    font-family: 'Passion One', cursive;
   }
   .heading {
-    font-family: "Passion One", cursive;
+    font-family: 'Passion One', cursive;
     font-size: 1rem;
     line-height: 1rem;
     color: #a8ecf0;
   }
   .sub_heading {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
 }

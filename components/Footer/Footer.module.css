@@ -73,7 +73,7 @@
   color: #fff;
   font-size: 32px;
   font-weight: 600;
-  font-family: 'Paytone One';
+  /* font-family: 'Paytone One'; */
 }
 .menu {
   align-items: center;
@@ -139,4 +139,22 @@
     width: 50vw;
     padding: 5px;
   }
+}
+.footer_ruler {
+  width: 90vw;
+  margin: auto;
+  height: 2px;
+  background-color: aliceblue;
+}
+.footer_copyrights {
+  text-align: center;
+  width: 100%;
+  font-family: 'Raleway';
+  letter-spacing: 2px;
+}
+
+.footer_copyrights p {
+  color: aliceblue;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

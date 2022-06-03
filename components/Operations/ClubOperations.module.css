@@ -1,9 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
 
 .card {
   padding: 1em;
   display: flex;
   align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.buttonContainer {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .cardLeft {
@@ -40,27 +50,21 @@
   padding: 1em;
   color: white;
   font-size: 1.8em;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .scroll {
-  display: grid;
-  grid-auto-flow: column;
-  padding: 4em;
-  gap: 4em;
-  grid-auto-columns: 70%;
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-}
-
-.scroll::-webkit-scrollbar {
-  display: none;
+  height: 400px;
+  display: flex;
+  padding: 3em;
+  align-items: center;
+  justify-content: center;
 }
 
 .smallTitle {
   font-size: 1.5em;
   color: #89baee;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-weight: 700;
   margin-bottom: 0.5em;
 }
@@ -68,7 +72,7 @@
 .title {
   font-size: 50px;
   color: white;
-  font-family: "Paytone One";
+  font-family: 'Paytone One';
   margin-bottom: 0.5em;
 }
 
@@ -79,7 +83,7 @@
 .context {
   font-size: 1.3em;
   color: white;
-  font-family: "open sans";
+  font-family: 'open sans';
   margin-bottom: 0.8em;
 }
 
@@ -93,9 +97,24 @@
   margin: 5em 0;
 }
 
+.button {
+  background-color: #89baee;
+  margin: 1em;
+  padding: 0.8em 0.5em;
+  border-radius: 50%;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1317px) and (min-width: 1023px) {
   .card {
     padding: 0.5em;
+    height: 70%;
   }
 
   .content {
@@ -113,11 +132,12 @@
   }
 
   .context {
-    font-size: 1.2em;
+    font-size: 20px;
   }
 
   .card {
     padding: 0.2em;
+    height: 80%;
   }
 
   .content {
@@ -125,13 +145,14 @@
   }
 
   .scroll {
-    gap: 2em;
+    height: 400px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .card {
     padding: 0em;
+    height: 90%;
   }
 
   .smallTitle {
@@ -148,9 +169,8 @@
   }
 
   .scroll {
-    gap: 1em;
-    grid-auto-columns: 90%;
     padding: 1em 0.2em;
+    height: 300px;
   }
 
   .number {

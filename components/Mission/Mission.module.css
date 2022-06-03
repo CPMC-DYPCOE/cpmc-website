@@ -22,8 +22,10 @@
 
 .smallheading {
   color: #89baee;
-  font-family: 'Passion One', cursive;
-  font-size: 1.3rem;
+  /* font-family: 'Passion One', cursive; */
+  /* font-family: 'Open sans'; */
+
+  font-size: 20px;
   letter-spacing: 1.5px;
   text-align: left;
 }
@@ -35,6 +37,7 @@
 }
 .content {
   text-align: left;
+  font-size: 20px;
 }
 
 .div1 {

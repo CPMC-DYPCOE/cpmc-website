@@ -25,6 +25,11 @@
   font-style: normal;
   src: url(/fonts/PassionOne-Bold.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  src: url(/fonts/Inter-SemiBold.ttf) format('truetype');
+}
 
 html,
 body {
