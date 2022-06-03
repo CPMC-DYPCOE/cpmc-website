@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
+
+@font-face {
+  font-family: 'Paytone One';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/PaytoneOne-Regular.ttf) format('truetype');
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
   background-color: #0f263a;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: #0f263a;
   scroll-behavior: smooth;
 }
