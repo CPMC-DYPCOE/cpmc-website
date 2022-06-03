@@ -20,6 +20,14 @@
   font-family: 'Paytone One', sans-serif;
   text-align: center;
 }
+
+.input option {
+  background-color: #0f263a;
+}
+.mandatory {
+  color: #f32053;
+}
+
 .red {
   display: flex;
   color: #f32053;

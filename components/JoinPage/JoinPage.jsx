@@ -83,31 +83,29 @@ const JoinPage = () => {
         </p>
         <div className={classes.form}>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>First Name *</label>
+            <label className={classes.input_label}>
+              First Name<span className={classes.mandatory}>*</span>
+            </label>
             <input className={classes.input} placeholder="Rahul Sharma" ref={nameInput} />
           </div>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>Email*</label>
-            <input
-              className={classes.input}
-              placeholder="rahulsharma@gmail.com"
-              ref={emailInput}
-              required
-            />
+            <label className={classes.input_label}>
+              Email<span className={classes.mandatory}>*</span>
+            </label>
+            <input className={classes.input} placeholder="rahulsharma@gmail.com" ref={emailInput} />
           </div>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>Phone Number</label>
-            <input
-              className={classes.input}
-              placeholder="0123456789"
-              ref={phoneNumberInput}
-              required
-            />
+            <label className={classes.input_label}>
+              Phone Number<span className={classes.mandatory}>*</span>
+            </label>
+            <input className={classes.input} placeholder="0123456789" ref={phoneNumberInput} />
           </div>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>Academic Year</label>
-            <select className={classes.input} ref={academicYearInput} required>
-              <option className={classes.option}>Select an Option</option>
+            <label className={classes.input_label}>
+              Academic Year<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={academicYearInput}>
+              <option className={classes.option}>Choose your year</option>
               <option className={classes.option}>FE</option>
               <option className={classes.option}>SE</option>
               <option className={classes.option}>TE</option>
@@ -115,9 +113,11 @@ const JoinPage = () => {
             </select>
           </div>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>Branch</label>
-            <select className={classes.input} ref={branchInput} required>
-              <option>Select an Option</option>
+            <label className={classes.input_label}>
+              Branch<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={branchInput}>
+              <option>Choose your branch</option>
               <option>Computer Engineering</option>
               <option>IT Engineering</option>
               <option>AI&DS Engineering</option>
@@ -128,15 +128,19 @@ const JoinPage = () => {
             </select>
           </div>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>Division</label>
-            <select className={classes.input} ref={divisionInput} required>
-              <option>Select an Option</option>
+            <label className={classes.input_label}>
+              Division<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={divisionInput}>
+              <option>Choose your division</option>
               <option>A</option>
               <option>B</option>
             </select>
           </div>
           <div className={classes.input_container}>
-            <label className={classes.input_label}>Hackerrank ID</label>
+            <label className={classes.input_label}>
+              Hackerrank ID<span className={classes.mandatory}>*</span>
+            </label>
             <input
               className={classes.input}
               placeholder="https://www.hackerrank.com/rahul_sharma"

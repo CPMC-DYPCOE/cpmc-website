@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
 
+
+.sirContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.sirDetails {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 95px;
+  padding: 0 100px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  flex-basis: 50%;
+  text-align: center;
+}
+
 .team_section {
   width: 100vw;
   height: auto;
@@ -10,6 +30,7 @@
   padding: 70px;
   padding-top: 20px;
 }
+
 .heading {
   /* color: #469697; */
   font-size: 50px;
@@ -18,9 +39,11 @@
   font-family: 'Open Sans', sans-serif;
   font-family: 'Paytone One', sans-serif;
 }
+
 .red {
   color: #f32053;
 }
+
 .para {
   color: #ffffff;
   font-size: 28px;
@@ -30,6 +53,7 @@
   width: 100%;
   font-family: 'Open Sans', sans-serif;
 }
+
 .team {
   display: flex;
   justify-content: center;
@@ -37,6 +61,7 @@
   flex-wrap: wrap;
   font-family: 'Open Sans', sans-serif;
 }
+
 .heading2 {
   margin: 50px 0 100px 0;
   color: #fff;
@@ -46,24 +71,49 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
 @media screen and (max-width: 1000px) {
+
   .heading,
   .heading2 {
     font-size: 40px;
   }
+
+  .sirDetails {
+    flex-basis: 70%;
+    margin-top: 0px;
+  }
+
+  .sirContainer {
+    flex-direction: column-reverse;
+    margin-top: 4em;
+  }
 }
+
 @media screen and (max-width: 768px) {
   .team_section {
     padding: 30px;
   }
+
   .heading,
   .heading2 {
     font-size: 40px;
   }
+
   .para {
     padding: 20px;
     font-size: 16px;
     margin-bottom: 35px;
     width: 90%;
+  }
+
+  .sirDetails {
+    flex-basis: 70%;
+    margin-top: 0px;
+  }
+
+  .sirContainer {
+    flex-direction: column-reverse;
+    margin-top: 4em;
   }
 }

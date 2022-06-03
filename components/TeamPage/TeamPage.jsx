@@ -1,14 +1,32 @@
 import React from 'react';
 import classes from './tp.module.css';
 import Card from './Card';
-import aj from '../assets/Team/aj.jpeg';
+import mannu from '../assets/Team/mannu.jpeg';
 
 import { DATA, DATA2, DATA3 } from '../assets/Team/Data/index';
+
+const sirKaData = {
+  name: 'Dr. Manish Sharma',
+  position: 'Faculty Co-ordinator',
+  photo: mannu,
+  linkedin: 'https://www.linkedin.com/in/dr-manish-sharma-2bb7404a/',
+  instagram: 'https://www.linkedin.com/in/dr-manish-sharma-2bb7404a/',
+  github: 'https://www.linkedin.com/in/dr-manish-sharma-2bb7404a/'
+}
 
 const TeamPage = () => {
   return (
     <>
       <div className={classes.team_section}>
+        <h1 className={classes.heading}>
+          FACULTY <span className={classes.red}>CO-ORDINATOR</span>
+        </h1>
+        <div className={classes.sirContainer}>
+          <p className={classes.sirDetails}>
+            Researcher with Ph.D. in Electronics Engineering (ML & AI) and 15+ years of hands-on experience leveraging machine learning models for predictive modeling, data preprocessing, exploratory data analysis and optimization to solve challenging problems. Passionate about reinforcement learning, intelligent systems, various configurations of neural Network, mathematical modeling. Published more than 70 research papers, 3 book chapters and 5 patents.
+          </p>
+          <Card m={sirKaData} key={0} sir />
+        </div>
         <h1 className={classes.heading}>
           OUR <span className={classes.red}> TEAM</span>
         </h1>
