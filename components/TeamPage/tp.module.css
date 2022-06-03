@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
 
-
 .sirContainer {
   display: flex;
   align-items: center;
@@ -73,15 +72,16 @@
 }
 
 @media screen and (max-width: 1000px) {
-
   .heading,
   .heading2 {
     font-size: 40px;
+    white-space: nowrap;
   }
 
   .sirDetails {
     flex-basis: 70%;
     margin-top: 0px;
+    padding: 0 0px;
   }
 
   .sirContainer {
@@ -97,7 +97,7 @@
 
   .heading,
   .heading2 {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   .para {
@@ -108,7 +108,9 @@
   }
 
   .sirDetails {
+    padding: 0;
     flex-basis: 70%;
+    font-size: 16px;
     margin-top: 0px;
   }
 
