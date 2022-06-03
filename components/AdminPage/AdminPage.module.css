@@ -1,0 +1,21 @@
+.container {
+  color: white;
+  text-align: center;
+}
+
+.contactContainer {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: left;
+  padding: 2rem;
+  border: 2px solid white;
+  height: 300px;
+}
