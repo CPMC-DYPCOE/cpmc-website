@@ -1,23 +1,32 @@
 import React, { Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import classes from '../LandingSlide/LandingSlide.module.css';
 import t4 from '../assets/t4.svg';
+
+
+import classes from '../LandingSlide/LandingSlide.module.css';
 import styles from './AboutTeam.module.css';
+
+import Model from '../threeJs/teamModels';
+
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 
 const AboutTeam = () => {
   return (
     <>
-      <div className={styles.mainabout}>
-        <div className={styles.leftcolumnteam}>
-          <div className={styles.teammainhead}>
-            <h2 className={styles.aboutteamhead}>About the Team</h2>
-            <h1 className={styles.teamhead1}>
-              <span className={styles.teamhead2}>MEET OUR</span>
+      <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col justify-center lg:mt-[180px] lg:pl-16 lg:pr-16">
+          <div className="pl-8 pr-8">
+            <h2 className="text-center text-sm font-semibold  text-[#89BAEE] lg:pl-0 lg:text-left">
+              About the Team
+            </h2>
+            <h1 className="pb-8 text-center text-3xl font-bold text-[#A8ECF0] lg:pl-0 lg:text-left lg:text-5xl ">
+              <span className="pr-4 font-bold text-white">MEET OUR</span>
               TEAM
             </h1>
           </div>
-          <p className={styles.teammssg}>
+          <p className="pl-8 pr-8 text-center text-sm font-[400] text-[#FFFFFF] lg:text-left lg:text-lg lg:font-semibold">
             Our primary goal is to promote CP in our college community and help students enhance
             their problem-solving abilities. Our primary goal is to promote CP in our college
             community and help students enhance their
@@ -33,9 +42,22 @@ const AboutTeam = () => {
               </button>
             </Link>
           </div>
+          
         </div>
-        <div>
-          <Image alt="xyz" src={t4} width={600} height={450} />
+        <div className="flex flex-col lg:mt-[180px] lg:pl-16 lg:pr-16">
+          <div className=" flex h-[300px] cursor-pointer items-center justify-center md:mr-auto md:h-[500px] md:w-[100vw] lg:mr-auto lg:h-[700px]  lg:w-[700px]">
+            <Canvas className="">
+              <OrbitControls enableDamping={true} enableZoom={false} />
+
+              <directionalLight position={[4, 5, 2]} intensity={1} color="#F32053" />
+              <directionalLight position={[-4, -5, -2]} intensity={1} color="#A8ECF0" />
+              <directionalLight position={[4, -5, 2]} intensity={1} color="#407BFF" />
+
+              <Suspense fallback={null}>
+                <Model />
+              </Suspense>
+            </Canvas>
+          </div>
         </div>
       </div>
     </>
