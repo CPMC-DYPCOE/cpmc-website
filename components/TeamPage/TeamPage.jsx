@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './tp.module.css';
 import Card from './Card';
-import mannu from '../assets/Team/mannu.jpeg';
+import mannu from '../assets/mannu.jpeg';
 
 import { DATA, DATA2, DATA3 } from '../assets/Team/Data/index';
 
@@ -12,7 +12,7 @@ const sirKaData = {
   linkedin: 'https://www.linkedin.com/in/dr-manish-sharma-2bb7404a/',
   instagram: 'https://www.linkedin.com/in/dr-manish-sharma-2bb7404a/',
   github: 'https://www.linkedin.com/in/dr-manish-sharma-2bb7404a/'
-}
+};
 
 const TeamPage = () => {
   return (
@@ -23,7 +23,12 @@ const TeamPage = () => {
         </h1>
         <div className={classes.sirContainer}>
           <p className={classes.sirDetails}>
-            Researcher with Ph.D. in Electronics Engineering (ML & AI) and 15+ years of hands-on experience leveraging machine learning models for predictive modeling, data preprocessing, exploratory data analysis and optimization to solve challenging problems. Passionate about reinforcement learning, intelligent systems, various configurations of neural Network, mathematical modeling. Published more than 70 research papers, 3 book chapters and 5 patents.
+            Researcher with Ph.D. in Electronics Engineering (ML & AI) and 15+ years of hands-on
+            experience leveraging machine learning models for predictive modeling, data
+            preprocessing, exploratory data analysis and optimization to solve challenging problems.
+            Passionate about reinforcement learning, intelligent systems, various configurations of
+            neural Network, mathematical modeling. Published more than 70 research papers, 3 book
+            chapters and 5 patents.
           </p>
           <Card m={sirKaData} key={0} sir />
         </div>
