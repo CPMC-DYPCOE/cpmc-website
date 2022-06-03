@@ -26,6 +26,7 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       });
+      console.log(res);
       if (!res.ok) {
         toast.error('Something Went Wrong');
       }
@@ -44,6 +45,7 @@ const Contact = () => {
   return (
     <>
       <div className={classes.contact_section}>
+        <ToastContainer />
         <h1 className={classes.heading}>
           CONTACT <span className={classes.red}>US</span>
         </h1>
