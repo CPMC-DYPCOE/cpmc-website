@@ -26,7 +26,7 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       });
-      console.log(res);
+
       if (!res.ok) {
         toast.error('Something Went Wrong');
       }
@@ -34,7 +34,6 @@ const Contact = () => {
         toast.success('Submitted successfully');
       }
       const data = await res.json();
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -57,11 +56,11 @@ const Contact = () => {
           <div className={classes.form}>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Name*</h1>
-              <input className={classes.input} placeholder="Full Name" ref={nameInput} />
+              <input className={classes.input} placeholder="Full Name" ref={nameInput} required />
             </div>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Email address*</h1>
-              <input className={classes.input} placeholder="Email" ref={emailInput} />
+              <input className={classes.input} placeholder="Email" ref={emailInput} required />
             </div>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Message*</h1>
@@ -69,6 +68,7 @@ const Contact = () => {
                 className={classes.textarea}
                 placeholder="Type Your Message Here..!"
                 ref={messageInput}
+                required
               />
             </div>
             <button className={classes.btn} onClick={submitFormHandler}>

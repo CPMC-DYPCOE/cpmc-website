@@ -88,15 +88,25 @@ const JoinPage = () => {
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>Email*</label>
-            <input className={classes.input} placeholder="rahulsharma@gmail.com" ref={emailInput} />
+            <input
+              className={classes.input}
+              placeholder="rahulsharma@gmail.com"
+              ref={emailInput}
+              required
+            />
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>Phone Number</label>
-            <input className={classes.input} placeholder="0123456789" ref={phoneNumberInput} />
+            <input
+              className={classes.input}
+              placeholder="0123456789"
+              ref={phoneNumberInput}
+              required
+            />
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>Academic Year</label>
-            <select className={classes.input} ref={academicYearInput}>
+            <select className={classes.input} ref={academicYearInput} required>
               <option className={classes.option}>Select an Option</option>
               <option className={classes.option}>FE</option>
               <option className={classes.option}>SE</option>
@@ -106,7 +116,7 @@ const JoinPage = () => {
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>Branch</label>
-            <select className={classes.input} ref={branchInput}>
+            <select className={classes.input} ref={branchInput} required>
               <option>Select an Option</option>
               <option>Computer Engineering</option>
               <option>IT Engineering</option>
@@ -119,7 +129,7 @@ const JoinPage = () => {
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>Division</label>
-            <select className={classes.input} ref={divisionInput}>
+            <select className={classes.input} ref={divisionInput} required>
               <option>Select an Option</option>
               <option>A</option>
               <option>B</option>
