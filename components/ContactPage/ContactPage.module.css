@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
+
+.contact_section {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px;
+  padding-top: 50px;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 60px;
+  font-style: bold;
+  font-weight: 800;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Paytone One', sans-serif;
+}
+.inputheading {
+  font-size: 1.2vw;
+  margin-left: 9px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.para {
+  color: #ffffff;
+  margin-top: 1.7em;
+  line-height: 1.3em;
+  font-size: 28px;
+  text-align: center;
+}
+.contact {
+  padding: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  color: #f32053;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 90px;
+  gap: 50px;
+  padding: 100px;
+  padding-top: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.input {
+  all: unset;
+  border: 1px solid #d9d9d9;
+  color: #fff;
+  padding: 10px 20px;
+  width: 50vw;
+  height: 5vh;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.textarea {
+  all: unset;
+  color: #fff;
+  /* background-color: fff; */
+  border: 1px solid #d9d9d9;
+  padding: 10px 20px;
+  width: 50vw;
+  height: 22vh;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 20px;
+  background: #f32053;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.btn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn:hover span {
+  transform: translateX(5em);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input {
+    width: 60vw;
+  }
+  .textarea {
+    width: 60vw;
+  }
+  .inputheading {
+    font-size: 2.5vw;
+  }
+  .heading {
+    font-size: 7.5vw;
+  }
+  .para {
+    font-size: 2.1vw;
+  }
+  .form {
+    margin-top: 40px;
+  }
+}

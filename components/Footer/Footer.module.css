@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
+
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: #183147;
+}
+.footer {
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+}
+.tagline {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.link_container {
+  color: rgb(200, 199, 199);
+}
+.link_container:hover {
+  color: #ff2863;
+}
+.socialmedia {
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.linkedin,
+.instagram {
+  margin: 10px;
+  border-radius: 42px;
+  background-color: #091e32;
+  font-size: 19px;
+  width: 12vw;
+  color: white;
+  cursor: pointer;
+}
+.logotagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.innerlink,
+.innerinsta {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon {
+  border-radius: 50px;
+  margin: 0px 15px;
+  margin-top: 9px;
+}
+.logo {
+  color: #ddf0a7;
+}
+.menu,
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'Paytone One';
+}
+.menu {
+  align-items: center;
+  margin-top: 40px;
+}
+.footer_links {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  gap: 5px;
+}
+
+.social_links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.name {
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+.footer_ruler {
+  width: 89vw;
+  margin: auto;
+  height: 2px;
+  background-color: aliceblue;
+}
+@media (max-width: 768px) {
+  .footer_container {
+    height: auto;
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 0 30px;
+  }
+  .menu,
+  .social {
+    font-size: 2rem;
+    margin: 20px;
+    white-space: nowrap;
+  }
+  .linker {
+    flex-direction: row;
+  }
+  .social_links {
+    flex-wrap: wrap;
+  }
+  .tagline {
+    margin-bottom: 1rem;
+  }
+  .linkedin,
+  .instagram {
+    width: 50vw;
+    padding: 5px;
+  }
+}

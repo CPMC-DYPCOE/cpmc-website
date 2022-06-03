@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap");
+
+.card {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.cardLeft {
+  background-color: #ffa701;
+  height: 100%;
+  flex-basis: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.cardRight {
+  background-color: #384c5c;
+  height: 100%;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.number {
+  font-size: 5em;
+  color: white;
+  text-shadow: -6px 2px 6px #2a2a2a82;
+}
+
+.content {
+  height: fit-content;
+  padding: 1em;
+  color: white;
+  font-size: 1.8em;
+  font-family: "Open Sans", sans-serif;
+}
+
+.scroll {
+  display: grid;
+  grid-auto-flow: column;
+  padding: 4em;
+  gap: 4em;
+  grid-auto-columns: 70%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.smallTitle {
+  font-size: 1.5em;
+  color: #89baee;
+  font-family: "Open Sans";
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  font-size: 50px;
+  color: white;
+  font-family: "Paytone One";
+  margin-bottom: 0.5em;
+}
+
+.title span {
+  color: #a8ecf0;
+}
+
+.context {
+  font-size: 1.3em;
+  color: white;
+  font-family: "open sans";
+  margin-bottom: 0.8em;
+}
+
+.hero {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.mainDiv {
+  margin: 5em 0;
+}
+
+@media screen and (max-width: 1317px) and (min-width: 1023px) {
+  .card {
+    padding: 0.5em;
+  }
+
+  .content {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1022px) and (min-width: 768px) {
+  .smallTitle {
+    font-size: 1.8em;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .context {
+    font-size: 1.2em;
+  }
+
+  .card {
+    padding: 0.2em;
+  }
+
+  .content {
+    font-size: 1.2em;
+  }
+
+  .scroll {
+    gap: 2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card {
+    padding: 0em;
+  }
+
+  .smallTitle {
+    font-size: 1.2em;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .content,
+  .context {
+    font-size: 0.875em;
+  }
+
+  .scroll {
+    gap: 1em;
+    grid-auto-columns: 90%;
+    padding: 1em 0.2em;
+  }
+
+  .number {
+    font-size: 3em;
+  }
+
+  .cardLeft {
+    flex-basis: 12%;
+    padding: 0.5em;
+  }
+}

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Raleway:wght@400&display=swap');
+
+.main {
+  background-color: #091e32;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 40px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.container1 {
+  width: 40%;
+  padding-left: 60px;
+}
+.container2 {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+}
+
+.smallheading {
+  color: #89baee;
+  font-family: 'Passion One', cursive;
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  text-align: left;
+}
+.heading {
+  color: #a8ecf0;
+  font-family: 'Passion One', cursive;
+  font-size: 4rem;
+  text-align: left;
+}
+.content {
+  text-align: left;
+}
+
+.div1 {
+  width: 50%;
+  padding: 30px;
+}
+.div2 {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: #0b1c2b;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.heading1 {
+  font-family: 'Passion One', cursive;
+  color: #a8ecf0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.content1 {
+  font-size: 0.8rem;
+  font-family: 'Raleway', sans-serif;
+  /* font-weight: 600; */
+}
+.container3 {
+  display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  .main {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .container1 {
+    width: 100%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .container2 {
+    width: 60%;
+    display: none;
+    flex-direction: row;
+  }
+
+  .smallheading {
+    color: #89baee;
+    font-family: 'Passion One', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+  .heading {
+    color: #a8ecf0;
+    font-family: 'Passion One', cursive;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .content {
+    text-align: center;
+  }
+  .container3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .card2 {
+    background-color: #0b1c2b;
+    width: 40%;
+    margin: 50px 20px;
+    padding: 20px;
+    height: 320px;
+  }
+  .heading1 {
+    font-family: 'Passion One', cursive;
+    color: #a8ecf0;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    margin: 10px 0;
+  }
+  .content1 {
+    font-size: 0.8rem;
+    font-family: 'Raleway', sans-serif;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card2 {
+    height: 390px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .card2 {
+    height: 430px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .card2 {
+    height: auto;
+    margin: 20px 20px;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main {
+    padding: 60px 20px;
+  }
+  .container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .card2 {
+    height: auto;
+    margin: 20px 20px;
+    width: 90%;
+  }
+  .smallheading {
+    color: #89baee;
+    font-family: 'Passion One', cursive;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+  .content {
+    font-size: 0.8rem;
+  }
+}
