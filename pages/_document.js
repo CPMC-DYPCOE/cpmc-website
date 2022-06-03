@@ -11,6 +11,18 @@ class MyDocument extends Document {
             as="font"
             crossOrigin="anonymous"
           ></link>
+          <link
+            rel="preload"
+            href="/fonts/Raleway-ExtraBold.ttf"
+            as="font"
+            crossOrigin="anonymous"
+          ></link>
+          <link
+            rel="preload"
+            href="/fonts/Oswald-Regular.ttf"
+            as="font"
+            crossOrigin="anonymous"
+          ></link>
         </Head>
         <body>
           <Main></Main>
