@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
 
 .join_section {
   width: 100vw;
@@ -16,8 +16,8 @@
   margin-top: 20px;
   font-size: 50px;
   font-weight: 900;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Paytone One', sans-serif;
   text-align: center;
 }
 .red {
@@ -43,8 +43,7 @@
   gap: 50px;
   padding: 100px;
   padding-top: 0;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .input_container {
   display: flex;
@@ -59,7 +58,7 @@
   color: #ffffff;
   margin-bottom: 15px;
   padding-left: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .input {
   all: unset;
@@ -146,5 +145,8 @@
   }
   .btn {
     font-size: 18px;
+  }
+  .form {
+    padding: 10px;
   }
 }

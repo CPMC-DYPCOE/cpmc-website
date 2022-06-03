@@ -9,7 +9,7 @@ const Mission = () => {
   return (
     <div className={classes.main}>
       <div className={classes.container1}>
-        <h1 className={classes.smallheading}>MissionWhy we are doing this</h1>
+        <h1 className={classes.smallheading}>Why we are doing this</h1>
         <h1 className={classes.heading}>OUR MISSION</h1>
         <h1 className={classes.content}>
           On a goal to increase students critical thinking skills through competitive programming,

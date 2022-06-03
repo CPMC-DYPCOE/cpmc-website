@@ -33,7 +33,7 @@ const Registers = () => {
               <Image alt="xyz" src={MentorFormStep2} width={330} height={256} />
             </div>
             <div className="break-words p-2 pt-4 text-white lg:w-[330px]">
-              Once we find your profile perfect for a mentee, we let you know about it through a
+              Once we find your profile perfect for a mentor, we let you know about it through a
               mail. Then you can join our discord server.
             </div>
           </div>
@@ -68,7 +68,7 @@ const Registers = () => {
               <Image alt="xyz" src={MenteeFormStep2} width={330} height={256} />
             </div>
             <div className="break-words p-2 pt-4 text-white lg:w-[330px]">
-              Once we find your profile perfect for a mentor, we let you know about it through a
+              Once we find your profile perfect for a mentee, we let you know about it through a
               mail. Then you can join our discord server.
             </div>
           </div>

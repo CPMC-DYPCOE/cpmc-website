@@ -20,7 +20,7 @@ const Footer = () => {
               <Image alt="xyz" src={logo} width={150} height={100} layout="fixed" />
             </div>
             <div className={classes.tagline}>
-              <h1 className=" font-Paytone">
+              <h1 className=" text-center font-Paytone">
                 <span className="text-[#f32053]">Coding</span> is{' '}
                 <span className="text-[#a8ecf0]">Fun</span> when{' '}
                 <span className="text-[#4073ff]">Mentoring</span> is{' '}
