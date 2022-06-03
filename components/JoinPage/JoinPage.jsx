@@ -2,6 +2,9 @@ import React from 'react';
 import { useRef } from 'react';
 import classes from './JoinPage.module.css';
 import Link from 'next/link';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 const JoinPage = () => {
   const nameInput = useRef();
@@ -41,6 +44,12 @@ const JoinPage = () => {
         }
       });
 
+      if (!res.ok) {
+        toast.error('Something Went Wrong');
+      }
+      if (res.ok) {
+        toast.success('Submitted successfully');
+      }
       const data = await res.json();
       console.log(data);
     } catch (error) {
@@ -65,6 +74,7 @@ const JoinPage = () => {
   return (
     <>
       <div className={classes.join_section}>
+        <ToastContainer />
         <h1 className={classes.heading}>
           FILL THESE DETAILS TO <br /> <span className={classes.red}> JOIN CLUB</span>
         </h1>

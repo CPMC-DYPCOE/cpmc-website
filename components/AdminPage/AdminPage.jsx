@@ -42,13 +42,33 @@ const AdminPage = () => {
       <h1 style={{ fontSize: '2rem' }}>Students Interested to Join club</h1>
       <div className={classes.contactContainer}>
         {students.map((student) => {
+          const {
+            _id,
+            firstName,
+            branch,
+            phoneNumber,
+            academicYear,
+            division,
+            leetCodeId,
+            codeChefId,
+            codeForcesId,
+            atCoderId,
+            hackerRankId,
+            hackerEarthId
+          } = student;
           return (
-            <div key={student._id} className={classes.contact}>
-              <h1>Name: {student.firstName}</h1>
-              <h3>Branch: {student.branch}</h3>
-              <p>Phone Number: {student.phoneNumber}</p>
-              <p>Academic Year: {student.academicYear}</p>
-              <p>Division: {student.division}</p>
+            <div key={_id} className={classes.contact}>
+              <h1>Name: {firstName}</h1>
+              <h3>Branch: {branch}</h3>
+              <p>Phone Number: {phoneNumber}</p>
+              <p>Academic Year: {academicYear}</p>
+              <p>Division: {division}</p>
+              {leetCodeId && <a href={leetCodeId}>LeetCode</a>}
+              {codeChefId && <a href={codeChefId}>CodeChef</a>}
+              {codeForcesId && <a href={codeForcesId}>CodeForces</a>}
+              {atCoderId && <a href={atCoderId}>AtCoder</a>}
+              {hackerRankId && <a href={hackerRankId}>HackerRank</a>}
+              {hackerEarthId && <a href={hackerEarthId}>HackerEarth</a>}
             </div>
           );
         })}

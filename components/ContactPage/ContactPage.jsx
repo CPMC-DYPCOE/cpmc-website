@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import contact from '../assets/contact.svg';
 import classes from './ContactPage.module.css';
 
@@ -23,6 +26,13 @@ const Contact = () => {
           'Content-Type': 'application/json'
         }
       });
+      console.log(res);
+      if (!res.ok) {
+        toast.error('Something Went Wrong');
+      }
+      if (res.ok) {
+        toast.success('Submitted successfully');
+      }
       const data = await res.json();
       console.log(data);
     } catch (error) {
@@ -35,6 +45,7 @@ const Contact = () => {
   return (
     <>
       <div className={classes.contact_section}>
+        <ToastContainer />
         <h1 className={classes.heading}>
           CONTACT <span className={classes.red}>US</span>
         </h1>
