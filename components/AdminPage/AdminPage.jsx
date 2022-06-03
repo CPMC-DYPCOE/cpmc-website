@@ -46,6 +46,7 @@ const AdminPage = () => {
             _id,
             firstName,
             branch,
+            email,
             phoneNumber,
             academicYear,
             division,
@@ -60,6 +61,7 @@ const AdminPage = () => {
             <div key={_id} className={classes.contact}>
               <h1>Name: {firstName}</h1>
               <h3>Branch: {branch}</h3>
+              <h3>Email: {email}</h3>
               <p>Phone Number: {phoneNumber}</p>
               <p>Academic Year: {academicYear}</p>
               <p>Division: {division}</p>
