@@ -10,5 +10,6 @@ export { default as TimeLines } from './TimeLines/TimeLines';
 export { default as Mission } from './Mission/Mission';
 export { default as JoinPage } from './JoinPage/JoinPage';
 export { default as TeamPage } from './TeamPage/TeamPage';
+export { default as EventsPage } from './EventsPage/EventsPage';
 export { default as Questions } from './Questions/Questions';
 export { default as ClubOperations } from './Operations/ClubOperations';

@@ -75,6 +75,11 @@ const AdminPage = () => {
           );
         })}
       </div>
+      <div className={classes.xyz}>
+        {students.map((student) => {
+          return <h1>{student.email}</h1>;
+        })}
+      </div>
     </div>
   );
 };
