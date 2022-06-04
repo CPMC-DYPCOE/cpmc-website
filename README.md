@@ -9,21 +9,12 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://website-3qdz1gwya-abcdefg1234007.vercel.app/">
-    <img src="https://user-images.githubusercontent.com/91309280/171466259-619a13a6-fe5f-490d-a1b0-47b90fd98774.png" alt="Logo" width="200" height="200">
-  </a>
+<div align = "center">
+<img src = "https://user-images.githubusercontent.com/91309280/171872948-daf756ef-a07a-4d24-b5bc-00ff01f4b9a5.gif">
+  </div>
 
-  <h3 align="center">CPMC - DYPCOE</h3>
 
-  <p align="center">
-    Competitive Programming and Mentornship Club
-    <br />
-    <a href="https://website-3qdz1gwya-abcdefg1234007.vercel.app/"><strong>Explore the site »</strong></a>
-    <br />
-    <br />
-  </p>
-</div>
+
 
 ## About the Club 🚀
 The Competitive Programmers and Mentorship Club
@@ -51,8 +42,6 @@ uncharted territory.
 
 ### Website : [click here](https://website-3qdz1gwya-abcdefg1234007.vercel.app/)
 
-
-<img width="1100" alt="site ss" src="https://user-images.githubusercontent.com/91309280/171473034-62d2a5e9-5f2b-4a2d-8419-c195bfbbd83a.png">
 
   
 ## Contributing 💡
