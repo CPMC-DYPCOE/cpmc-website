@@ -76,8 +76,8 @@ const AdminPage = () => {
         })}
       </div>
       <div className={classes.xyz}>
-        {students.map((student) => {
-          return <h1>{student.email}</h1>;
+        {students.map((student, key) => {
+          return <h1 key={key}>{student.email}</h1>;
         })}
       </div>
     </div>

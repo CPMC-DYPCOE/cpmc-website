@@ -39,7 +39,7 @@ const EventsPage = () => {
               </Link>
             </div>
             <div className={styles.xyz}>
-              <Image src={e1} width={250} height={200} />
+              <Image alt="xyz" src={e1} width={250} height={200} />
             </div>
           </div>
         </div>
