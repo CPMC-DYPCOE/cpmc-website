@@ -87,3 +87,9 @@
     display: none;
   }
 }
+@media screen and (max-width: 400px) {
+  .name {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+}
