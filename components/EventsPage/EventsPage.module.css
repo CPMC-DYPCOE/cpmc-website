@@ -1,11 +1,20 @@
 .event_section {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 200px 50px;
   padding-top: 50px;
   width: 100vw;
   height: 100vh;
+  flex-direction: column;
+}
+.title {
+  font-family: 'Paytone One';
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 80px;
+  white-space: nowrap;
 }
 .event {
   width: 80vw;
@@ -73,6 +82,10 @@
     width: 90vw;
     height: auto;
   }
+  .title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
   .content_container {
     padding-bottom: 40px;
   }
@@ -88,6 +101,10 @@
   }
 }
 @media screen and (max-width: 400px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
   .name {
     font-size: 20px;
     white-space: nowrap;

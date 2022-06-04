@@ -9,6 +9,9 @@ const EventsPage = () => {
   return (
     <>
       <div className={styles.event_section}>
+        <h1 className={styles.title}>
+          Upcoming <span className={styles.red}> Events</span>
+        </h1>
         <div className={styles.event}>
           <div className={styles.blue_box}></div>
           <div className={styles.content_container}>
@@ -28,7 +31,11 @@ const EventsPage = () => {
                   <Link href="/joinus">REGISTER HERE</Link>
                 </span>
               </p>
-              <Link href="/">
+              <Link
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.hackerrank.com/contests/cpmc-coding-test/challenges"
+              >
                 <button className={classes.btn} style={{ margin: '0' }}>
                   <span className={classes.span}>CONTEST LINK</span>
                   <svg viewBox="0 0 13 10" height="10px" width="15px">
