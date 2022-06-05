@@ -26,10 +26,19 @@ const EventsPage = () => {
                 DATE - <span className={styles.blue}>5/June/2022</span>
               </p>
               <p className={styles.imp}>
-                First you have to{' '}
+                First you have to :
                 <span className={styles.link}>
-                  <Link href="/joinus">REGISTER HERE</Link>
+                  <Link href="/joinus"><button className={classes.btn} style={{ margin: '0' }}>
+                    <span className={classes.span}>REGISTER HERE!!</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button></Link>
                 </span>
+              </p>
+              <p className={styles.imp}>
+                If you have already registered:
               </p>
               <Link
                 target="_blank"
