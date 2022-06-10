@@ -26,8 +26,8 @@ const AboutTeam = () => {
             </h1>
           </div>
           <p className="pl-8 pr-8 text-center text-sm font-[400] text-[#FFFFFF] lg:text-left lg:text-lg lg:font-semibold">
-            If you'd like to meet and connect with the people behind C.P.M.C., visit our team page
-            by clicking the button below.
+            If you&apos;d like to meet and connect with the people behind C.P.M.C., visit our team
+            page by clicking the button below.
           </p>
           <div className={styles.teambtn}>
             <Link href="/team">
