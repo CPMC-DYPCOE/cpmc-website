@@ -26,9 +26,8 @@ const AboutTeam = () => {
             </h1>
           </div>
           <p className="pl-8 pr-8 text-center text-sm font-[400] text-[#FFFFFF] lg:text-left lg:text-lg lg:font-semibold">
-            Our primary goal is to promote CP in our college community and help students enhance
-            their problem-solving abilities. Our primary goal is to promote CP in our college
-            community and help students enhance their
+            If you'd like to meet and connect with the people behind C.P.M.C., visit our team page
+            by clicking the button below.
           </p>
           <div className={styles.teambtn}>
             <Link href="/team">

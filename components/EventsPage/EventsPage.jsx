@@ -10,7 +10,7 @@ const EventsPage = () => {
     <>
       <div className={styles.event_section}>
         <h1 className={styles.title}>
-          Upcoming <span className={styles.red}> Events</span>
+          Past <span className={styles.red}> Events</span>
         </h1>
         <div className={styles.event}>
           <div className={styles.blue_box}></div>
@@ -28,18 +28,18 @@ const EventsPage = () => {
               <p className={styles.imp}>
                 First you have to :
                 <span className={styles.link}>
-                  <Link href="/joinus"><button className={classes.btn} style={{ margin: '0' }}>
-                    <span className={classes.span}>REGISTER HERE!!</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </button></Link>
+                  <Link href="/joinus">
+                    <button className={classes.btn} style={{ margin: '0' }}>
+                      <span className={classes.span}>REGISTER HERE!!</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </button>
+                  </Link>
                 </span>
               </p>
-              <p className={styles.imp}>
-                If you have already registered:
-              </p>
+              <p className={styles.imp}>If you have already registered:</p>
               <Link
                 target="_blank"
                 rel="noreferrer"
