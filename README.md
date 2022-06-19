@@ -1,4 +1,7 @@
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <h1 align="center"> <font size="5"> <b> CPMC - DYPCOE 🔥</b></h1>
 
 
@@ -57,12 +60,22 @@ See the [open issues](https://github.com/CPMC-DYPCOE/Website/issues) for a full 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/cpmc_dypcoe/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/cpmc-dypcoe/)
 
-## License 📄
-
-LICENSED UNDER THE MIT LICENSE
-
 ## Contributors 🌟
-<a href="https://github.com/CPMC-DYPCOE/Website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=CPMC-DYPCOE/Website" />
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Spyware007"><img src="https://avatars.githubusercontent.com/u/89961974?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OM GAWANDE</b></sub></a><br /><a href="#maintenance-Spyware007" title="Maintenance">🚧</a> <a href="#projectManagement-Spyware007" title="Project Management">📆</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Spyware007" title="Tests">⚠️</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/pulls?q=is%3Apr+reviewed-by%3ASpyware007" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://nishant-bhosale.netlify.app/"><img src="https://avatars.githubusercontent.com/u/77777251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nishant Bhosale</b></sub></a><br /><a href="#maintenance-Nishant-Bhosale" title="Maintenance">🚧</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Nishant-Bhosale" title="Tests">⚠️</a> <a href="#ideas-Nishant-Bhosale" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Sourabh-Bharale"><img src="https://avatars.githubusercontent.com/u/89797467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sourabh-Bharale</b></sub></a><br /><a href="#maintenance-Sourabh-Bharale" title="Maintenance">🚧</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Sourabh-Bharale" title="Tests">⚠️</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 </a>
 <p align="right">(<a href="#top">back to top</a>)</p>

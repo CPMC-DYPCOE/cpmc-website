@@ -1,0 +1,49 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Spyware007",
+      "name": "OM GAWANDE",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89961974?v=4",
+      "profile": "https://github.com/Spyware007",
+      "contributions": [
+        "maintenance",
+        "projectManagement",
+        "test",
+        "review"
+      ]
+    },
+    {
+
+      "login": "Nishant-Bhosale",
+      "name": "Nishant Bhosale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77777251?v=4",
+      "profile": "https://nishant-bhosale.netlify.app/",
+      "contributions": [
+        "maintenance",
+        "test",
+        "ideas"
+        ]
+    },
+    {
+      "login": "Sourabh-Bharale",
+      "name": "Sourabh-Bharale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89797467?v=4",
+      "profile": "https://github.com/Sourabh-Bharale",
+      "contributions": [
+        "maintenance",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "CPMC-DYPCOE-OFFICIAL",
+  "projectOwner": "Spyware007",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
