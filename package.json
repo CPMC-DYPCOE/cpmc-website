@@ -18,6 +18,7 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-screentype-hook": "^1.0.18",
     "react-toastify": "^9.0.3",
     "swiper": "^8.2.4",
     "three": "^0.141.0"
