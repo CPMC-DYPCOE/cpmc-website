@@ -44,20 +44,25 @@ const EventSlider = () => {
           modules={[Zoom, Autoplay, Pagination, Navigation]}
         >
           <SwiperSlide className="justify-center   rounded-xl  text-center">
-            <div>
-              <Image alt="eventabcde" src={abcde} objectFit="cover" className="rounded-xl" />
-            </div>
+            <Link href="/masterstalk">
+              <div style={{ cursor: 'pointer' }}>
+                <Image alt="eventabcde" src={abcde} objectFit="cover" className="rounded-xl" />
+              </div>
+            </Link>
           </SwiperSlide>
-          <SwiperSlide className="justify-center  rounded-xl   text-center">
-            <div>
-              <Image alt="eventabcde" src={abcde} objectFit="cover" className="rounded-xl" />
-            </div>
+          <SwiperSlide className="justify-center   rounded-xl  text-center">
+            <Link href="/masterstalk">
+              <div style={{ cursor: 'pointer' }}>
+                <Image alt="eventabcde" src={abcde} objectFit="cover" className="rounded-xl" />
+              </div>
+            </Link>
           </SwiperSlide>
-
-          <SwiperSlide className="justify-center  rounded-xl   text-center">
-            <div>
-              <Image alt="eventabcde" src={abcde} objectFit="cover" className="rounded-xl" />
-            </div>
+          <SwiperSlide className="justify-center   rounded-xl  text-center">
+            <Link href="/masterstalk">
+              <div style={{ cursor: 'pointer' }}>
+                <Image alt="eventabcde" src={abcde} objectFit="cover" className="rounded-xl" />
+              </div>
+            </Link>
           </SwiperSlide>
         </Swiper>
       </div>

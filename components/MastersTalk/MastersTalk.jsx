@@ -58,11 +58,10 @@ const MasterTalk = () => {
       <div className={classes.join_section}>
         <ToastContainer />
         <h1 className={classes.heading}>
-          FILL THESE DETAILS TO <br /> <span className={classes.red}> JOIN CLUB</span>
+          Register for the
+          <br /> <span className={classes.red}> Masters&apos; Talk</span>
         </h1>
-        <p className={classes.para}>
-          Fill out the form below to join the club and become a member of the C.P.M.C squad.
-        </p>
+        <p className={classes.para}>Fill out the form below to register for the event.</p>
         <div className={classes.form}>
           <div className={classes.input_container}>
             <label className={classes.input_label}>
