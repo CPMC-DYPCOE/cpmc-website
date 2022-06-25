@@ -42,24 +42,24 @@ const EventSlider = () => {
         >
           <SwiperSlide className="justify-center   rounded-xl  text-center">
             <div>
-            {/* <Link href="#">  */}
+           
             <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
-            {/* </Link> */}
+            
             </div>
           </SwiperSlide>
           <SwiperSlide className="justify-center  rounded-xl   text-center">
           <div>
-            {/* <Link href="#">  */}
+           
             <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
-            {/* </Link> */}
+           
             </div>
           </SwiperSlide>
 
           <SwiperSlide className="justify-center  rounded-xl   text-center">
           <div>
-            {/* <Link href="#">  */}
+           
             <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
-            {/* </Link> */}
+           
             </div>
           </SwiperSlide>
         </Swiper>
