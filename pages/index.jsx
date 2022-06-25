@@ -9,7 +9,8 @@ import {
   JoinClub,
   AboutTeam,
   Questions,
-  ClubOperations
+  ClubOperations,
+  EventSlider
 } from '../components';
 
 export default function Home() {
@@ -27,6 +28,7 @@ DYPCOE, Pune."
       </Head>
 
       <LandingSlide />
+      <EventSlider/>
       <TimeLines />
       <Mission />
       <ClubOperations />
