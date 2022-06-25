@@ -14,5 +14,5 @@ export { default as TeamPage } from './TeamPage/TeamPage';
 export { default as EventsPage } from './EventsPage/EventsPage';
 export { default as Questions } from './Questions/Questions';
 export { default as ClubOperations } from './Operations/ClubOperations';
-export { default as EventSlider } from './EventSLider/EventSlider';
+export { default as EventSlider } from './EventSlider/EventSlider';
 
