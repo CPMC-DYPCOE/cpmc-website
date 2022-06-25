@@ -55,6 +55,7 @@
   background-color: #0b1c2b;
   padding: 20px;
   margin: 20px 0;
+  border-radius: 0.75rem;
 }
 
 .heading1 {
@@ -122,6 +123,8 @@
     margin: 50px 20px;
     padding: 20px;
     height: 320px;
+  border-radius: 0.75rem;
+
   }
   .heading1 {
     font-family: 'Passion One', cursive;
@@ -140,11 +143,15 @@
 @media only screen and (max-width: 900px) {
   .card2 {
     height: 390px;
+  border-radius: 0.75rem;
+
   }
 }
 @media only screen and (max-width: 800px) {
   .card2 {
     height: 430px;
+  border-radius: 0.75rem;
+
   }
 }
 @media only screen and (max-width: 800px) {
@@ -159,6 +166,8 @@
     height: auto;
     margin: 20px 20px;
     width: 80%;
+  border-radius: 0.75rem;
+
   }
 }
 @media only screen and (max-width: 450px) {
@@ -176,6 +185,8 @@
     height: auto;
     margin: 20px 20px;
     width: 90%;
+  border-radius: 0.75rem;
+
   }
   .smallheading {
     color: #89baee;
