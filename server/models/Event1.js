@@ -26,6 +26,9 @@ const Event1Schema = new Schema({
   },
   question: {
     type: String
+  },
+  question2: {
+    type: String
   }
 });
 

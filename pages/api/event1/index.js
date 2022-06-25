@@ -9,9 +9,9 @@ const handler = async (req, res) => {
 
   await connectDB();
   try {
-    const { name, email, phoneNumber, academicYear, branch, question } = req.body;
+    const { name, email, phoneNumber, academicYear, branch, question, question2 } = req.body;
 
-    if (!validateEmail(email) || !name || !phoneNumber || !academicYear || !branch || !question) {
+    if (!validateEmail(email) || !name || !phoneNumber || !academicYear || !branch) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
@@ -21,7 +21,8 @@ const handler = async (req, res) => {
       phoneNumber,
       academicYear,
       branch,
-      question
+      question,
+      question2
     });
 
     await newEvent1.save();

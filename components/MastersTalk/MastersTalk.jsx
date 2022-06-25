@@ -13,6 +13,7 @@ const MasterTalk = () => {
   const academicYearInput = useRef();
   const branchInput = useRef();
   const questionInput = useRef();
+  const question2Input = useRef();
 
   const submitFormHandler = async (e) => {
     e.preventDefault();
@@ -25,7 +26,8 @@ const MasterTalk = () => {
           phoneNumber: phoneNumberInput.current.value,
           branch: branchInput.current.value,
           academicYear: academicYearInput.current.value,
-          question: questionInput.current.value
+          question: questionInput.current.value,
+          question2: question2Input.current.value
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -51,6 +53,7 @@ const MasterTalk = () => {
     branchInput.current.value = '';
     academicYearInput.current.value = '';
     questionInput.current.value = '';
+    question2Input.current.value = '';
   };
 
   return (
@@ -58,15 +61,14 @@ const MasterTalk = () => {
       <div className={classes.join_section}>
         <ToastContainer />
         <h1 className={classes.heading}>
-          FILL THESE DETAILS TO <br /> <span className={classes.red}> JOIN CLUB</span>
+          Register for the
+          <br /> <span className={classes.red}> Masters&apos; Talk</span>
         </h1>
-        <p className={classes.para}>
-          Fill out the form below to join the club and become a member of the C.P.M.C squad.
-        </p>
+        <p className={classes.para}>Fill out the form below to register for the event.</p>
         <div className={classes.form}>
           <div className={classes.input_container}>
             <label className={classes.input_label}>
-              First Name<span className={classes.mandatory}>*</span>
+              Name<span className={classes.mandatory}>*</span>
             </label>
             <input className={classes.input} placeholder="Rahul Sharma" ref={nameInput} />
           </div>
@@ -112,9 +114,15 @@ const MasterTalk = () => {
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>
-              Ask a question to the speakers!<span className={classes.mandatory}>*</span>
+              Question for Abroad Studies!<span className={classes.mandatory}></span>
             </label>
-            <input className={classes.input} placeholder="How are you?" ref={questionInput} />
+            <input className={classes.input} placeholder="Your question..." ref={questionInput} />
+          </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Question on Gate Examination!<span className={classes.mandatory}></span>
+            </label>
+            <input className={classes.input} placeholder="Your question..." ref={question2Input} />
           </div>
 
           <button className={classes.btn} onClick={submitFormHandler}>

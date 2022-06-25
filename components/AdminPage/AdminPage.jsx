@@ -90,7 +90,8 @@ const AdminPage = () => {
           </h1>
           <div className={classes.data_item2}>
             {event1.map((student) => {
-              const { _id, name, branch, email, phoneNumber, academicYear, question } = student;
+              const { _id, name, branch, email, phoneNumber, academicYear, question, question2 } =
+                student;
               return (
                 <div key={_id} className={classes.data_items2}>
                   <h1>Name: {name}</h1>
@@ -99,6 +100,7 @@ const AdminPage = () => {
                   <p>Phone Number: {phoneNumber}</p>
                   <p>Academic Year: {academicYear}</p>
                   <p>Question: {question}</p>
+                  <p>Question2: {question2}</p>
                 </div>
               );
             })}
