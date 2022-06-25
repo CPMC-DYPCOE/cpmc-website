@@ -83,7 +83,7 @@ const MasterTalk = () => {
           <br /> <span className={classes.red}> Masters&apos; Talk</span>
         </h1>
         <p className={classes.para}>Fill out the form below to register for the event.</p>
-        <form className={classes.form} autocomplete="on">
+        <form className={classes.form}>
           <div className={classes.input_container}>
             <label className={classes.input_label}>
               Name<span className={classes.mandatory}>*</span>
@@ -98,8 +98,6 @@ const MasterTalk = () => {
               className={classes.input}
               placeholder="rahulsharma@gmail.com"
               type="email"
-              autocomplete="on"
-              autocompletetype="email"
               ref={emailInput}
             />
           </div>
