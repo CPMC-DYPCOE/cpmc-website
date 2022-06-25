@@ -22,7 +22,7 @@ const EventSlider = () => {
           Upcoming <span className="text-[#f32053]"> Events </span>{' '}
         </h1>
       </div>
-      <div className="m-12 lg:m-[160px] lg:mt-12 lg:mb-0 lg:pl-16 lg:pr-16">
+      <div className="m-12 lg:m-[300px] lg:mt-12 lg:mb-0 lg:pl-16 lg:pr-16">
         <Swiper
           className="m-8 rounded-xl "
           loop={true}
