@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import t4 from '../assets/t4.svg';
 
-import classes from '../LandingSlide/LandingSlide.module.css';
-import styles from './AboutTeam.module.css';
+// import classes from '../LandingSlide/LandingSlide.module.css';
+import classes from './AboutTeam.module.css';
 
 import Model from '../threeJs/teamModels';
 
@@ -29,7 +29,7 @@ const AboutTeam = () => {
             If you&apos;d like to meet and connect with the people behind C.P.M.C., visit our team
             page by clicking the button below.
           </p>
-          <div className={styles.teambtn}>
+          <div className='lg:pt-8 lg:mr-auto lg:pl-8  '>
             <Link href="/team">
               <button className={classes.btn}>
                 <span className={classes.span}>OUR TEAM</span>
