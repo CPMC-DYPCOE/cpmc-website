@@ -29,7 +29,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={classes.menu}>
-            Menu
+            <h1>Menu</h1>
             <ul className={classes.footer_links}>
               <li className={classes.link_container}>
                 <Link href="/">
