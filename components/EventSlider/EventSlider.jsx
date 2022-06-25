@@ -16,9 +16,9 @@ import { Zoom, Autoplay, Navigation, Pagination } from 'swiper';
 
 const EventSlider = () => {
   return (
-    <>     
+    <>
       <div className="pt-20 lg:pl-32 lg:pr-32">
-        <h1 className="font-Paytone lg:text-4xl text-xl font-semibold text-white ml-12 lg:ml-0">
+        <h1 className="ml-12 font-Paytone text-xl font-semibold text-white lg:ml-0 lg:text-4xl">
           Upcomming <span className="text-[#f32053]"> Events </span>{' '}
         </h1>
       </div>
@@ -28,7 +28,7 @@ const EventSlider = () => {
           loop={true}
           centeredSlides={true}
           spaceBetween={30}
-          slidesPerView={1}
+          slidesPerView={1.5}
           pagination={{
             dynamicBullets: true,
             clickable: true
@@ -42,24 +42,18 @@ const EventSlider = () => {
         >
           <SwiperSlide className="justify-center   rounded-xl  text-center">
             <div>
-           
-            <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
-            
+              <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="justify-center  rounded-xl   text-center">
-          <div>
-           
-            <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
-           
+            <div>
+              <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
             </div>
           </SwiperSlide>
 
           <SwiperSlide className="justify-center  rounded-xl   text-center">
-          <div>
-           
-            <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
-           
+            <div>
+              <Image alt="eventImage1" src={image1} objectFit="cover" className="rounded-xl" />
             </div>
           </SwiperSlide>
         </Swiper>
