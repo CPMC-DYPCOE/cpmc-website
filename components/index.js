@@ -7,6 +7,7 @@ export { default as Vision } from './Vision';
 export { default as JoinClub } from './JoinClub';
 export { default as AboutTeam } from './AboutTeam/AboutTeam';
 export { default as TimeLines } from './TimeLines/TimeLines';
+export { default as MastersTalk } from './MastersTalk/MastersTalk';
 export { default as Mission } from './Mission/Mission';
 export { default as JoinPage } from './JoinPage/JoinPage';
 export { default as TeamPage } from './TeamPage/TeamPage';

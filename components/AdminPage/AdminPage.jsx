@@ -4,6 +4,7 @@ import classes from './AdminPage.module.css';
 const AdminPage = () => {
   const [students, setStudents] = useState([]);
   const [contacts, setContacts] = useState([]);
+  const [event1, setEvent1] = useState([]);
 
   useEffect(() => {
     try {
@@ -15,6 +16,7 @@ const AdminPage = () => {
           console.log(data);
           setContacts(data.contacts);
           setStudents(data.students);
+          setEvent1(data.event1);
         });
     } catch (error) {
       console.log(error);
@@ -77,6 +79,26 @@ const AdminPage = () => {
                   {atCoderId && <a href={atCoderId}>AtCoder</a>}
                   {hackerRankId && <a href={hackerRankId}>HackerRank</a>}
                   {hackerEarthId && <a href={hackerEarthId}>HackerEarth</a>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className={classes.inner_block}>
+          <h1 className={classes.heading}>
+            Masters<span className={classes.red}> Talk</span>
+          </h1>
+          <div className={classes.data_item2}>
+            {event1.map((student) => {
+              const { _id, name, branch, email, phoneNumber, academicYear, question } = student;
+              return (
+                <div key={_id} className={classes.data_items2}>
+                  <h1>Name: {name}</h1>
+                  <h3>Branch: {branch}</h3>
+                  <h3>Email: {email}</h3>
+                  <p>Phone Number: {phoneNumber}</p>
+                  <p>Academic Year: {academicYear}</p>
+                  <p>Question: {question}</p>
                 </div>
               );
             })}

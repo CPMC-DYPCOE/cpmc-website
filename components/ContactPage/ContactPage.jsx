@@ -60,7 +60,13 @@ const Contact = () => {
             </div>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Email address*</h1>
-              <input className={classes.input} placeholder="Email" ref={emailInput} required />
+              <input
+                className={classes.input}
+                placeholder="Email"
+                ref={emailInput}
+                type="email"
+                required
+              />
             </div>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Message*</h1>
