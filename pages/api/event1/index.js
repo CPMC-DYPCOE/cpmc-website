@@ -9,9 +9,35 @@ const handler = async (req, res) => {
 
   await connectDB();
   try {
-    const { name, email, phoneNumber, academicYear, branch, question, question2 } = req.body;
+    const {
+      name,
+      email,
+      phoneNumber,
+      academicYear,
+      branch,
+      question,
+      question2,
+      aim,
+      gre,
+      tofel,
+      gate,
+      ielts,
+      duolingo
+    } = req.body;
 
-    if (!validateEmail(email) || !name || !phoneNumber || !academicYear || !branch) {
+    if (
+      !validateEmail(email) ||
+      !name ||
+      !phoneNumber ||
+      !academicYear ||
+      !branch ||
+      !aim ||
+      !gre ||
+      !tofel ||
+      !gate ||
+      !ielts ||
+      !duolingo
+    ) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
@@ -22,7 +48,13 @@ const handler = async (req, res) => {
       academicYear,
       branch,
       question,
-      question2
+      question2,
+      aim,
+      gre,
+      tofel,
+      gate,
+      ielts,
+      duolingo
     });
 
     await newEvent1.save();

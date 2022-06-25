@@ -14,6 +14,12 @@ const MasterTalk = () => {
   const branchInput = useRef();
   const questionInput = useRef();
   const question2Input = useRef();
+  const greInput = useRef();
+  const tofelInput = useRef();
+  const gateInput = useRef();
+  const ieltsInput = useRef();
+  const duolingoInput = useRef();
+  const aimInput = useRef();
 
   const submitFormHandler = async (e) => {
     e.preventDefault();
@@ -27,7 +33,13 @@ const MasterTalk = () => {
           branch: branchInput.current.value,
           academicYear: academicYearInput.current.value,
           question: questionInput.current.value,
-          question2: question2Input.current.value
+          question2: question2Input.current.value,
+          gre: greInput.current.value,
+          tofel: tofelInput.current.value,
+          gate: gateInput.current.value,
+          ielts: ieltsInput.current.value,
+          duolingo: duolingoInput.current.value,
+          aim: aimInput.current.value
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -54,6 +66,12 @@ const MasterTalk = () => {
     academicYearInput.current.value = '';
     questionInput.current.value = '';
     question2Input.current.value = '';
+    greInput.current.value = '';
+    tofelInput.current.value = '';
+    gateInput.current.value = '';
+    ieltsInput.current.value = '';
+    duolingoInput.current.value = '';
+    aimInput.current.value = '';
   };
 
   return (
@@ -65,7 +83,7 @@ const MasterTalk = () => {
           <br /> <span className={classes.red}> Masters&apos; Talk</span>
         </h1>
         <p className={classes.para}>Fill out the form below to register for the event.</p>
-        <div className={classes.form}>
+        <form className={classes.form} autocomplete="on">
           <div className={classes.input_container}>
             <label className={classes.input_label}>
               Name<span className={classes.mandatory}>*</span>
@@ -76,7 +94,14 @@ const MasterTalk = () => {
             <label className={classes.input_label}>
               Email<span className={classes.mandatory}>*</span>
             </label>
-            <input className={classes.input} placeholder="rahulsharma@gmail.com" ref={emailInput} />
+            <input
+              className={classes.input}
+              placeholder="rahulsharma@gmail.com"
+              type="email"
+              autocomplete="on"
+              autocompletetype="email"
+              ref={emailInput}
+            />
           </div>
           <div className={classes.input_container}>
             <label className={classes.input_label}>
@@ -96,6 +121,7 @@ const MasterTalk = () => {
               <option className={classes.option}>BE</option>
             </select>
           </div>
+
           <div className={classes.input_container}>
             <label className={classes.input_label}>
               Branch<span className={classes.mandatory}>*</span>
@@ -112,6 +138,68 @@ const MasterTalk = () => {
               <option>Instrumental Engineering</option>
             </select>
           </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Are you aiming for further studies?<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={aimInput}>
+              <option>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+              <option>Maybe</option>
+            </select>
+          </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Do you know about GRE?<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={greInput}>
+              <option>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Do you know about TOFEL?<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={tofelInput}>
+              <option>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Do you know about GATE?<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={gateInput}>
+              <option>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Do you know about IELTS?<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={ieltsInput}>
+              <option>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div className={classes.input_container}>
+            <label className={classes.input_label}>
+              Do you know about DUOLINGO?<span className={classes.mandatory}>*</span>
+            </label>
+            <select className={classes.input} ref={duolingoInput}>
+              <option>Choose one</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
           <div className={classes.input_container}>
             <label className={classes.input_label}>
               Question for Abroad Studies!<span className={classes.mandatory}></span>
@@ -139,7 +227,7 @@ const MasterTalk = () => {
             </div>
             <span>SUBMIT</span>
           </button>
-        </div>
+        </form>
       </div>
     </>
   );

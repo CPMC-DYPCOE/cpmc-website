@@ -25,10 +25,36 @@ const Event1Schema = new Schema({
     required: true
   },
   question: {
-    type: String
+    type: String,
+    required: true
   },
   question2: {
-    type: String
+    type: String,
+    required: true
+  },
+  aim: {
+    type: String,
+    required: true
+  },
+  gre: {
+    type: String,
+    required: true
+  },
+  tofel: {
+    type: String,
+    required: true
+  },
+  gate: {
+    type: String,
+    required: true
+  },
+  ielts: {
+    type: String,
+    required: true
+  },
+  duolingo: {
+    type: String,
+    required: true
   }
 });
 
