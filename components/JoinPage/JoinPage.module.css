@@ -10,6 +10,7 @@
   padding: 100px;
   padding-top: 80px;
 }
+
 .heading {
   color: #ffffff;
   line-height: 1.4;
@@ -24,6 +25,7 @@
 .input option {
   background-color: #0f263a;
 }
+
 .mandatory {
   color: #f32053;
 }
@@ -34,6 +36,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .para {
   color: #ffffff;
   font-size: 28px;
@@ -43,6 +46,7 @@
   width: 90%;
   text-align: center;
 }
+
 .form {
   display: flex;
   justify-content: center;
@@ -53,12 +57,14 @@
   padding-top: 0;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
 .input_container {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .input_label {
   font-weight: 100;
   font-size: 32px;
@@ -68,6 +74,7 @@
   padding-left: 18px;
   font-family: 'Open Sans', sans-serif;
 }
+
 .input {
   all: unset;
   background-color: #00000000;
@@ -124,6 +131,13 @@
   transform: scale(0.95);
 }
 
+.linkBtn {
+  color: white;
+  margin: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
 @keyframes fly-1 {
   from {
     transform: translateY(0.1em);
@@ -138,22 +152,28 @@
   .join_section {
     padding: 20px;
   }
+
   .heading {
     padding-left: 10px;
     font-size: 32px;
   }
+
   .para {
     font-size: 16px;
   }
+
   .input {
     width: 80vw;
   }
+
   .input_label {
     font-size: 20px;
   }
+
   .btn {
     font-size: 18px;
   }
+
   .form {
     padding: 10px;
   }

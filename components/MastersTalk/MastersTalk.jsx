@@ -19,7 +19,9 @@ const MasterTalk = () => {
   const ieltsInput = useRef();
   const duolingoInput = useRef();
   const aimInput = useRef();
-  const [registered, setRegistered] = useState(true)
+  const [registered, setRegistered] = useState(false)
+
+  const linkMap = ['https://chat.whatsapp.com/KAXnEQpSSYe2L1hOltO1it', 'https://chat.whatsapp.com/LIOZnHu3iXf5GGnPzw5epu']
 
   const submitFormHandler = async (e) => {
     e.preventDefault();
@@ -52,6 +54,7 @@ const MasterTalk = () => {
       if (res.ok) {
         toast.success('Submitted successfully');
         setRegistered(true);
+
       }
       const data = await res.json();
       console.log(data);
@@ -214,16 +217,22 @@ const MasterTalk = () => {
   }
 
   const WhatsApp = () => {
-    return (
-      <h1 className={classes.input_label}>
-        Registered Successfully! join our whatsApp group for further instructions:
+    return (<>
+
+      <h1 className={classes.input_label} style={{ textAlign: 'center', fontWeight: 'bold' }}>
+        Registered Successfully!!!
       </h1>
+      <p>join our whatsApp group for further instructions:</p>
+      <br />
+      <a href={linkMap[1]} style={{ backgroundColor: '#ff2863' }} className={classes.linkBtn}>WhatsApp Group 1</a>
+      <a href={linkMap[0]} style={{ backgroundColor: '#4073ff' }} className={classes.linkBtn}>WhatsApp Group 2</a>
+    </>
     )
   }
 
   return (
     <>
-      <div className={classes.join_section}>
+      <div className={classes.join_section} style={{ color: 'white' }}>
         <ToastContainer />
         {registered === true ? (<WhatsApp />) : (<Form />)}
       </div>
