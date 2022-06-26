@@ -23,10 +23,7 @@ const MasterTalk = () => {
   const [registered, setRegistered] = useState(false);
   const [visit, setVisit] = useState(0);
 
-  const linkMap = [
-    'https://chat.whatsapp.com/KAXnEQpSSYe2L1hOltO1it',
-    'https://chat.whatsapp.com/LIOZnHu3iXf5GGnPzw5epu'
-  ];
+  const linkMap = ['https://chat.whatsapp.com/LIOZnHu3iXf5GGnPzw5epu'];
 
   const submitFormHandler = async (e) => {
     e.preventDefault();
@@ -249,11 +246,11 @@ const MasterTalk = () => {
         <br />
         <a
           href={linkMap[1]}
-          style={{ backgroundColor: '#ff2863' }}
+          style={{ backgroundColor: '#635f60' }}
           onClick={buttonToggle}
           className={classes.linkBtn}
         >
-          WhatsApp Group 1
+          WhatsApp Group 1(Full)
         </a>
         <a
           href={linkMap[0]}
