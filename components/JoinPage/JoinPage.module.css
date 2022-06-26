@@ -207,9 +207,8 @@
   -moz-appearance: none;
 }
 
-  .linkBtn {
-    display: block;
-    width: 60%;
-    margin: 20px auto;
-  }
+.linkBtn {
+  display: block;
+  width: 60%;
+  margin: 20px auto;
 }
