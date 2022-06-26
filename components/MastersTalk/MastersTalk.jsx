@@ -228,7 +228,7 @@ const MasterTalk = () => {
       <h1 className={classes.input_label} style={{ textAlign: 'center', fontWeight: 'bold' }}>
         Registered Successfully!!!
       </h1>
-      <p style={{ textAlign: 'center' }}>Join any one of our WhatsApp group for further updates:</p>
+      <p style={{ textAlign: 'center' }}>Join our WhatsApp group for further updates</p>
       <br />
       <a href={linkMap[1]} style={{ backgroundColor: '#ff2863' }} onClick={buttonToggle} className={classes.linkBtn}>WhatsApp Group 1</a>
       {/* {visit === true ? () : (<a href={linkMap[0]} style={{ backgroundColor: '#4073ff' }} onClick={buttonToggle} className={classes.linkBtn}>WhatsApp Group 2</a>)} */}

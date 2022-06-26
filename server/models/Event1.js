@@ -26,11 +26,11 @@ const Event1Schema = new Schema({
   },
   question: {
     type: String,
-    required: true
+    // required: true
   },
   question2: {
     type: String,
-    required: true
+    // required: true
   },
   aim: {
     type: String,
