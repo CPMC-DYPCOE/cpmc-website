@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/zoom';
 
-import abcde from './Images/registration.png';
+import abcde from './Images/registration.jpg';
 import classes from './eventSlider.module.css';
 import 'swiper/css/effect-cards';
 import { Zoom, Autoplay, Navigation, Pagination } from 'swiper';
@@ -23,9 +23,9 @@ const EventSlider = () => {
         </h1>
       </div>
       <div className={classes.eventmaindiv}>
-        <div className={classes.imagediv}>
-          <Image alt="eventabcde" src={abcde} objectFit="cover" className={classes.posterimage} />
-        </div>
+        <Link href="events" className={classes.imagediv}>
+          <Image style={{ cursor: 'pointer' }} alt="eventabcde" src={abcde} objectFit="cover" className={classes.posterimage} />
+        </Link>
         <div className={classes.eventcontentdiv}>
           <h1>
             MASTERS&apos; <span>TALK</span>

@@ -54,7 +54,7 @@ const MasterTalk = () => {
       if (res.ok) {
         toast.success('Submitted successfully');
         setRegistered(true);
-
+        window.scrollTo(0, 0);
       }
       const data = await res.json();
       console.log(data);

@@ -8,30 +8,36 @@
   position: relative;
   margin-left: 50px;
 }
+
 .eventcontentdiv {
-    width: 50%;
+  width: 50%;
   padding: 0 50px;
 }
-.posterimage {
+
+.posterimage {}
+
+.eventcontentdiv {
+  margin: auto;
+  margin-left: 60px;
 }
-.eventcontentdiv{
-    margin: auto;
-    margin-left: 60px;
-}
+
 .eventcontentdiv h1 {
   font-size: 2.7vw;
   text-align: left;
   color: white;
   font-weight: 800;
 }
+
 .eventcontentdiv h1 span {
   color: #f32053;
 }
-.eventcontentdiv h3{
-    font-size: 1.4vw;
-    color: #fff;
-    padding:20px 0 ;
+
+.eventcontentdiv h3 {
+  font-size: 1.4vw;
+  color: #fff;
+  padding: 20px 0;
 }
+
 .btn {
   position: relative;
   /* margin: auto; */
@@ -84,6 +90,7 @@
   width: 100%;
   background: #f32053;
 }
+
 .btn:hover span {
   color: #fff;
 }
@@ -96,29 +103,35 @@
 .btn:active {
   transform: scale(0.95);
 }
+
 @media screen and (max-width: 768px) {
-    .eventmaindiv{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left:0;
-    }
-    .imagediv{
-        width: 100%;
-        margin-left: 0;
-    }
-    .eventcontentdiv{
-        width: 100%;
-        margin-left:0;
-        padding:20px 0;
-    }
-    .eventcontentdiv h1{
-        font-size: 1.5rem;
-    }
-    .eventcontentdiv h3{
-        font-size: 0.9rem;
-    }
-    .btn {
-      margin-top: 10px;
-    }
+  .eventmaindiv {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .imagediv {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .eventcontentdiv {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px 0;
+  }
+
+  .eventcontentdiv h1 {
+    font-size: 1.5rem;
+  }
+
+  .eventcontentdiv h3 {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
 }
