@@ -77,12 +77,12 @@
 }
 
 .input {
-  all: unset;
+  /* all: unset; */
   background-color: #00000000;
   border: 1px solid #d9d9d9;
   padding: 10px 20px;
   width: 50vw;
-  height: 5vh;
+  height: 9vh;
   color: #a8a8a8;
   border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -190,4 +190,19 @@
   .form {
     padding: 10px;
   }
+}
+.input {
+  text-align: left;
+}
+
+.input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+.input:-moz-placeholder {
+  text-align: left;
+}
+.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
