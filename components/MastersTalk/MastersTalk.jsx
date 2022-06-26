@@ -19,7 +19,7 @@ const MasterTalk = () => {
   const ieltsInput = useRef();
   const duolingoInput = useRef();
   const aimInput = useRef();
-  const [registered, setRegistered] = useState(true)
+  const [registered, setRegistered] = useState(false)
   const [visit, setVisit] = useState(0)
 
   const linkMap = ['https://chat.whatsapp.com/KAXnEQpSSYe2L1hOltO1it', 'https://chat.whatsapp.com/LIOZnHu3iXf5GGnPzw5epu']
