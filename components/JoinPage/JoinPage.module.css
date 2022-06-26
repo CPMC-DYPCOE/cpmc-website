@@ -146,9 +146,9 @@
 
 .linkBtn {
   color: white;
-  margin: 10px;
   padding: 5px 15px;
   border-radius: 5px;
+  margin: 10px;
 }
 
 @keyframes fly-1 {
@@ -205,4 +205,11 @@
 .input {
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+  .linkBtn {
+    display: block;
+    width: 60%;
+    margin: 20px auto;
+  }
 }
