@@ -9,6 +9,7 @@ import gmail from '../assets/Social/gmail.svg';
 import logo from '../assets/CPMC.svg';
 import insta from '../assets/instagram-new.png';
 import linkd from '../assets/linkedin.png';
+import github from '../assets/github.png';
 
 const Footer = () => {
   return (
@@ -81,6 +82,20 @@ const Footer = () => {
                     <div className={classes.name}>Instagram</div>
                     <div className={classes.icon}>
                       <Image alt="xyz" src={insta} width={24} height={24} layout="fixed" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL"
+              >
+                <div className={classes.instagram}>
+                  <div className={classes.innerinsta}>
+                    <div className={classes.name}>GitHub</div>
+                    <div className={classes.icon}>
+                      <Image alt="xyz" src={github} width={24} height={24} layout="fixed" />
                     </div>
                   </div>
                 </div>
