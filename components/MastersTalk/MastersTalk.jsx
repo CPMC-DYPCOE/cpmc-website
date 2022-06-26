@@ -1,5 +1,4 @@
-import React from 'react';
-import { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import classes from '../JoinPage/JoinPage.module.css';
 import Link from 'next/link';
 import { ToastContainer } from 'react-toastify';
@@ -7,8 +6,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 const MasterTalk = () => {
-  const nameInput = useRef();
-  const emailInput = useRef();
+  const nameInput = useRef('');
+  const emailInput = useRef('');
   const phoneNumberInput = useRef();
   const academicYearInput = useRef();
   const branchInput = useRef();
@@ -20,6 +19,7 @@ const MasterTalk = () => {
   const ieltsInput = useRef();
   const duolingoInput = useRef();
   const aimInput = useRef();
+  const [registered, setRegistered] = useState(true)
 
   const submitFormHandler = async (e) => {
     e.preventDefault();
@@ -51,6 +51,7 @@ const MasterTalk = () => {
       }
       if (res.ok) {
         toast.success('Submitted successfully');
+        setRegistered(true);
       }
       const data = await res.json();
       console.log(data);
@@ -59,173 +60,172 @@ const MasterTalk = () => {
       // const err = await error.json();
       // console.log(error);
     }
-    nameInput.current.value = '';
-    emailInput.current.value = '';
-    phoneNumberInput.current.value = '';
-    branchInput.current.value = '';
-    academicYearInput.current.value = '';
-    questionInput.current.value = '';
-    question2Input.current.value = '';
-    greInput.current.value = '';
-    tofelInput.current.value = '';
-    gateInput.current.value = '';
-    ieltsInput.current.value = '';
-    duolingoInput.current.value = '';
-    aimInput.current.value = '';
   };
+
+  const Form = () => {
+    return <><h1 className={classes.heading}>
+      Register for the
+      <br /> <span className={classes.red}> Masters&apos; Talk</span>
+    </h1>
+      <p className={classes.para}>Fill out the form below to register for the event.</p>
+      <form className={classes.form}>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Name<span className={classes.mandatory}>*</span>
+          </label>
+          <input className={classes.input} placeholder="Rahul Sharma" ref={nameInput} />
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Email<span className={classes.mandatory}>*</span>
+          </label>
+          <input
+            className={classes.input}
+            placeholder="rahulsharma@gmail.com"
+            type="email"
+            ref={emailInput}
+          />
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Phone Number<span className={classes.mandatory}>*</span>
+          </label>
+          <input className={classes.input} placeholder="0123456789" ref={phoneNumberInput} />
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Academic Year<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={academicYearInput}>
+            <option className={classes.option}>Choose your year</option>
+            <option className={classes.option}>FE</option>
+            <option className={classes.option}>SE</option>
+            <option className={classes.option}>TE</option>
+            <option className={classes.option}>BE</option>
+          </select>
+        </div>
+
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Branch<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={branchInput}>
+            <option>Choose your branch</option>
+            <option>Computer Engineering</option>
+            <option>IT Engineering</option>
+            <option>AI&DS Engineering</option>
+            <option>Mechanical Engineering</option>
+            <option>Robotics and Automation</option>
+            <option>ENTC Engineering</option>
+            <option>Civil Engineering</option>
+            <option>Instrumental Engineering</option>
+          </select>
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Are you aiming for further studies?<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={aimInput}>
+            <option>Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+          </select>
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Do you know about GRE?<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={greInput}>
+            <option>Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Do you know about TOFEL?<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={tofelInput}>
+            <option>Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Do you know about GATE?<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={gateInput}>
+            <option>Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Do you know about IELTS?<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={ieltsInput}>
+            <option>Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Do you know about DUOLINGO?<span className={classes.mandatory}>*</span>
+          </label>
+          <select className={classes.input} ref={duolingoInput}>
+            <option>Choose one</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Question for Abroad Studies!<span className={classes.mandatory}></span>
+          </label>
+          <input className={classes.input} placeholder="Your question..." ref={questionInput} />
+        </div>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>
+            Question on Gate Examination!<span className={classes.mandatory}></span>
+          </label>
+          <input className={classes.input} placeholder="Your question..." ref={question2Input} />
+        </div>
+
+        <button className={classes.btn} onClick={submitFormHandler}>
+          <div className={classes['svg-wrapper-1']}>
+            <div className={classes['svg-wrapper']}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  fill="currentColor"
+                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <span>SUBMIT</span>
+        </button>
+      </form></>
+  }
+
+  const WhatsApp = () => {
+    return (
+      <h1 className={classes.input_label}>
+        Registered Successfully! join our whatsApp group for further instructions:
+      </h1>
+    )
+  }
 
   return (
     <>
       <div className={classes.join_section}>
         <ToastContainer />
-        <h1 className={classes.heading}>
-          Register for the
-          <br /> <span className={classes.red}> Masters&apos; Talk</span>
-        </h1>
-        <p className={classes.para}>Fill out the form below to register for the event.</p>
-        <form className={classes.form}>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Name<span className={classes.mandatory}>*</span>
-            </label>
-            <input className={classes.input} placeholder="Rahul Sharma" ref={nameInput} />
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Email<span className={classes.mandatory}>*</span>
-            </label>
-            <input
-              className={classes.input}
-              placeholder="rahulsharma@gmail.com"
-              type="email"
-              ref={emailInput}
-            />
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Phone Number<span className={classes.mandatory}>*</span>
-            </label>
-            <input className={classes.input} placeholder="0123456789" ref={phoneNumberInput} />
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Academic Year<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={academicYearInput}>
-              <option className={classes.option}>Choose your year</option>
-              <option className={classes.option}>FE</option>
-              <option className={classes.option}>SE</option>
-              <option className={classes.option}>TE</option>
-              <option className={classes.option}>BE</option>
-            </select>
-          </div>
-
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Branch<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={branchInput}>
-              <option>Choose your branch</option>
-              <option>Computer Engineering</option>
-              <option>IT Engineering</option>
-              <option>AI&DS Engineering</option>
-              <option>Mechanical Engineering</option>
-              <option>Robotics and Automation</option>
-              <option>ENTC Engineering</option>
-              <option>Civil Engineering</option>
-              <option>Instrumental Engineering</option>
-            </select>
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Are you aiming for further studies?<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={aimInput}>
-              <option>Choose one</option>
-              <option>Yes</option>
-              <option>No</option>
-              <option>Maybe</option>
-            </select>
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Do you know about GRE?<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={greInput}>
-              <option>Choose one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Do you know about TOFEL?<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={tofelInput}>
-              <option>Choose one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Do you know about GATE?<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={gateInput}>
-              <option>Choose one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Do you know about IELTS?<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={ieltsInput}>
-              <option>Choose one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Do you know about DUOLINGO?<span className={classes.mandatory}>*</span>
-            </label>
-            <select className={classes.input} ref={duolingoInput}>
-              <option>Choose one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Question for Abroad Studies!<span className={classes.mandatory}></span>
-            </label>
-            <input className={classes.input} placeholder="Your question..." ref={questionInput} />
-          </div>
-          <div className={classes.input_container}>
-            <label className={classes.input_label}>
-              Question on Gate Examination!<span className={classes.mandatory}></span>
-            </label>
-            <input className={classes.input} placeholder="Your question..." ref={question2Input} />
-          </div>
-
-          <button className={classes.btn} onClick={submitFormHandler}>
-            <div className={classes['svg-wrapper-1']}>
-              <div className={classes['svg-wrapper']}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path
-                    fill="currentColor"
-                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <span>SUBMIT</span>
-          </button>
-        </form>
+        {registered === true ? (<WhatsApp />) : (<Form />)}
       </div>
     </>
   );
