@@ -13,7 +13,7 @@ const EventsPage = () => {
         <h1 className={styles.title}>
           Upcoming <span className={styles.red}> Events</span>
         </h1>
-        <div className={styles.event1}>
+        <div className={styles.event}>
           <div className={styles.blue_box}></div>
           <div className={styles.content_container}>
             <div className={styles.content}>

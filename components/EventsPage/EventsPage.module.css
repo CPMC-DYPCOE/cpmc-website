@@ -2,12 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 50px;
+  padding: 50px 50px;
   padding-top: 0px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   flex-direction: column;
+  margin: 50px 0;
 }
+
 .title {
   font-family: 'Paytone One';
   text-align: center;
@@ -16,8 +17,9 @@
   margin-bottom: 80px;
   white-space: nowrap;
 }
+
 .event {
-  width: 80vw;
+  width: 60vw;
   height: auto;
   /* padding: 20px 30px; */
   border-radius: 20px;
@@ -27,6 +29,7 @@
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
 .event1 {
   width: 65vw;
   height: auto;
@@ -38,6 +41,7 @@
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
 .blue_box {
   width: 100%;
   background-color: #407bff;
@@ -45,6 +49,7 @@
   border-radius: 20px 20px 0 0;
   margin-bottom: 40px;
 }
+
 .content_container {
   display: flex;
   justify-content: space-between;
@@ -53,6 +58,7 @@
   padding-bottom: 20px;
   /* flex-direction: column; */
 }
+
 .content {
   display: flex;
   justify-content: flex-start;
@@ -60,65 +66,81 @@
   flex-direction: column;
   row-gap: 20px;
 }
+
 .name {
   font-size: 40px;
   font-family: 'Paytone One';
   font-weight: 200;
   color: #fff;
 }
+
 .red {
   color: #f32053;
 }
+
 .blue {
   color: #407bff;
 }
+
 .desc,
 .date {
   color: #fff;
   font-size: 16px;
 }
+
 .imp {
   font-family: 'Paytone One';
   color: #fff;
 }
+
 .link {
   color: #f32053;
   transition: all 0.3s ease-in;
 }
+
 .link:hover {
   color: #407bff;
 }
+
 @media screen and (max-width: 768px) {
   .event {
     width: 90vw;
     height: auto;
   }
+
   .event1 {
     width: 90vw;
   }
+
   .title {
     font-size: 30px;
     margin-bottom: 40px;
   }
+
   .content_container {
     padding-bottom: 40px;
   }
+
   .content {
     row-gap: 10px;
   }
+
   .name {
     font-size: 30px;
     white-space: nowrap;
   }
+
   .xyz {
     display: none;
   }
 }
+
 @media screen and (max-width: 400px) {
   .title {
     font-size: 20px;
     margin-bottom: 20px;
   }
+
   .name {
     font-size: 20px;
     white-space: nowrap;

@@ -19,7 +19,8 @@ const MasterTalk = () => {
   const ieltsInput = useRef();
   const duolingoInput = useRef();
   const aimInput = useRef();
-  const [registered, setRegistered] = useState(false)
+  const [registered, setRegistered] = useState(true)
+  const [visit, setVisit] = useState(0)
 
   const linkMap = ['https://chat.whatsapp.com/KAXnEQpSSYe2L1hOltO1it', 'https://chat.whatsapp.com/LIOZnHu3iXf5GGnPzw5epu']
 
@@ -177,7 +178,7 @@ const MasterTalk = () => {
         </div>
         <div className={classes.input_container}>
           <label className={classes.input_label}>
-            Do you know about DUOLINGO?<span className={classes.mandatory}>*</span>
+            Do you know about DUOLINGO English test?<span className={classes.mandatory}>*</span>
           </label>
           <select className={classes.input} ref={duolingoInput}>
             <option>Choose one</option>
@@ -216,16 +217,20 @@ const MasterTalk = () => {
       </form></>
   }
 
+  const buttonToggle = () => {
+    setVisit((visit + 1) % 2)
+  }
+
   const WhatsApp = () => {
     return (<>
 
       <h1 className={classes.input_label} style={{ textAlign: 'center', fontWeight: 'bold' }}>
         Registered Successfully!!!
       </h1>
-      <p>join our whatsApp group for further instructions:</p>
+      <p style={{ textAlign: 'center' }}>Join any one of our WhatsApp group for further updates:</p>
       <br />
-      <a href={linkMap[1]} style={{ backgroundColor: '#ff2863' }} className={classes.linkBtn}>WhatsApp Group 1</a>
-      <a href={linkMap[0]} style={{ backgroundColor: '#4073ff' }} className={classes.linkBtn}>WhatsApp Group 2</a>
+      <a href={linkMap[1]} style={{ backgroundColor: '#ff2863' }} onClick={buttonToggle} className={classes.linkBtn}>WhatsApp Group 1</a>
+      {/* {visit === true ? () : (<a href={linkMap[0]} style={{ backgroundColor: '#4073ff' }} onClick={buttonToggle} className={classes.linkBtn}>WhatsApp Group 2</a>)} */}
     </>
     )
   }
