@@ -63,6 +63,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
 }
 
 .input_label {
@@ -82,10 +83,22 @@
   padding: 10px 20px;
   width: 50vw;
   height: 5vh;
-  color: #fff;
+  color: #a8a8a8;
   border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.select_input {
+  all: unset;
+  background-color: #00000000;
+  border: 1px solid #d9d9d9;
+  padding: 25px 20px;
+  color: #a8a8a8;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  width: 95%;
 }
 
 .btn {

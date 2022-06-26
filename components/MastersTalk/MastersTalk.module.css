@@ -1,0 +1,23 @@
+.whatsappdiv {
+    margin: 10% 0;
+    align-items: center;
+    text-align: center;
+}
+
+.whatsappdiv h1 {
+    color: #4BB543;
+}
+
+.whatsappdiv p {
+    margin-bottom: 20px;
+}
+
+.whatsappdiv a {
+    padding: 10px;
+}
+
+@media screen and (max-width: 508px) {
+    .whatsappdiv {
+        margin: 60% 0;
+    }
+}

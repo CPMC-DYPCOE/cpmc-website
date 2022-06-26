@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import classes from '../JoinPage/JoinPage.module.css';
+import secondclasses from './MastersTalk.module.css'
 import Link from 'next/link';
 import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
@@ -191,13 +192,13 @@ const MasterTalk = () => {
           <label className={classes.input_label}>
             Question for Abroad Studies!<span className={classes.mandatory}></span>
           </label>
-          <input className={classes.input} placeholder="Your question..." ref={questionInput} />
+          <textarea className={classes.input} placeholder="Your question..." ref={questionInput} />
         </div>
         <div className={classes.input_container}>
           <label className={classes.input_label}>
             Question on Gate Examination!<span className={classes.mandatory}></span>
           </label>
-          <input className={classes.input} placeholder="Your question..." ref={question2Input} />
+          <textarea className={classes.input} placeholder="Your question..." ref={question2Input} />
         </div>
 
         <button className={classes.btn} onClick={submitFormHandler}>
@@ -222,7 +223,7 @@ const MasterTalk = () => {
   }
 
   const WhatsApp = () => {
-    return (<>
+    return (<div className={secondclasses.whatsappdiv}>
 
       <h1 className={classes.input_label} style={{ textAlign: 'center', fontWeight: 'bold' }}>
         Registered Successfully!!!
@@ -231,7 +232,7 @@ const MasterTalk = () => {
       <br />
       <a href={linkMap[1]} style={{ backgroundColor: '#ff2863' }} onClick={buttonToggle} className={classes.linkBtn}>WhatsApp Group 1</a>
       {/* {visit === true ? () : (<a href={linkMap[0]} style={{ backgroundColor: '#4073ff' }} onClick={buttonToggle} className={classes.linkBtn}>WhatsApp Group 2</a>)} */}
-    </>
+    </div>
     )
   }
 
