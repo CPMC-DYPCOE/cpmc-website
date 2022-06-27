@@ -241,7 +241,7 @@ const MasterTalk = () => {
           Registerations are closed now!
         </h1>
         <p style={{ textAlign: 'center' }}>
-          Join any one of our WhatsApp group for further updates
+          Join any one of our WhatsApp group for further Events.
         </p>
         <br />
         <a
