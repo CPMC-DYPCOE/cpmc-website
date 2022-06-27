@@ -1,7 +1,6 @@
 const { validateEmail } = require('../../../utils/utils');
 const Contact = require('../../../server/models/Contact');
 const connectDB = require('../../../server/db/connect');
-
 const handler = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(400).json({ message: 'Invalid request' });
