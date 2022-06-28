@@ -16,6 +16,17 @@
         "test",
         "review"
       ]
+    },
+    {
+      "login": "Nishant-Bhosale",
+      "name": "Nishant Bhosale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77777251?v=4",
+      "profile": "https://nishant-bhosale.netlify.app/",
+      "contributions": [
+        "maintenance",
+        "test",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
