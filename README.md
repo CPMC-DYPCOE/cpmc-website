@@ -1,4 +1,7 @@
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <h1 align="center"> <font size="5"> <b> CPMC - DYPCOE 🔥</b></h1>
 
 
@@ -64,5 +67,18 @@ LICENSED UNDER THE MIT LICENSE
 ## Contributors 🌟
 <a href="https://github.com/CPMC-DYPCOE/Website/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=CPMC-DYPCOE/Website" />
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Spyware007"><img src="https://avatars.githubusercontent.com/u/89961974?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OM GAWANDE</b></sub></a><br /><a href="#maintenance-Spyware007" title="Maintenance">🚧</a> <a href="#projectManagement-Spyware007" title="Project Management">📆</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Spyware007" title="Tests">⚠️</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/pulls?q=is%3Apr+reviewed-by%3ASpyware007" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 </a>
 <p align="right">(<a href="#top">back to top</a>)</p>
