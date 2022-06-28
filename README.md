@@ -60,13 +60,8 @@ See the [open issues](https://github.com/CPMC-DYPCOE/Website/issues) for a full 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/cpmc_dypcoe/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/cpmc-dypcoe/)
 
-## License 📄
-
-LICENSED UNDER THE MIT LICENSE
-
 ## Contributors 🌟
-<a href="https://github.com/CPMC-DYPCOE/Website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=CPMC-DYPCOE/Website" />
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
