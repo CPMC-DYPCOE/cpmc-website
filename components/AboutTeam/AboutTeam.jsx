@@ -29,7 +29,7 @@ const AboutTeam = () => {
             If you&apos;d like to meet and connect with the people behind C.P.M.C., visit our team
             page by clicking the button below.
           </p>
-          <div className='lg:pt-8 lg:mr-auto lg:pl-8  '>
+          <div className="lg:mr-auto lg:pt-8 lg:pl-8  ">
             <Link href="/team">
               <button className={classes.btn}>
                 <span className={classes.span}>OUR TEAM</span>

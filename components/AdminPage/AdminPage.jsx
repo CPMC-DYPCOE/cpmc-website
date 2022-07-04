@@ -36,7 +36,8 @@ const AdminPage = () => {
           password: passwordInput.current.value
         }),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'x-auth-token': ''
         }
       });
 
@@ -47,6 +48,7 @@ const AdminPage = () => {
       //   toast.success('Submitted successfully');
       // }
       const data = await res.json();
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -60,7 +62,7 @@ const AdminPage = () => {
           Admin <span className={classes.red}>Page</span>
         </h1>
       </div>
-      <div className={classes.form}>
+      <form className={classes.form} onSubmit={submitFormHandler}>
         <div className={classes.input_container}>
           <h1 className={classes.inputheading}>Email address*</h1>
           <input
@@ -78,6 +80,7 @@ const AdminPage = () => {
             placeholder="Enter your Password"
             ref={passwordInput}
             required
+            type="password"
           />
         </div>
 
@@ -95,7 +98,7 @@ const AdminPage = () => {
           </div>
           <span>SUBMIT</span>
         </button>
-      </div>
+      </form>
     </>
   );
 };
