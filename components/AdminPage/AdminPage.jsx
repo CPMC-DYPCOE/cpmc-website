@@ -23,7 +23,7 @@ const AdminPage = () => {
       alert('Something Went Wrong');
     }
   }, []);
-
+  let a = 0;
   return (
     <>
       <h1 className={classes.admin}>Admin</h1>
@@ -84,7 +84,7 @@ const AdminPage = () => {
             })}
           </div>
         </div>
-        <div className={classes.inner_block}>
+        {/* <div className={classes.inner_block}>
           <h1 className={classes.heading}>
             Masters<span className={classes.red}> Talk</span>
           </h1>
@@ -106,6 +106,7 @@ const AdminPage = () => {
                 duolingo,
                 aim
               } = student;
+              a += 1;
               return (
                 <div key={_id} className={classes.data_items2}>
                   <h1>Name: {name}</h1>
@@ -125,8 +126,84 @@ const AdminPage = () => {
               );
             })}
           </div>
-        </div>
+          <div>
+            {event1.map((student) => {
+              const { question, question2 } = student;
+              return (
+                <>
+                  <div>Abroad studies {question}</div>
+                  <div>GATE {question2}</div>
+                </>
+              );
+            })}
+          </div>
+          <div>
+            <h1>FE</h1>
+            {event1.map((student) => {
+              const { name, phoneNumber, email, academicYear, question, question2 } = student;
+              return (
+                <>
+                  {academicYear === 'FE' && (
+                    <div>
+                      :{name} : {email} :{phoneNumber}:
+                    </div>
+                  )}
+                </>
+              );
+            })}
+            <h1>SE</h1>
+            {event1.map((student) => {
+              const { name, phoneNumber, email, academicYear, question, question2 } = student;
+              return (
+                <>
+                  {academicYear === 'SE' && (
+                    <div>
+                      :{name} : {email} :{phoneNumber}:
+                    </div>
+                  )}
+                </>
+              );
+            })}
+            <h1>TE</h1>
+            {event1.map((student) => {
+              const { name, email, phoneNumber, academicYear, question, question2 } = student;
+              return (
+                <>
+                  {academicYear === 'TE' && (
+                    <div>
+                      :{name} : {email} :{phoneNumber}:
+                    </div>
+                  )}
+                </>
+              );
+            })}
+            <h1>BE</h1>
+            {event1.map((student) => {
+              const { name, email, phoneNumber, academicYear, question, question2 } = student;
+              return (
+                <>
+                  {academicYear === 'BE' && (
+                    <div>
+                      :{name} : {email} :{phoneNumber}:
+                    </div>
+                  )}
+                </>
+              );
+            })}
+
+            <h1>mails</h1>
+            {event1.map((student) => {
+              const { email } = student;
+              return (
+                <>
+                  <div>{email}</div>
+                </>
+              );
+            })}
+          </div>
+        </div> */}
       </div>
+      <h1>{a}</h1>
     </>
   );
 };
