@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <h1 align="center"> <font size="5"> <b> CPMC - DYPCOE 🔥</b></h1>
 
@@ -82,6 +82,7 @@ See the [open issues](https://github.com/CPMC-DYPCOE/Website/issues) for a full 
     <td align="center"><a href="https://github.com/Spyware007"><img src="https://avatars.githubusercontent.com/u/89961974?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OM GAWANDE</b></sub></a><br /><a href="#maintenance-Spyware007" title="Maintenance">🚧</a> <a href="#projectManagement-Spyware007" title="Project Management">📆</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Spyware007" title="Tests">⚠️</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/pulls?q=is%3Apr+reviewed-by%3ASpyware007" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://nishant-bhosale.netlify.app/"><img src="https://avatars.githubusercontent.com/u/77777251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nishant Bhosale</b></sub></a><br /><a href="#maintenance-Nishant-Bhosale" title="Maintenance">🚧</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Nishant-Bhosale" title="Tests">⚠️</a> <a href="#ideas-Nishant-Bhosale" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/Sourabh-Bharale"><img src="https://avatars.githubusercontent.com/u/89797467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sourabh-Bharale</b></sub></a><br /><a href="#maintenance-Sourabh-Bharale" title="Maintenance">🚧</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Sourabh-Bharale" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/Sapna127"><img src="https://avatars.githubusercontent.com/u/91309280?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sapna Kul</b></sub></a><br /><a href="#content-Sapna127" title="Content">🖋</a> <a href="#design-Sapna127" title="Design">🎨</a> <a href="#maintenance-Sapna127" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
