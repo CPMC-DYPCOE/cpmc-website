@@ -1,7 +1,3 @@
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <h1 align="center"> <font size="5"> <b> CPMC - DYPCOE 🔥</b></h1>
 
 
@@ -91,4 +87,3 @@ See the [open issues](https://github.com/CPMC-DYPCOE/Website/issues) for a full 
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 </a>
-<p align="right">(<a href="#top">back to top</a>)</p>
