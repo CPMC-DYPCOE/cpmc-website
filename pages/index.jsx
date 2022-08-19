@@ -28,7 +28,7 @@ DYPCOE, Pune."
       </Head>
 
       <LandingSlide />
-      <EventSlider/>
+      {/* <EventSlider/> */}
       <TimeLines />
       <Mission />
       <ClubOperations />

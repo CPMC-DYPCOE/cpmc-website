@@ -18,7 +18,7 @@ const LandingSlide = () => {
         </div>
         <div className="justify-center  pt-16 text-2xl font-semibold md:text-4xl lg:pb-[2.5rem] lg:text-7xl">
           <div>
-            <h1 className="text-center text-[#89BAEE]">Competetive Programming</h1>
+            <h1 className="text-center text-[#89BAEE]">Competitive Programming</h1>
             <h1 className="pt-4 text-center text-white">and Mentorship Club.</h1>
             <h1 className="pt-4 text-center text-[#89BAEE]">
               DYPCOE, <span className="text-center text-white"> Pune.</span>{' '}
