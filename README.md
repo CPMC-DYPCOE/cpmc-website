@@ -64,7 +64,6 @@ See the [open issues](https://github.com/CPMC-DYPCOE/Website/issues) for a full 
 
 ## Community 👥
 
-[![Discord](https://img.shields.io/badge/%3CServer%3E-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8n7gStkGyG)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/cpmc_dypcoe/)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/cpmc-dypcoe/)
 
