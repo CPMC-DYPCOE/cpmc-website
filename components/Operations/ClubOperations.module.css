@@ -50,7 +50,7 @@
   padding: 1em;
   color: white;
   font-size: 1.8em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .scroll {
@@ -64,7 +64,7 @@
 .smallTitle {
   font-size: 1.5em;
   color: #89baee;
-  font-family: 'Open Sans';
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
@@ -72,7 +72,7 @@
 .title {
   font-size: 50px;
   color: white;
-  font-family: 'Paytone One';
+  font-family: 'Passion One', cursive;
   margin-bottom: 0.5em;
 }
 
@@ -83,7 +83,7 @@
 .context {
   font-size: 1.3em;
   color: white;
-  font-family: 'open sans';
+  font-family: 'Inter', sans-serif;
   margin-bottom: 0.8em;
 }
 

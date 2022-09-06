@@ -10,7 +10,7 @@
 }
 
 .title {
-  font-family: 'Paytone One';
+  font-family: 'Passion One', cursive;
   text-align: center;
   font-size: 50px;
   color: #fff;
@@ -69,7 +69,7 @@
 
 .name {
   font-size: 40px;
-  font-family: 'Paytone One';
+  font-family: 'Passion One', cursive;
   font-weight: 200;
   color: #fff;
 }
@@ -86,10 +86,11 @@
 .date {
   color: #fff;
   font-size: 16px;
+  font-family: 'Inter', sans-serif;
 }
 
 .imp {
-  font-family: 'Paytone One';
+  font-family: 'Inter', sans-serif;
   color: #fff;
 }
 

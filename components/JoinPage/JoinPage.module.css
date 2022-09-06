@@ -17,8 +17,8 @@
   margin-top: 20px;
   font-size: 50px;
   font-weight: 900;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Paytone One', sans-serif;
+  font-family: 'Passion one', cursive;
+  /* font-family: 'Paytone One', sans-serif; */
   text-align: center;
 }
 
@@ -40,7 +40,6 @@
 .para {
   color: #ffffff;
   font-size: 28px;
-
   margin-top: 50px;
   margin-bottom: 90px;
   width: 90%;

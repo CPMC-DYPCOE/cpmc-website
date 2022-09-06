@@ -14,7 +14,7 @@
   margin-bottom: 95px;
   padding: 0 100px;
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   flex-basis: 50%;
   text-align: center;
 }
@@ -35,8 +35,7 @@
   font-size: 50px;
   font-weight: 600;
   color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Paytone One', sans-serif;
+  font-family: 'Passion One', cursive;
 }
 
 .red {
@@ -50,7 +49,7 @@
   margin-bottom: 95px;
   padding: 0 100px;
   width: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .team {
@@ -58,15 +57,14 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .heading2 {
   margin: 50px 0 100px 0;
   color: #fff;
   font-size: 50px;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Paytone One', sans-serif;
+  font-family: 'Passion One', cursive;
   font-weight: 600;
   text-transform: uppercase;
 }
