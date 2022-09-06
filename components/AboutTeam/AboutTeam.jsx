@@ -12,6 +12,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
 const AboutTeam = () => {
+  
   return (
     <>
       <div className="flex flex-col lg:flex-row">
