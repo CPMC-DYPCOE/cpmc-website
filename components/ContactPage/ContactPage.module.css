@@ -25,6 +25,7 @@
   margin-bottom: 20px;
   font-weight: 700;
 }
+
 .para {
   color: #ffffff;
   margin-top: 1.7em;
@@ -33,7 +34,7 @@
   text-align: center;
 }
 .contact {
-  padding: 0;
+  padding-top:2rem;
   width: 100vw;
   display: flex;
   justify-content: space-between;
