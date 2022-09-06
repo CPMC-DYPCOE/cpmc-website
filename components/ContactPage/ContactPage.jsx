@@ -56,6 +56,7 @@ const Contact = () => {
           <div className={classes.form}>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Name*</h1>
+
               <input className={classes.input} placeholder="Full Name" ref={nameInput} required />
             </div>
             <div className={classes.input_container}>
