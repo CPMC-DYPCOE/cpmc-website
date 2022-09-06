@@ -1,4 +1,4 @@
-<h1 align="center"> <font size="5"> <b> CPMC - DYPCOE 🔥</b></h1>
+<h1 align="center"> <font size="5"> <b>🔥 CPMC - DYPCOE 🔥</b></h1>
 
 
 [![Issues](https://img.shields.io/github/issues/CPMC-DYPCOE/Website)](#issues)
