@@ -60,6 +60,38 @@ const TeamPage = () => {
             <Card m={m} key={i} />
           ))}
         </div>
+        <h1 className={classes.heading2}>
+          TEAM <span className={classes.red}> SPANKARS</span>
+        </h1>
+        <div className={classes.team}>
+          {DATA2.map((m, i) => (
+            <Card m={m} key={i} />
+          ))}
+        </div>
+        <h1 className={classes.heading2}>
+          TEAM <span className={classes.red}> SINISTERS</span>
+        </h1>
+        <div className={classes.team}>
+          {DATA2.map((m, i) => (
+            <Card m={m} key={i} />
+          ))}
+        </div>
+        <h1 className={classes.heading2}>
+          TEAM <span className={classes.red}> ENDEAVOURS</span>
+        </h1>
+        <div className={classes.team}>
+          {DATA2.map((m, i) => (
+            <Card m={m} key={i} />
+          ))}
+        </div>
+        <h1 className={classes.heading2}>
+          TEAM <span className={classes.red}> LANNISTERS</span>
+        </h1>
+        <div className={classes.team}>
+          {DATA2.map((m, i) => (
+            <Card m={m} key={i} />
+          ))}
+        </div>
       </div>
     </>
   );

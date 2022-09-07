@@ -40,7 +40,7 @@
   background: #b1dae7;
   width: 45px;
   height: 45px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out ;
 }
 
 .btn .span {
@@ -63,7 +63,7 @@
   stroke: #fff;
   stroke-width: 2;
   transform: translateX(-5px);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover:before {
@@ -87,7 +87,7 @@
   top: 67vh;
   left: 48vw;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
 }
 .down_arrow:hover {
   transform: translateY(2px) scale(0.8);
