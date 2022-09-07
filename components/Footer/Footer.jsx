@@ -107,9 +107,7 @@ const Footer = () => {
         <div className={classes.footer_copyrights}>
           <div className={classes.footer_ruler}></div>
           <p className={classes.footer_copyright}>
-            © CPMC-DYPCOE 2022
-            <br />
-            All Rights Reserved.
+            © CPMC-DYPCOE 2022   All Rights Reserved.
           </p>
         </div>
       </div>
