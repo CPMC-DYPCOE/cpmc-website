@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
 
+
 .join_section {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: flex-start;
