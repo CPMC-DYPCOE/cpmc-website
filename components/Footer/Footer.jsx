@@ -63,42 +63,47 @@ const Footer = () => {
             Connect <span className="text-[#f32053]"> With Us</span>
             <div className={classes.socialmedia}>
               <Link
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.linkedin.com/company/cpmc-dypcoe/"
+                // target = {'_blank'}
+                // rel="noreferrer"
+                href={"https://www.linkedin.com/company/cpmc-dypcoe/"}
+              // href={"https://www.linkedin.com/company/cpmc-dypcoe/"}
               >
-                <div className={classes.linkedin}>
-                  <div className={classes.innerlink}>
-                    <div className={classes.name}>Linkedin</div>
-                    <div className={classes.icon}>
-                      <Image alt="xyz" src={linkd} width={24} height={24} layout="fixed" />
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className={classes.linkedin}>
+                    <div className={classes.innerlink}>
+                      <div className={classes.name}>Linkedin</div>
+                      <div className={classes.icon}>
+                        <Image alt="xyz" src={linkd} width={24} height={24} layout="fixed" />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </Link>
-              <Link target="_blank" rel="noreferrer" href="https://www.instagram.com/cpmc_dypcoe/">
-                <div className={classes.instagram}>
-                  <div className={classes.innerinsta}>
-                    <div className={classes.name}>Instagram</div>
-                    <div className={classes.icon}>
-                      <Image alt="xyz" src={insta} width={24} height={24} layout="fixed" />
+              <Link href="https://www.instagram.com/cpmc_dypcoe/">
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className={classes.instagram}>
+                    <div className={classes.innerinsta}>
+                      <div className={classes.name}>Instagram</div>
+                      <div className={classes.icon}>
+                        <Image alt="xyz" src={insta} width={24} height={24} layout="fixed" />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </Link>
               <Link
-                target="_blank"
-                rel="noreferrer"
                 href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL"
               >
-                <div className={classes.instagram}>
-                  <div className={classes.innerinsta}>
-                    <div className={classes.name}>GitHub</div>
-                    <div className={classes.icon}>
-                      <Image alt="xyz" src={github} width={24} height={24} layout="fixed" />
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className={classes.instagram}>
+                    <div className={classes.innerinsta}>
+                      <div className={classes.name}>GitHub</div>
+                      <div className={classes.icon}>
+                        <Image alt="xyz" src={github} width={24} height={24} layout="fixed" />
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
           </div>
@@ -107,9 +112,7 @@ const Footer = () => {
         <div className={classes.footer_copyrights}>
           <div className={classes.footer_ruler}></div>
           <p className={classes.footer_copyright}>
-            © CPMC-DYPCOE 2022
-            <br />
-            All Rights Reserved.
+            © CPMC-DYPCOE 2022   All Rights Reserved.
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
 
 .contact_section {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: flex-start;
@@ -35,7 +35,7 @@
 }
 .contact {
   padding-top:2rem;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
