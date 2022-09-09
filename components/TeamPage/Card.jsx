@@ -5,7 +5,7 @@ import linkedin from '../assets/linkedin.svg';
 import instagram from '../assets/instagram.svg';
 import github from '../assets/github.svg';
 
-const Card = ({ m }) => {
+const Card = ({m}) => {
   return (
     <>
       <div className={classes.card}>
