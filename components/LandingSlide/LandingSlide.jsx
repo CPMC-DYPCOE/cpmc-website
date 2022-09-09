@@ -37,7 +37,7 @@ const LandingSlide = () => {
             </Link> */}
 
             <Link href="#timeline">
-              <div className="relative top-[20px]  flex items-center justify-center transition delay-150 duration-300 hover:-translate-x-1 hover:scale-75 lg:top-[60px]">
+              <div className="relative top-[20px]  flex items-center justify-center transition delay-150 duration-300 hover:-translate-y-1 hover:scale-75 lg:top-[60px]">
                 <Image src={down_arrow} alt="down" width={50} height={50} />
               </div>
             </Link>
