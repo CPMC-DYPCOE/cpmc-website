@@ -22,7 +22,7 @@ const EventsPage = () => {
               </h1>
               <p className={styles.desc}>A talk with the Masters for Masters</p>
               <p className={styles.date}>
-                DATE - <span className={styles.blue}>4/July/2022</span>
+                DATE - <span className={styles.blue}>Not Defined</span>
               </p>
               <span className={styles.link}>
                 <Link href="/masterstalk">
