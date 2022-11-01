@@ -19,6 +19,12 @@
   white-space: nowrap;
 }
 
+.event_content_section{
+  display:flex;
+  gap:2rem;
+  flex-wrap: wrap;
+}
+
 .event {
   width: 60vw;
   height: auto;
