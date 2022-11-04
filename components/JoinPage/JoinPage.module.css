@@ -32,7 +32,7 @@
 }
 
 .red {
-  display: flex;
+  /* display: flex; */
   color: #f32053;
   justify-content: center;
   align-items: center;
@@ -41,12 +41,41 @@
 .para {
   color: #ffffff;
   font-size: 28px;
-  margin-top: 50px;
-  margin-bottom: 90px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   width: 90%;
   text-align: center;
 }
+.btn {
+  position: relative;
+  margin: auto;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 30px;
+  background: none;
+  display: flex;
+  background: #f32053;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
 
+.btn:hover {
+  background: #ffffff;
+  color: #f32053;
+}
+
+
+.btn:active {
+  transform: scale(0.95);
+}
 .form {
   display: flex;
   justify-content: center;
@@ -101,48 +130,6 @@
   width: 95%;
 }
 
-.btn {
-  font-family: inherit;
-  font-size: 20px;
-  background: #f32053;
-  color: white;
-  padding: 0.7em 1em;
-  padding-left: 0.9em;
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  overflow: hidden;
-  transition: all 0.2s;
-}
-
-.btn span {
-  display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn svg {
-  display: block;
-  transform-origin: center center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.btn:hover .svg-wrapper {
-  animation: fly-1 0.6s ease-in-out infinite alternate;
-}
-
-.btn:hover svg {
-  transform: translateX(1.2em) rotate(45deg) scale(1.1);
-}
-
-.btn:hover span {
-  transform: translateX(5em);
-}
-
-.btn:active {
-  transform: scale(0.95);
-}
 
 .linkBtn {
   color: white;

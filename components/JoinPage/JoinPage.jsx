@@ -77,12 +77,18 @@ const JoinPage = () => {
     <>
       <div className={classes.join_section}>
         <ToastContainer />
-        {registraion ? (
+        { registraion ? (
           <>
             <h1 className={classes.heading}>
-              Registrations <br /> <span className={classes.red}> Closed</span>
+              Registrations <span className={classes.red}>Closed</span>
             </h1>
             <p className={classes.para}>Currently registrations are closed</p>
+            <p className={classes.para}>YOU CAN JOIN OUR WHATSAPP GROUP FOR FURTHER UPDATES </p>
+            <Link href="https://chat.whatsapp.com/KAXnEQpSSYe2L1hOltO1it" target={'_blank'}>
+              <button className={classes.btn}>
+                JOIN WHATSAPP GROUP
+              </button>
+            </Link>
           </>
         ) : (
           <>
