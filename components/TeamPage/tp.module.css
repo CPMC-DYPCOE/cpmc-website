@@ -50,6 +50,7 @@
   padding: 0 100px;
   width: 100%;
   font-family: 'Inter', sans-serif;
+  text-align: center;
 }
 
 .team {
@@ -58,6 +59,14 @@
   align-items: center;
   flex-wrap: wrap;
   font-family: 'Inter', sans-serif;
+}
+.imgDiv{
+  padding: 2rem 0rem;
+  margin-bottom: 1rem;
+}
+.image{
+  width: 70%;
+  border-radius: 2rem;
 }
 
 .heading2 {

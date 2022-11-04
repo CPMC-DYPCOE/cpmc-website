@@ -21,23 +21,23 @@
   align-items: center;
   cursor: pointer;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 .line1 {
   background-color: #407bff;
-  width: 56px;
+  width: 40px;
   height: 4px;
   transition: all 0.3s ease-in-out;
 }
 .line2 {
   background-color: #fff;
-  width: 28px;
+  width: 20px;
   height: 4px;
   transition: all 0s ease-in-out;
 }
 .line3 {
   background-color: #407bff;
-  width: 56px;
+  width: 40px;
   height: 4px;
   transition: all 0.3s ease-in-out;
 }

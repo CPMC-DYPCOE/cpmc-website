@@ -1,6 +1,6 @@
 .nav_links {
   background-color: #091e32;
-  width: 100vw;
+  width: 100%;
   height: calc(93vh - 20px);
   display: flex;
   justify-content: space-between;

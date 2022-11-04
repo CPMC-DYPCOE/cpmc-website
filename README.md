@@ -1,11 +1,11 @@
 <h1 align="center"> <font size="5"> <b>🔥 CPMC - DYPCOE 🔥</b></h1>
 
 
-[![Issues](https://img.shields.io/github/issues/CPMC-DYPCOE/Website)](#issues)
+<!-- [![Issues](https://img.shields.io/github/issues/CPMC-DYPCOE/Website)](#issues)
 [![forks](https://img.shields.io/github/forks/CPMC-DYPCOE/Website)](#forks)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)
 ![stars](https://img.shields.io/badge/Stars-%E2%AD%90-blue)
-
+ -->
 <!-- PROJECT LOGO -->
 <br />
 <div align = "center">
@@ -51,38 +51,5 @@ uncharted territory.
  
 ## Glimpse ✨
 
-### Website : [Click here](https://cpmc-dypcoe.vercel.app/)
-
-
-  
-## Contributing 💡
-
-All suggestions and ideas are welcomed. Please don't hesitate to open an [pull request](https://github.com/AmeyaJain-25/Awesome-React-Stepper/pulls) or [issue](https://github.com/CPMC-DYPCOE/Website/issues).
-
-See the [open issues](https://github.com/CPMC-DYPCOE/Website/issues) for a full list of proposed features (and known issues).
-
-
-## Community 👥
-
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/cpmc_dypcoe/)
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/cpmc-dypcoe/)
-
-## Contributors 🌟
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Spyware007"><img src="https://avatars.githubusercontent.com/u/89961974?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OM GAWANDE</b></sub></a><br /><a href="#maintenance-Spyware007" title="Maintenance">🚧</a> <a href="#projectManagement-Spyware007" title="Project Management">📆</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Spyware007" title="Tests">⚠️</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/pulls?q=is%3Apr+reviewed-by%3ASpyware007" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://nishant-bhosale.netlify.app/"><img src="https://avatars.githubusercontent.com/u/77777251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nishant Bhosale</b></sub></a><br /><a href="#maintenance-Nishant-Bhosale" title="Maintenance">🚧</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Nishant-Bhosale" title="Tests">⚠️</a> <a href="#ideas-Nishant-Bhosale" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/Sourabh-Bharale"><img src="https://avatars.githubusercontent.com/u/89797467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sourabh-Bharale</b></sub></a><br /><a href="#maintenance-Sourabh-Bharale" title="Maintenance">🚧</a> <a href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL/commits?author=Sourabh-Bharale" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/Sapna127"><img src="https://avatars.githubusercontent.com/u/91309280?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sapna Kul</b></sub></a><br /><a href="#content-Sapna127" title="Content">🖋</a> <a href="#design-Sapna127" title="Design">🎨</a> <a href="#maintenance-Sapna127" title="Maintenance">🚧</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+### Website : [Click here](https://www.cpmc-dypcoe.in/)
 </a>
