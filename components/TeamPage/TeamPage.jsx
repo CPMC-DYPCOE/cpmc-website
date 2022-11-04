@@ -3,7 +3,7 @@ import classes from './tp.module.css';
 import Card from './Card';
 import mannu from '../assets/mannu.jpeg';
 
-import { DATA, DATA2, DATA3 } from '../assets/Team/Data/index';
+import { DATA, DATA2, spankars ,sinisters,lanisters,endeavours} from '../assets/Team/Data/index';
 
 const sirKaData = {
   name: 'Dr. Manish Sharma',
@@ -45,18 +45,10 @@ const TeamPage = () => {
           ))}
         </div>
         <h1 className={classes.heading2}>
-          Doubt-Solving <span className={classes.red}> TEAM</span>
+          OUR  <span className={classes.red}> COMMANDERS </span>
         </h1>
         <div className={classes.team}>
           {DATA2.map((m, i) => (
-            <Card m={m} key={i} />
-          ))}
-        </div>
-        <h1 className={classes.heading2}>
-          Management <span className={classes.red}> TEAM</span>
-        </h1>
-        <div className={classes.team}>
-          {DATA3.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>
@@ -64,7 +56,7 @@ const TeamPage = () => {
           TEAM <span className={classes.red}> SPANKARS</span>
         </h1>
         <div className={classes.team}>
-          {DATA2.map((m, i) => (
+          {spankars.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>
@@ -72,7 +64,7 @@ const TeamPage = () => {
           TEAM <span className={classes.red}> SINISTERS</span>
         </h1>
         <div className={classes.team}>
-          {DATA2.map((m, i) => (
+          {sinisters.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>
@@ -80,7 +72,7 @@ const TeamPage = () => {
           TEAM <span className={classes.red}> ENDEAVOURS</span>
         </h1>
         <div className={classes.team}>
-          {DATA2.map((m, i) => (
+          {endeavours.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>
@@ -88,7 +80,7 @@ const TeamPage = () => {
           TEAM <span className={classes.red}> LANNISTERS</span>
         </h1>
         <div className={classes.team}>
-          {DATA2.map((m, i) => (
+          {lanisters.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>

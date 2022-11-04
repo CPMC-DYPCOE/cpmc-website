@@ -20,21 +20,27 @@ const Card = ({m}) => {
         </div>
         <div className={classes.social_container}>
           <ul className={classes.social_links}>
+            {m.linkedin &&
             <li className={classes.link_container}>
               <a href={m.linkedin} className={classes.link} target="_blank" rel="noreferrer">
                 <Image alt="xyz" src={linkedin} width={40} height={40} />
               </a>
             </li>
+            }
+            {m.instagram &&
             <li className={classes.link_container}>
               <a href={m.instagram} className={classes.link} target="_blank" rel="noreferrer">
                 <Image alt="xyz" src={instagram} width={40} height={40} />
               </a>
             </li>
+            }
+            {m.github &&
             <li className={classes.link_container}>
               <a href={m.github} className={classes.link} target="_blank" rel="noreferrer">
                 <Image alt="xyz" src={github} width={40} height={40} />
               </a>
             </li>
+            }
           </ul>
         </div>
       </div>
