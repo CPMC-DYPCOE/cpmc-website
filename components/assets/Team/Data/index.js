@@ -22,7 +22,7 @@ import sukrut from './gunners/sukrut.jpg'
 import rasika from './gunners/rasika.jpg'
 import princeton from './gunners/princeton.jpg'
 import adityaBisht from './gunners/adityaBisht.jpg'
-import harshalRudra from './gunners/harshalRudra.jpg'
+import harshalRudra from './gunners/harshalrudra.jpg'
 import sanyog from './gunners/sanyog.JPG'
 import atharv from './gunners/atharvMuley.jpg'
 
