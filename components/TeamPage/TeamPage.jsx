@@ -2,8 +2,9 @@ import React from 'react';
 import classes from './tp.module.css';
 import Card from './Card';
 import mannu from '../assets/mannu.jpeg';
-
-import { DATA, DATA2, spankars ,sinisters,lanisters,endeavours} from '../assets/Team/Data/index';
+import team from '../assets/Team/Team.JPG'
+import { Admiral, commander, spankars ,sinisters,lanisters,endeavours, ViceAdmmiral} from '../assets/Team/Data/index';
+import Image from 'next/image';
 
 const sirKaData = {
   name: 'Dr. Manish Sharma',
@@ -18,6 +19,10 @@ const TeamPage = () => {
   return (
     <>
       <div className={classes.team_section}>
+        <div className={classes.imgDiv}>
+
+      <Image alt="xyz" className={classes.image} src={team} />
+        </div>
         <h1 className={classes.heading}>
           FACULTY <span className={classes.red}>CO-ORDINATOR</span>
         </h1>
@@ -40,15 +45,21 @@ const TeamPage = () => {
           have made significant progress in their coding journey.
         </p>
         <div className={classes.team}>
-          {DATA?.map((m, i) => (
+          {Admiral?.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>
+        <div className={classes.team}>
+          {ViceAdmmiral?.map((m, i) => (
+            <Card m={m} key={i} />
+          ))}
+        </div>
+        
         <h1 className={classes.heading2}>
           OUR  <span className={classes.red}> COMMANDERS </span>
         </h1>
         <div className={classes.team}>
-          {DATA2.map((m, i) => (
+          {commander.map((m, i) => (
             <Card m={m} key={i} />
           ))}
         </div>

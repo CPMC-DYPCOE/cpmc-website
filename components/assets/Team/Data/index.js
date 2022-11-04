@@ -1,4 +1,4 @@
-import aj from '../aj.jpeg';
+import aj from '../aj.png';
 import palash from '../palash.jpeg';
 import sarthak from '../sarthak.jpeg';
 import sourabh from '../sourabh.jpeg';
@@ -7,10 +7,8 @@ import nishant from '../nishant.jpeg';
 import mrunmayi from '../mrunmayi.jpeg';
 import sapna from '../sapna.jpeg';
 import shorya from '../shorya.JPG';
-import Spider from '../Spider.jpeg';
 import arya from '../arya.jpeg';
 import saurabh from '../saurabh.jpg';
-import adi from '../adi.jpeg';
 import pratikPatil from './gunners/pratikPatil.jpg'
 import aihrar from './gunners/aihrar.png'
 import rutik from './gunners/rutik.png'
@@ -26,7 +24,7 @@ import harshalRudra from './gunners/harshalrudra.jpg'
 import sanyog from './gunners/sanyog.JPG'
 import atharv from './gunners/atharvMuley.jpg'
 
-export const DATA = [
+export const Admiral = [
   {
     name: 'Aryan Jangid',
     position: 'Admiral',
@@ -36,6 +34,8 @@ export const DATA = [
     instagram: 'https://www.instagram.com/aj_aryan0007/',
     github: 'https://github.com/aryanjangid'
   },
+]
+  export const ViceAdmmiral=[
   {
     name: 'Palash Rambhia',
     position: 'Vice-Admiral',
@@ -64,7 +64,7 @@ export const DATA = [
     github: ''
   }
 ];
-export const DATA2 = [
+export const commander = [
   {
     name: 'Mrunmayi Shirke',
     position: 'Commander',
