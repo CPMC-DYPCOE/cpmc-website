@@ -113,13 +113,14 @@ export const DATA2 = [
     github: 'https://github.com/Sapna127'
   },
   {
-    name: 'Om Gawande',
+    name: 'Sanyog Mahajan',
     position: 'Commander',
-    class: '(TE-COMPUTER)',
-    photo: Spider,
-    linkedin: 'https://www.linkedin.com/in/om-gawande/',
-    instagram: 'https://www.instagram.com/_s_p_i_d_e_r_9480/',
-    github: 'https://github.com/Spyware007'
+    class: '(TE-IT)',
+    photo: sanyog,
+    linkedin: 'https://www.linkedin.com/in/sanyog-mahajan-8288a7204/',
+    instagram:'',
+    github:''
+
   },
   {
     name: 'Arya Gaikwad',
@@ -138,15 +139,6 @@ export const DATA2 = [
     linkedin: 'https://www.linkedin.com/in/saurabh-barde-5b617321a',
     instagram: 'https://www.instagram.com/saurabhbarde999/',
     github: 'https://github.com/SaurabhBarde-007'
-  },
-  {
-    name: 'Aditya Doiphode',
-    position: 'Commander',
-    class: '(TE-AI&DS)',
-    photo: adi,
-    linkedin: 'https://www.linkedin.com/in/aditya-doiphode-001/',
-    instagram: 'https://www.instagram.com/adi_doi_01/',
-    github: ''
   }
 ];
 
@@ -158,12 +150,12 @@ export const spankars = [
     photo: pratikPatil,
     linkedin: 'https://www.linkedin.com/in/pratikspatil007',
   },
-  {
-    name: 'Kritika',
-    position: 'Gunner',
-    class: '(SE-CS)',
-    photo: aj,
-  },
+  // {
+  //   name: 'Kritika',
+  //   position: 'Gunner',
+  //   class: '(SE-CS)',
+  //   photo: aj,
+  // },
   {
     name: 'Aihrar',
     position: 'Gunner',
@@ -195,12 +187,12 @@ export const sinisters = [
     photo: vedant,
     linkedin: 'https://www.linkedin.com/in/vedant-bodkhe-141822226',
   },
-  {
-    name: 'Jatin',
-    position: 'Gunner',
-    class: '(SE-CS)',
-    photo: aj,
-  },
+  // {
+  //   name: 'Jatin',
+  //   position: 'Gunner',
+  //   class: '(SE-CS)',
+  //   photo: aj,
+  // },
   {
     name: 'Atharv',
     position: 'Gunner',
@@ -217,13 +209,13 @@ export const sinisters = [
     photo: pranavJoshi,
     linkedin: 'https://www.linkedin.com/in/pranav-joshi-20a50821a',
   },
-  {
-    name: 'Suraj Rajaram',
-    position: 'Gunner',
-    class: '(TE-IT)',
-    photo: aj,
+  // {
+  //   name: 'Suraj Rajaram',
+  //   position: 'Gunner',
+  //   class: '(TE-IT)',
+  //   photo: aj,
 
-  },
+  // },
 ];
 
 export const endeavours = [
@@ -234,26 +226,26 @@ export const endeavours = [
     photo: ameyswami,
     linkedin: 'https://www.linkedin.com/in/amey-swami-978685237',
   },
-  {
-    name: 'Pravin',
-    position: 'Gunner',
-    class: '(SE-CS)',
-    photo: aj,
-  },
-  {
-    name: 'Saurabh Puri',
-    position: 'Gunner',
-    class: '(SE-IT)',
-    photo: aj,
+  // {
+  //   name: 'Pravin',
+  //   position: 'Gunner',
+  //   class: '(SE-CS)',
+  //   photo: aj,
+  // },
+  // {
+  //   name: 'Saurabh Puri',
+  //   position: 'Gunner',
+  //   class: '(SE-IT)',
+  //   photo: aj,
 
-  },
-  {
-    name: 'Shreyash',
-    position: 'Gunner',
-    class: '(TE-AI&DS)',
-    photo: aj,
+  // },
+  // {
+  //   name: 'Shreyash',
+  //   position: 'Gunner',
+  //   class: '(TE-AI&DS)',
+  //   photo: aj,
 
-  },
+  // },
   {
     name: 'Sukrut',
     position: 'Gunner',
@@ -295,12 +287,5 @@ export const lanisters = [
     linkedin: 'https://www.linkedin.com/in/harshalrudra',
 
   },
-  {
-    name: 'Sanyog',
-    position: 'Gunner',
-    class: '(TE-IT)',
-    photo: sanyog,
-    linkedin: 'https://www.linkedin.com/in/sanyog-mahajan-8288a7204/'
-
-  },
+  
 ];

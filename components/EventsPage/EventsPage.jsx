@@ -23,16 +23,16 @@ const EventsPage = () => {
     <>
       <div className={styles.event_section}>
         <h1 className={styles.title}> Upcoming <span className={styles.red}> Events</span></h1>
-        {upcomingEvent.map((data) => {
-          return (<UpcomingEventCard data={data} />)
+        {upcomingEvent.map((data,i) => {
+          return (<UpcomingEventCard data={data} key={i} />)
         })
         }
       </div>
       <div className={styles.event_section}>
         <h1 className={styles.title}>Past <span className={styles.red}> Events</span></h1>
         <div className={styles.event_content_section}>
-          {pastEvent.map((data) => {
-            return (<PastEventCard data={data} />)
+          {pastEvent.map((data,i) => {
+            return (<PastEventCard data={data} key={i}/>)
           })
           }
         </div>
