@@ -21,7 +21,7 @@ const TeamPage = () => {
       <div className={classes.team_section}>
         <div className={classes.imgDiv}>
 
-      <Image alt="xyz" className={classes.image} src={team} />
+      <Image alt="xyz" className={classes.image} src={team} height={2000} />
         </div>
         <h1 className={classes.heading}>
           FACULTY <span className={classes.red}>CO-ORDINATOR</span>

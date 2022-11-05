@@ -16,10 +16,12 @@ const PastEventCard = (props) => {
                         <h1 className={styles.name}> <span className={styles.red}>{props.data.name}</span></h1>
                     }
                     {props.data.subTitle ? <p className={styles.desc}>{props.data.subTitle}</p> : null}
-                    {props.data.heldOn ? <p className={styles.date}> Held On - <span className={styles.blue}>{props.data.heldOn}</span> </p> : null}
+                    <p style={{fontWeight:'600'}} className={styles.date}><span className={styles.red}>{props.data.heldOn}</span></p>
+
+                    {/* {props.data.heldOn ? <p className={styles.date}> Held On - <span className={styles.blue}>{props.data.heldOn}</span> </p> : null} */}
                     {props.data.ViewEventDetailsLink?
                     <span className={styles.link}>
-                        <Link href={props.data.ViewEventDetailsLink}>
+                        <Link href={{pathname:props.data.ViewEventDetailsLink}}>
                             <button className={classes.btn} style={{ margin: '0' }}>
                                 <span className={classes.span}>VIEW EVENT</span>
                                 <svg viewBox="0 0 13 10" height="10px" width="15px">

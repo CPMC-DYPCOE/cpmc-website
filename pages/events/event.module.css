@@ -1,0 +1,35 @@
+.title{
+    text-transform: capitalize;;
+}
+.eventImagesDiv{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:5rem
+}
+
+.image {
+    border-radius: 1rem;
+}
+
+.heading{
+    color: #f32053;
+  font-size: 60px;
+  font-style: bold;
+  font-weight: 800;
+  font-family: 'Passion One', cursive;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 768px){
+    .heading{
+        font-size: 10.5vw;
+    }
+    .eventImagesDiv{
+        margin:1rem
+    }
+}

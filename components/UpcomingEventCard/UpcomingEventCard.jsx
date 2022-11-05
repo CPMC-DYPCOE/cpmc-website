@@ -19,9 +19,11 @@ const UpcomingEventCard = (props) => {
                         }
                         {props.data.subTitle ? <p className={styles.desc}>{props.data.subTitle}</p> : null}
                         <div style={{display:'flex', gap:'2rem'}}>
-                        {props.data.toBeHeldOn ? <p className={styles.date}> DATE - <span className={styles.blue}>{props.data.toBeHeldOn}</span> </p> : null}
-                        {props.data.timing ? <p className={styles.date}> Timing - <span className={styles.blue}>{props.data.timing}</span> </p> : null}
+                            <p style={{fontWeight:'600'}} className={styles.date}><span className={styles.red}>{props.data.toBeHeldOn}</span> | <span className={styles.red}>{props.data.timing}</span></p>
+                        {/* {props.data.toBeHeldOn ? <p className={styles.date}> Held On - <span className={styles.blue}>{props.data.toBeHeldOn}</span> </p> : null}
+                        {props.data.timing ? <p className={styles.date}> Timing - <span className={styles.blue}>{props.data.timing}</span> </p> : null} */}
                         </div>
+                        {props.data.venue ? <p className={styles.date}> Venue - <span className={styles.blue}>{props.data.venue}</span> </p> : null}
                         {props.data.registrationLink?
                         <span className={styles.link}>
                             <Link href={props.data.registrationLink}>

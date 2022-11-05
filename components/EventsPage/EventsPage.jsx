@@ -7,16 +7,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import UpcomingEventCard from '../UpcomingEventCard/UpcomingEventCard';
 import PastEventCard from '../PastEventCard/PastEventCard';
-
+// import {useLocation} from 'react-router-dom'
+import { useRouter } from 'next/router';
 const EventsPage = () => {
 
+  // const url = window.location.toString();
+  // console.log(url);
+
+  const router = useRouter()
+  
+  // const location = useLocation();
+  console.log(router.route);
+
+   
+  // console.log('pathname', location.pathname);
+  // console.log('search', location.search);
+
+  console.log('asdfasd')
   const upcomingEvent = [
-    { name: 'Code Room', subTitle: 'Come code together learn together', toBeHeldOn: 'Monday to Friday', timing: '5pm', Venue: 'Classroom Number 1, A building', registrationLink: '', img: e1 }
+    { name: 'Masters-Talk Episode-2', subTitle: 'Competitive Programming Talk Show with Abhinav Awasti', toBeHeldOn: 'Novermber 6', timing: '4pm - 5pm', venue: 'MS Team', registrationLink: '/', img: e2 },
+    { name: 'Code Room', subTitle: 'Come code together learn together', toBeHeldOn: 'Monday to Friday', timing: '5pm - 7pm', venue: 'Classroom Number 1, A building', registrationLink: '', img: e1 }
   ]
 
   const pastEvent = [
-    { name: 'Masters', subTitle: 'A talk with the Masters for Masters', heldOn: '4/July/2022', timing: '', Venue: 'sfd', ViewEventDetailsLink: '' },
-    { name: 'Coding Competition', subTitle: 'Programming Competition, for students and professionals of DYPCOE Akurdi, Pune', heldOn: '5/June/2022', timing: '', Venue: 'Online', ViewEventDetailsLink: ''},
+    { name: 'Masters-Talk Episode-1', subTitle: 'A talk with the Masters for Masters', heldOn: 'July 4', timing: '', Venue: 'sfd', ViewEventDetailsLink: 'events/masters-talk' },
+    { name: 'Coding Competition', subTitle: 'Programming Competition, for students and professionals of DYPCOE Akurdi, Pune', heldOn: 'June 5', timing: '', Venue: 'Online', ViewEventDetailsLink: ''},
   ]
 
   return (

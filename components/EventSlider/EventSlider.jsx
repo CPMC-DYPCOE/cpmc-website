@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/zoom';
 
-import abcde from './Images/registration.jpg';
+import img from './Images/podcast.png';
 import classes from './eventSlider.module.css';
 import 'swiper/css/effect-cards';
 import { Zoom, Autoplay, Navigation, Pagination } from 'swiper';
@@ -24,16 +24,14 @@ const EventSlider = () => {
       </div>
       <div className={classes.eventmaindiv}>
         <Link href="events" className={classes.imagediv}>
-          <Image style={{ cursor: 'pointer' }} alt="eventabcde" src={abcde} objectFit="cover" className={classes.posterimage} />
+          <Image style={{ cursor: 'pointer' }} alt="eventabcde" src={img} objectFit="cover" className={classes.posterimage} />
         </Link>
         <div className={classes.eventcontentdiv}>
           <h1>
             MASTERS&apos; <span>TALK</span>
           </h1>
           <h3>
-            A Guide for further studies from seniors who have secured themselves a seat in top
-            universities all over the world and India. he talk will be about They will guide
-            students about how to start preparation
+          A talk on DSA and competitive programming.
           </h3>
           <Link href="events">
             <button className={classes.btn}>
