@@ -13,7 +13,7 @@ import mastersTalkPic5 from '../../components/assets/Events/MastersTalk/pic5-min
 import mastersTalkPic6 from '../../components/assets/Events/MastersTalk/pic6-min.JPG'
 import mastersTalkPic7 from '../../components/assets/Events/MastersTalk/pic7-min.JPG'
 
-const event = () => {
+const Event = () => {
     const router = useRouter()
     const event = router.query.event
 
@@ -38,9 +38,9 @@ const event = () => {
             <Navbar />
             <h1 className={style.heading}>{eventName}</h1>
             <div className={style.eventImagesDiv}>
-                {currentEvent.map((img) => {
+                {currentEvent.map((img,index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <Image className={style.image} src={img} alt={event} height={400} width={600} />
                         </div>
                     )
@@ -51,4 +51,4 @@ const event = () => {
     )
 }
 
-export default event
+export default Event
