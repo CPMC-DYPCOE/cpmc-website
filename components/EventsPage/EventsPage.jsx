@@ -11,7 +11,7 @@ import PastEventCard from '../PastEventCard/PastEventCard';
 const EventsPage = () => {
 
   const upcomingEvent = [
-    { name: 'Masters-Talk Episode-2', subTitle: 'Competitive Programming Talk Show with Abhinav Awasti', toBeHeldOn: 'Novermber 6', timing: '4pm - 5pm', venue: 'MS Team', registrationLink: '/', img: e2 },
+    { name: 'Masters-Talk Episode-2', subTitle: 'Competitive Programming Talk Show with Abhinav Awasti', toBeHeldOn: 'Novermber 6', timing: '4pm - 5pm', venue: 'MS Team', registrationLink:'https://forms.gle/BgSWqSGdFJb6uWXn7', img: e2 },
     { name: 'Code Room', subTitle: 'Come code together learn together', toBeHeldOn: 'Monday to Friday', timing: '5pm - 7pm', venue: 'Classroom Number 1, A building', registrationLink: '', img: e1 }
   ]
 
