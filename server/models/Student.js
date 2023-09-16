@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
-  firstName: {
+  name: {
     type: String,
     required: true
   },
@@ -54,7 +54,7 @@ const StudentSchema = new Schema({
     default: ''
   },
   events: [{
-    type: String, 
+    type: String,
   }]
 });
 
