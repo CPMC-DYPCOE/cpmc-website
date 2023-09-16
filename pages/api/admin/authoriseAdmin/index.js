@@ -2,12 +2,12 @@ const Admin = require('../../../../server/models/Admin.js');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-const verify = (req, res) => {
+const verify = async (req, res) => {
   console.log(req.headers);
   let token = req.headers['x-auth-token'];
+  console.log(token);
 
   token = token.split(' ')[1];
-
   if (!token) {
     res.status(400).json({ msg: 'No Authorization Access Denied' });
     return true;
@@ -15,6 +15,7 @@ const verify = (req, res) => {
 
   try {
     const decoded = jwt.verify(token, process.env.SECRET_KEY);
+    console.log(decoded)
     req.user = decoded.user;
   } catch (error) {
     res.status(500).json({ msg: 'Token is invalid' });

@@ -32,7 +32,6 @@ const handler = async (req, res) => {
   const { email, password } = req.body;
   if (req.method === 'POST') {
     try {
-      console.log(email);
       const admin = await Admin.findOne({ email });
       if (admin) return res.json({ message: 'Admin already exists' });
       console.log(admin);
@@ -42,8 +41,6 @@ const handler = async (req, res) => {
         email,
         password: hashedPassword
       });
-
-      console.log(newAdmin);
 
       await newAdmin.save();
 
@@ -60,7 +57,6 @@ const handler = async (req, res) => {
 
   try {
     const resData = await verify(req, res);
-    console.log(resData);
     if (resData) return;
     const students = await Student.find({});
     const contacts = await Contact.find({});
