@@ -1,20 +1,421 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import classes from "./AdminEditEvent.module.css"; 
+import classes from './AdminEditEvent.module.css';
 
 const AdminEditEvent = () => {
-    const router = useRouter();
-    const { event_id } = router.query;
+  const router = useRouter();
+  const { event_id } = router.query;
+  const [compToShow, setCompToShow] = useState('edit');
+  const [eventDetails, setEventDetails] = useState({
+    id: 'event3',
+    event_name: 'Mastertalk',
+    caption: 'Competitive Programming Talk Show with Abhinav Awasti',
+    description: 'We invited Competitive Programming Talk Show with Abhinav Awasti',
+    event_date: '2015-11-29 - 2018-11-29',
+    event_time: '4pm - 5pm',
+    venue: 'MS Teams',
+    is_completed: false,
+    images: ['', '', '', '']
+  });
+  const [formChanged, setFormChanged] = useState(false);
 
-    if(event_id==null) {
-        return <div>Invalid event id: {event_id}</div>
-    }
+  const RegisteredStudendData = [
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'A'
+    },
+    {
+      name: 'aryan',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2017',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2016',
+      branch: 'comp',
+      division: 'A'
+    },
+    {
+      name: 'prince',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2015',
+        branch: 'master',
+        division: 'A'
+      },
+      {
+        name: 'aryan',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2017',
+        branch: 'master',
+        division: 'B'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2016',
+        branch: 'comp',
+        division: 'A'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2015',
+        branch: 'master',
+        division: 'A'
+      },
+      {
+        name: 'aryan',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2017',
+        branch: 'master',
+        division: 'B'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2016',
+        branch: 'comp',
+        division: 'A'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2015',
+        branch: 'master',
+        division: 'A'
+      },
+      {
+        name: 'aryan',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2017',
+        branch: 'master',
+        division: 'B'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2016',
+        branch: 'comp',
+        division: 'A'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2015',
+        branch: 'master',
+        division: 'A'
+      },
+      {
+        name: 'aryan',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2017',
+        branch: 'master',
+        division: 'B'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2016',
+        branch: 'comp',
+        division: 'A'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2015',
+        branch: 'master',
+        division: 'A'
+      },
+      {
+        name: 'aryan',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2017',
+        branch: 'master',
+        division: 'B'
+      },
+      {
+        name: 'John',
+        email: 'john@gsda',
+        phoneNumber: '341234',
+        academicYear: '2016',
+        branch: 'comp',
+        division: 'A'
+      },
+  ];
+
+  useEffect(() => {
+    () =>
+      setEventDetails({
+        id: 'event3',
+        event_name: 'Mastertalk',
+        caption: 'Competitive Programming Talk Show with Abhinav Awasti',
+        description: 'We invited Competitive Programming Talk Show with Abhinav Awasti',
+        event_date: '2015-11-29 - 2018-11-29',
+        event_time: '4pm - 5pm',
+        venue: 'MS Teams',
+        is_completed: false,
+        images: ['', '', '', '']
+      });
+  }, []);
+
+  // Handle changes in the form inputs
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    // Update the eventDetails state based on the input type
+    setEventDetails((prevDetails) => ({
+      ...prevDetails,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+
+    // Mark the form as changed
+    setFormChanged(true);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Send the updated eventDetails data to your API or perform any desired action here
+    // Reset the formChanged state to false to disable the Save button
+    setFormChanged(false);
+    alert('changed');
+  };
+
+  const handleToggle = (section) => {
+    setCompToShow(section);
+  };
+
+  if (event_id == null) {
+    return <div>Invalid event id: {event_id}</div>;
+  }
+
+  if (eventDetails == null) {
+    return <div>No event details</div>;
+  }
+
+  const RegisteredStudent = ({ RegisteredStudendData }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [sortBy, setSortBy] = useState('name'); // Default sorting by name
+
+    const filteredStudents = RegisteredStudendData.filter((student) => {
+      // Filter based on the search term
+      return (
+        student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        student.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        student.phoneNumber.includes(searchTerm) ||
+        student.academicYear.includes(searchTerm) ||
+        student.branch.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        student.division.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+
+    const sortedStudents = filteredStudents.slice().sort((a, b) => {
+      // Sort based on the selected criteria
+      if (sortBy === 'name') {
+        return a.name.localeCompare(b.name);
+      } else if (sortBy === 'email') {
+        return a.email.localeCompare(b.email);
+      } else if (sortBy === 'phoneNumber') {
+        return a.phoneNumber.localeCompare(b.phoneNumber);
+      } else if (sortBy === 'academicYear') {
+        return a.academicYear.localeCompare(b.academicYear);
+      } else if (sortBy === 'branch') {
+        return a.branch.localeCompare(b.branch);
+      } else if (sortBy === 'division') {
+        return a.division.localeCompare(b.division);
+      }
+    });
+
+    const Card = ({ student }) => {
+      return (
+        <div className={classes.card}>
+          <div className={classes.cardItemDetail}>
+            <h1>Name:</h1>
+            <p>{student.name}</p>
+          </div>
+          <div className={classes.cardItemDetail}>
+            <h1>Email:</h1>
+            <p>{student.email}</p>
+          </div>
+          <div className={classes.cardItemDetail}>
+            <h1>Phone Number:</h1>
+            <p>{student.phoneNumber}</p>
+          </div>
+          <div className={classes.cardItemDetail}>
+            <h1>Academic Year:</h1>
+            <p>{student.academicYear}</p>
+          </div>
+          <div className={classes.cardItemDetail}>
+            <h1>Branch:</h1>
+            <p>{student.branch}</p>
+          </div>
+          <div className={classes.cardItemDetail}>
+            <h1>Division:</h1>
+            <p>{student.division}</p>
+          </div>
+        </div>
+      );
+    };
+    return (
+      <div>
+        <div className={classes.registerUesrComp}>
+          <input
+            type="text"
+            placeholder="Search by keyword"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className={classes.input}
+            style={{width:"300px"}}
+          />
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className={classes.input} style={{width:"300px"}}>
+            <option value="name">Sort by Name</option>
+            <option value="email">Sort by Email</option>
+            <option value="phoneNumber">Sort by Phone Number</option>
+            <option value="academicYear">Sort by Academic Year</option>
+            <option value="branch">Sort by Branch</option>
+            <option value="division">Sort by Division</option>
+          </select>
+        </div>
+        <h1 style={{ margin: '2em 0', textAlign:"center" }}>Total Registration: {sortedStudents.length}</h1>
+        <div className={classes.registeredStudentCard}>
+          {sortedStudents.map((student) => {
+            return <Card student={student} />;
+          })}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className={classes.adminEditEvent}>
-      AdminEditEvent:  {event_id}
-    </div>
-  )
-}
+      <div className={classes.options}>
+        <button
+          className={`${compToShow === 'edit' ? classes.selectedButton : ''}`}
+          onClick={() => handleToggle('edit')}
+        >
+          Edit
+        </button>
+        <button
+          className={` ${compToShow === 'register' ? classes.selectedButton : ''}`}
+          onClick={() => handleToggle('register')}
+        >
+          Register
+        </button>
+      </div>
+      {compToShow === 'edit' && (
+        <div>
+          <h1 className={classes.heading}>Edit event details</h1>
+          <form onSubmit={handleSubmit} className={classes.form}>
+            <div className={classes.input_container}>
+              <label className={classes.input_label}>Event Name:</label>
+              <input
+                className={classes.input}
+                type="text"
+                name="event_name"
+                value={eventDetails.event_name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label className={classes.input_label}>Caption:</label>
+              <input
+                type="text"
+                name="caption"
+                value={eventDetails.caption}
+                onChange={handleInputChange}
+                className={classes.input}
+              />
+            </div>
+            <div>
+              <label className={classes.input_label}>Event Dates:</label>
+              <input
+                className={classes.input}
+                type="text"
+                name="event_date"
+                value={eventDetails.event_date}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label className={classes.input_label}>Event Time:</label>
+              <input
+                className={classes.input}
+                type="text"
+                name="event_time"
+                value={eventDetails.event_time}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label className={classes.input_label}>Description:</label>
+              <textarea
+                name="description"
+                value={eventDetails.description}
+                onChange={handleInputChange}
+                className={classes.input}
+                style={{ minHeight: '200px' }}
+              />
+            </div>
+            <div className={classes.checkboxDiv}>
+              <label className={classes.input_label}>Is Completed:</label>
+              <input
+                type="checkbox"
+                name="is_completed"
+                checked={eventDetails.is_completed}
+                onChange={handleInputChange}
+                className={classes.checkbox}
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={!formChanged}
+              className={formChanged ? classes.btn : classes.disBtn}
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      )}
 
-export default AdminEditEvent
+      {compToShow === 'register' && (
+        <div>
+          <h1 className={classes.heading}>Registered Students</h1>
+          
+          <RegisteredStudent RegisteredStudendData={RegisteredStudendData} />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default AdminEditEvent;
