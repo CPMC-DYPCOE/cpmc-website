@@ -52,7 +52,10 @@ const StudentSchema = new Schema({
   hackerEarthId: {
     type: String,
     default: ''
-  }
+  },
+  events: [{
+    type: String, 
+  }]
 });
 
 mongoose.models = {};
