@@ -21,7 +21,7 @@ const JoinClub = () => {
           always looking for motivated members that are eager to explore CP.
         </h1>
       </div>
-        <Link href="//joinus">
+        <Link href="/joinus">
               <button className={classes.btn}>
                 <span className={classes.span}>JOIN NOW</span>
                 <svg viewBox="0 0 13 10" height="10px" width="15px">

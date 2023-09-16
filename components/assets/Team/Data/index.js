@@ -150,12 +150,6 @@ export const spankars = [
     photo: pratikPatil,
     linkedin: 'https://www.linkedin.com/in/pratikspatil007',
   },
-  // {
-  //   name: 'Kritika',
-  //   position: 'Gunner',
-  //   class: '(SE-CS)',
-  //   photo: aj,
-  // },
   {
     name: 'Aihrar',
     position: 'Gunner',
@@ -187,12 +181,6 @@ export const sinisters = [
     photo: vedant,
     linkedin: 'https://www.linkedin.com/in/vedant-bodkhe-141822226',
   },
-  // {
-  //   name: 'Jatin',
-  //   position: 'Gunner',
-  //   class: '(SE-CS)',
-  //   photo: aj,
-  // },
   {
     name: 'Atharv',
     position: 'Gunner',
@@ -209,13 +197,6 @@ export const sinisters = [
     photo: pranavJoshi,
     linkedin: 'https://www.linkedin.com/in/pranav-joshi-20a50821a',
   },
-  // {
-  //   name: 'Suraj Rajaram',
-  //   position: 'Gunner',
-  //   class: '(TE-IT)',
-  //   photo: aj,
-
-  // },
 ];
 
 export const endeavours = [
@@ -226,26 +207,6 @@ export const endeavours = [
     photo: ameyswami,
     linkedin: 'https://www.linkedin.com/in/amey-swami-978685237',
   },
-  // {
-  //   name: 'Pravin',
-  //   position: 'Gunner',
-  //   class: '(SE-CS)',
-  //   photo: aj,
-  // },
-  // {
-  //   name: 'Saurabh Puri',
-  //   position: 'Gunner',
-  //   class: '(SE-IT)',
-  //   photo: aj,
-
-  // },
-  // {
-  //   name: 'Shreyash',
-  //   position: 'Gunner',
-  //   class: '(TE-AI&DS)',
-  //   photo: aj,
-
-  // },
   {
     name: 'Sukrut',
     position: 'Gunner',
