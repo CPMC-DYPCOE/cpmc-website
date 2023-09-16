@@ -1,12 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import classes from './AdminPage.module.css';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 
 const AdminPage = () => {
   const [students, setStudents] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [event1, setEvent1] = useState([]);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) setIsLogin(true)
+  }, [])
 
   // useEffect(() => {
   //   try {
@@ -49,15 +55,15 @@ const AdminPage = () => {
       }
       if (res.ok) {
         toast.success('Submitted successfully');
+        const data = await res.json();
+        localStorage.setItem('token', data['token'])
         setIsLogin(true);
       }
-      const data = await res.json();
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
-    passwordInput.current.value = '';
-    emailInput.current.value = '';
+    // passwordInput.current.value = '';
+    // emailInput.current.value = '';
   };
 
   const LoginForm = () => {
