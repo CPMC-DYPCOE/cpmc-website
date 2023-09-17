@@ -1,6 +1,6 @@
 const Contact = require('../../../server/models/Contact');
 const Student = require('../../../server/models/Student');
-const Event1 = require('../../../server/models/Event1');
+// const Event1 = require('../../../server/models/Event1');
 const connectDB = require('../../../server/db/connect');
 const Admin = require('../../../server/models/Admin');
 const bcrypt = require('bcryptjs');
@@ -64,9 +64,9 @@ const handler = async (req, res) => {
     if (resData) return;
     const students = await Student.find({});
     const contacts = await Contact.find({});
-    const event1 = await Event1.find({});
+    // const event1 = await Event1.find({});
 
-    res.status(200).json({ message: 'Success', students, contacts, event1 });
+    res.status(200).json({ message: 'Success', students, contacts });
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: 'Internal Server Error' });

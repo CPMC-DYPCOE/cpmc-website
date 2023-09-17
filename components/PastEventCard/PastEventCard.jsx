@@ -5,13 +5,13 @@ import Image from 'next/image';
 
 const PastEventCard = (props) => {
     const name = props.data.name;
-    const nameArr = name.split(' ');
+    const nameArr = name?.split(' ');
     return (
         <div className={styles.event}>
             <div className={styles.blue_box}></div>
             <div className={styles.content_container}>
                 <div className={styles.content}>
-                    {nameArr.length > 1 ?
+                    {nameArr?.length > 1 ?
                         <h1 className={styles.name}>{nameArr[0]} <span className={styles.red}>{nameArr[1]}</span></h1> :
                         <h1 className={styles.name}> <span className={styles.red}>{props.data.name}</span></h1>
                     }

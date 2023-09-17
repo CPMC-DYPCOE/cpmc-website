@@ -332,7 +332,7 @@ const AdminEditEvent = () => {
             <option value="division">Sort by Division</option>
           </select>
         </div>
-        <h1 style={{ margin: '2em 0', textAlign:"center" }}>Total Registration: {sortedStudents.length}</h1>
+        <h1 style={{ margin: '2em 0', textAlign:"center" }}>Total Registration: {sortedStudents?.length}</h1>
         <div className={classes.registeredStudentCard}>
           {sortedStudents.map((student) => {
             return <Card student={student} key={student.email}/>;
