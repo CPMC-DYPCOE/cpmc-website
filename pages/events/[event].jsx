@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import EventDetails from '../../components/EventDetails/EventDetails';
 import { useEffect, useState } from 'react';
 import { API_HOST } from '../../utils/utils';
+import Image from 'next/image';
 const Event = ({ imagePaths }) => {
   const router = useRouter();
   const event_id = router.query.event;
@@ -25,7 +26,7 @@ const Event = ({ imagePaths }) => {
         {imagePaths?.map((src, index) => {
           return (
             <div key={index}>
-              <img src={src} alt={`Image ${index}`} width={400} height={300} />
+              <Image src={src} alt={`Image ${index}`} width={400} height={300} />
               <div></div>
             </div>
           );
@@ -42,8 +43,6 @@ export async function getServerSideProps(context) {
   const { event } = context.params;
   let event_name = '';
 
-  console.log(context.params);
-  console.log(event);
   try {
     const response = await fetch(`${API_HOST}/api/events/eventDetails`, {
       method: 'POST',
@@ -55,7 +54,11 @@ export async function getServerSideProps(context) {
     });
 
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+        return {
+            props: {
+              imagePaths
+            }
+          };
     }
 
     const data = await response.json();
