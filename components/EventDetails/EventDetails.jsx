@@ -2,24 +2,10 @@ import React, { useEffect, useState } from 'react';
 import classes from './EventDetails.module.css';
 import Link from 'next/link';
 import { API_HOST } from '../../utils/utils';
-import RenderEventImages from '../../pages/images/events/[event]';
 import Image from 'next/image';
-// import getImagePathsForEvent from '../../utils/getImgPath';
-
-// export async function getServerSideProps(context) {
-//   const { event } = context.params;
-//   const imagePaths = getImagePathsForEvent(event);
-
-//   return {
-//     props: {
-//       imagePaths
-//     }
-//   };
-// }
 
 const EventDetails = ({ event_id }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [imagePaths, setImagePaths] = useState([]);
 
   const [eventDetails, setEventDetails] = useState({
     event_id: '',
