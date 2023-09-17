@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import classes from './AdminCreateEvent.module.css'
 import { toast } from 'react-toastify';
+import { API_HOST } from '../../../../utils/utils';
 
 const AdminCreateEvent = () => {
   const [formChanged, setFormChanged] = useState(false);
@@ -34,7 +35,7 @@ const AdminCreateEvent = () => {
     e.preventDefault();
     setFormChanged(false);
     try {
-      const res = await fetch('/api/events', {
+      const res = await fetch(`${API_HOST}/api/events`, {
         method: 'POST',
         body: JSON.stringify(eventDetails),
         headers: {
@@ -46,7 +47,7 @@ const AdminCreateEvent = () => {
         toast.error('Something Went Wrong');
       }
       if (res.ok) {
-        alert('Submitted successfully')
+        alert('Created successfully')
         window.location.href = '/admin/events'
       }
     } catch (error) {

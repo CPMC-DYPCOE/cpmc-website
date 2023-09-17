@@ -18,6 +18,7 @@ const AdminEditEvent = () => {
     event_time: '',
     venue: '',
     is_completed: false,
+    is_competition_form: false
   });
   const [formChanged, setFormChanged] = useState(false);
 
@@ -55,142 +56,143 @@ const AdminEditEvent = () => {
       division: 'B'
     },
     {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2015',
-        branch: 'master',
-        division: 'A'
-      },
-      {
-        name: 'aryan',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2017',
-        branch: 'master',
-        division: 'B'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2016',
-        branch: 'comp',
-        division: 'A'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2015',
-        branch: 'master',
-        division: 'A'
-      },
-      {
-        name: 'aryan',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2017',
-        branch: 'master',
-        division: 'B'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2016',
-        branch: 'comp',
-        division: 'A'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2015',
-        branch: 'master',
-        division: 'A'
-      },
-      {
-        name: 'aryan',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2017',
-        branch: 'master',
-        division: 'B'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2016',
-        branch: 'comp',
-        division: 'A'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2015',
-        branch: 'master',
-        division: 'A'
-      },
-      {
-        name: 'aryan',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2017',
-        branch: 'master',
-        division: 'B'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2016',
-        branch: 'comp',
-        division: 'A'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2015',
-        branch: 'master',
-        division: 'A'
-      },
-      {
-        name: 'aryan',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2017',
-        branch: 'master',
-        division: 'B'
-      },
-      {
-        name: 'John',
-        email: 'john@gsda',
-        phoneNumber: '341234',
-        academicYear: '2016',
-        branch: 'comp',
-        division: 'A'
-      },
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'A'
+    },
+    {
+      name: 'aryan',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2017',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2016',
+      branch: 'comp',
+      division: 'A'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'A'
+    },
+    {
+      name: 'aryan',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2017',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2016',
+      branch: 'comp',
+      division: 'A'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'A'
+    },
+    {
+      name: 'aryan',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2017',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2016',
+      branch: 'comp',
+      division: 'A'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'A'
+    },
+    {
+      name: 'aryan',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2017',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2016',
+      branch: 'comp',
+      division: 'A'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2015',
+      branch: 'master',
+      division: 'A'
+    },
+    {
+      name: 'aryan',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2017',
+      branch: 'master',
+      division: 'B'
+    },
+    {
+      name: 'John',
+      email: 'john@gsda',
+      phoneNumber: '341234',
+      academicYear: '2016',
+      branch: 'comp',
+      division: 'A'
+    }
   ];
 
   const getEvents = async () => {
-    console.log(event_id)
+    console.log(event_id);
     try {
       fetch(`${API_HOST}/api/events/eventDetails`, {
         method: 'POST',
-        body: JSON.stringify({"event_id":event_id}),
+        body: JSON.stringify({ event_id: event_id }),
         headers: {
           'Content-Type': 'application/json',
-          'x-auth-token': ''}
-        })
+          'x-auth-token': ''
+        }
+      })
         .then((res) => {
           return res.json();
         })
         .then((data) => {
-          setEventDetails(data.event_details[0])
+          setEventDetails(data.event_details[0]);
         });
     } catch (error) {
       console.log(error);
@@ -201,7 +203,7 @@ const AdminEditEvent = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    if(event_id){
+    if (event_id) {
       getEvents();
     }
   }, [event_id]);
@@ -220,18 +222,18 @@ const AdminEditEvent = () => {
     e.preventDefault();
     setFormChanged(false);
     let updated_value = eventDetails;
-    updated_value["event_id"]=event_id
-    fetch('/api/events/eventDetails', {
+    updated_value['event_id'] = event_id;
+    fetch(`${API_HOST}/api/events/eventDetails`, {
       method: 'PUT',
       body: JSON.stringify(updated_value),
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     })
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        alert('Updated successfully')
+        alert('Updated successfully');
       })
       .catch((error) => {
         console.error(error);
@@ -322,9 +324,14 @@ const AdminEditEvent = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className={classes.input}
-            style={{width:"300px"}}
+            style={{ width: '300px' }}
           />
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className={classes.input} style={{width:"300px"}}>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className={classes.input}
+            style={{ width: '300px' }}
+          >
             <option value="name">Sort by Name</option>
             <option value="email">Sort by Email</option>
             <option value="phoneNumber">Sort by Phone Number</option>
@@ -333,10 +340,12 @@ const AdminEditEvent = () => {
             <option value="division">Sort by Division</option>
           </select>
         </div>
-        <h1 style={{ margin: '2em 0', textAlign:"center" }}>Total Registration: {sortedStudents?.length}</h1>
+        <h1 style={{ margin: '2em 0', textAlign: 'center' }}>
+          Total Registration: {sortedStudents?.length}
+        </h1>
         <div className={classes.registeredStudentCard}>
           {sortedStudents.map((student) => {
-            return <Card student={student} key={student.email}/>;
+            return <Card student={student} key={student.email} />;
           })}
         </div>
       </div>
@@ -433,6 +442,16 @@ const AdminEditEvent = () => {
                 className={classes.checkbox}
               />
             </div>
+            <div className={classes.checkboxDiv}>
+              <label className={classes.input_label}>Is competition form:</label>
+              <input
+                type="checkbox"
+                name="is_competition_form"
+                checked={eventDetails.is_competition_form}
+                onChange={handleInputChange}
+                className={classes.checkbox}
+              />
+            </div>
             <button
               type="submit"
               disabled={!formChanged}
@@ -447,7 +466,7 @@ const AdminEditEvent = () => {
       {compToShow === 'register' && (
         <div>
           <h1 className={classes.heading}>Registered Students</h1>
-          
+
           <RegisteredStudent RegisteredStudendData={RegisteredStudendData} />
         </div>
       )}
