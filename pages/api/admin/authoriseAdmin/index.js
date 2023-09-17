@@ -37,9 +37,7 @@ const handler = async (req, res) => {
   }
 
   if (req.method === 'POST') {
-    const resSent = await verify(req, res);
 
-    if (resSent) return;
     const { email, password } = req.body;
 
     try {

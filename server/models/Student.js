@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const StudentSchema = new Schema({
-  firstName: {
+  name: {
     type: String,
     required: true
   },
@@ -52,7 +52,10 @@ const StudentSchema = new Schema({
   hackerEarthId: {
     type: String,
     default: ''
-  }
+  },
+  events: [{
+    type: String,
+  }]
 });
 
 mongoose.models = {};
