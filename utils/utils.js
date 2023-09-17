@@ -4,6 +4,6 @@ const validateEmail = (email) => {
   );
 };
 
-const API_HOST = "http://localhost:4242";
+const API_HOST = 'https://cpmc-dev.vercel.app';
 
 export { validateEmail, API_HOST };

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import classes from './event.module.css'
 
 const RenderEventImages = ({ imagePaths }) => {
   if (!imagePaths) {
@@ -7,7 +8,7 @@ const RenderEventImages = ({ imagePaths }) => {
   }
 
   return (
-    <div>
+    <div className={classes.eventImages}>
       {imagePaths.map((src, index) => {
         return (
           <div key={index}>
@@ -25,6 +26,7 @@ const RenderEventImages = ({ imagePaths }) => {
 export default RenderEventImages;
 
 export async function getServerSideProps(context) {
+  console.log(context);
   const { event } = context.params;
 
   const folderPath = path.join(process.cwd(), `public/images/events/${event}`);
@@ -49,3 +51,28 @@ export async function getServerSideProps(context) {
     };
   }
 }
+// export async function getServerSideProps(event, category) {
+//   // const { event } = context.params;
+
+//   const folderPath = path.join(process.cwd(), `public/images/${category}/${event}`);
+
+//   try {
+//     const imageFiles = fs.readdirSync(folderPath);
+
+//     const imagePaths = imageFiles.map((fileName) => `/images/${category}/${event}/${fileName}`);
+
+//     return {
+//       props: {
+//         imagePaths
+//       }
+//     };
+//   } catch (error) {
+//     console.error(error);
+
+//     return {
+//       props: {
+//         imagePaths: null
+//       }
+//     };
+//   }
+// }
