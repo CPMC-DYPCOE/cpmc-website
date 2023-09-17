@@ -82,7 +82,7 @@ const JoinPage = () => {
             <h1 className={classes.heading}>
               Join us to level up your <span className={classes.red}>coding skills. </span>
             </h1>
-            <p className={classes.para}>We've got 99 bugs, but a glitch ain't one. Join our code-tastic community today! </p>
+            <p className={classes.para}>We&apos;ve got 99 bugs, but a glitch ain&apos;t one. Join our code-tastic community today! </p>
             <Link href="https://chat.whatsapp.com/Hbd6HIrZPheKZOFzFRYLy8" target={'_blank'}>
               <button className={classes.btn}>
                 JOIN COMMUNITY
