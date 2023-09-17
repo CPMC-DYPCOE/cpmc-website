@@ -1,36 +1,95 @@
-import React from 'react'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
-import style from './event.module.css'
-import { Footer, Navbar } from '../../components'
-import Head from 'next/head'
+import fs from 'fs';
+import path from 'path';
+import style from './event.module.css';
+import { Footer, Navbar } from '../../components';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
-import mastersTalkPic1 from '../../components/assets/Events/MastersTalk/pic1-min.JPG'
-import mastersTalkPic2 from '../../components/assets/Events/MastersTalk/pic2-min.JPG'
-import mastersTalkPic3 from '../../components/assets/Events/MastersTalk/pic3-min.JPG'
-import mastersTalkPic4 from '../../components/assets/Events/MastersTalk/pic4-min.JPG'
-import mastersTalkPic5 from '../../components/assets/Events/MastersTalk/pic5-min.JPG'
-import mastersTalkPic6 from '../../components/assets/Events/MastersTalk/pic6-min.JPG'
-import mastersTalkPic7 from '../../components/assets/Events/MastersTalk/pic7-min.JPG'
-import EventDetails from '../../components/EventDetails/EventDetails'
+import EventDetails from '../../components/EventDetails/EventDetails';
+import { useEffect, useState } from 'react';
+import { API_HOST } from '../../utils/utils';
 
-const Event = () => {
-    const router = useRouter()
-    const event_id = router.query.event
+const Event = ({ imagePaths }) => {
+  const router = useRouter();
+    const event_id = router.query.event;
+    const [eventDetails, setEventDetails] = useState({
 
-    const mastersTalk = [mastersTalkPic1, mastersTalkPic2, mastersTalkPic3, mastersTalkPic4, mastersTalkPic5, mastersTalkPic6, mastersTalkPic7]
+    })
 
-    return (
-        <>
-            <Head>
-                <title className={style.title}>CPMC </title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <Navbar />
-                <EventDetails event_id={event_id}/>
-            <Footer />
-        </>
-    )
+  const getEvents = async () => {
+    console.log(event_id);
+    try {
+      fetch(`${API_HOST}/api/events/eventDetails`, {
+        method: 'POST',
+        body: JSON.stringify({ event_id: event_id }),
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-token': ''
+        }
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data.event_details[0]);
+          setEventDetails(data.event_details[0]);
+        });
+    } catch (error) {
+      console.log(error);
+      alert('Something Went Wrong');
+    }
+  };
+
+  useEffect(() => {
+    if (event_id) {
+      getEvents();
+    }
+  }, [event_id]);
+  return (
+    <>
+      <Head>
+        <title className={style.title}>CPMC </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <EventDetails event_id={event_id} />
+      {imagePaths.map((src, index) => {
+        return (
+          <div key={index}>
+            <img src={src} alt={`Image ${index}`} width={400} height={300} />
+            <div></div>
+          </div>
+        );
+      })}
+      <Footer />
+    </>
+  );
+};
+
+export default Event;
+
+export async function getServerSideProps(eventDetails) {
+  const event = "master_talk";
+
+  const folderPath = path.join(process.cwd(), `public/images/events/${event}`);
+
+  try {
+    const imageFiles = fs.readdirSync(folderPath);
+
+    const imagePaths = imageFiles.map((fileName) => `/images/events/${event}/${fileName}`);
+
+    return {
+      props: {
+        imagePaths
+      }
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      props: {
+        imagePaths: null
+      }
+    };
+  }
 }
-
-export default Event

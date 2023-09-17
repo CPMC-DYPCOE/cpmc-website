@@ -6,7 +6,7 @@ import Image from 'next/image';
 const PastEventCard = (props) => {
   const name = props.data.event_name;
   const nameArr = name?.split(' ');
-  console.log(props.data)
+  console.log(props.data);
 
   return (
     <div className={styles.event}>
@@ -30,17 +30,17 @@ const PastEventCard = (props) => {
 
           {/* {props.data.heldOn ? <p className={styles.date}> Held On - <span className={styles.blue}>{props.data.heldOn}</span> </p> : null} */}
           {/* {props.data.ViewEventDetailsLink ? ( */}
-            <span className={styles.link}>
-              <Link href={{ pathname: `/events/${props.data._id}` }}>
-                <button className={classes.btn} style={{ margin: '0' }}>
-                  <span className={classes.span}>VIEW EVENT</span>
-                  <svg viewBox="0 0 13 10" height="10px" width="15px">
-                    <path d="M1,5 L11,5"></path>
-                    <polyline points="8 1 12 5 8 9"></polyline>
-                  </svg>
-                </button>
-              </Link>
-            </span>
+          <span className={styles.link}>
+            <Link href={{ pathname: `/events/${props.data._id}` }}>
+              <button className={classes.btn} style={{ margin: '0' }}>
+                <span className={classes.span}>VIEW EVENT</span>
+                <svg viewBox="0 0 13 10" height="10px" width="15px">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+              </button>
+            </Link>
+          </span>
           {/* ) : null} */}
         </div>
       </div>
