@@ -70,7 +70,7 @@ const EventDetails = ({ event_id }) => {
       </div>
       <div className={classes.aboutEvent}>
         <h1>About Event: </h1>
-        <p style={{maxWidth:"500px"}}> {eventDetails.description}</p>
+        <p style={{maxWidth:"500px", textAlign:"center"}}> {eventDetails.description}</p>
       </div>
       <div>
         {!eventDetails.is_completed ? (

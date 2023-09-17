@@ -5,9 +5,9 @@ import PastEventCard from '../PastEventCard/PastEventCard';
 import { API_HOST } from '../../utils/utils';
 // import {useLocation} from 'react-router-dom'
 const EventsPage = () => {
-  const [upComingEvent, setUpcomingEvent] = useState([])
-  const [pastEvent, setPastEvent] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [upComingEvent, setUpcomingEvent] = useState([]);
+  const [pastEvent, setPastEvent] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getEvents = async () => {
     try {
@@ -16,11 +16,11 @@ const EventsPage = () => {
           return res.json();
         })
         .then((data) => {
-          let events = data.events
-          const filteredUpcomingEvents = events.filter(event => !event.is_completed)
-          const filteredPastEvents = events.filter(event => event.is_completed)
-          setUpcomingEvent(filteredUpcomingEvents)
-          setPastEvent(filteredPastEvents)
+          let events = data.events;
+          const filteredUpcomingEvents = events.filter((event) => !event.is_completed);
+          const filteredPastEvents = events.filter((event) => event.is_completed);
+          setUpcomingEvent(filteredUpcomingEvents);
+          setPastEvent(filteredPastEvents);
         });
     } catch (error) {
       console.log(error);
@@ -34,27 +34,31 @@ const EventsPage = () => {
     getEvents();
   }, []);
 
-
-
-
   return (
     <>
-      <div className={styles.event_section}>
-        <h1 className={styles.title}> Upcoming <span className={styles.red}> Events</span></h1>
-        {upComingEvent.map((data,i) => {
-          return (<UpcomingEventCard data={data} key={i} />)
-        })
-        }
-      </div>
-      <div className={styles.event_section}>
-        <h1 className={styles.title}>Past <span className={styles.red}> Events</span></h1>
-        <div className={styles.event_content_section}>
-          {pastEvent.map((data,i) => {
-            return (<PastEventCard data={data} key={i}/>)
-          })
-          }
+      {upComingEvent.length > 0 ? (
+        <div className={styles.event_section}>
+          <h1 className={styles.title}>
+            {' '}
+            Upcoming <span className={styles.red}> Events</span>
+          </h1>
+          {upComingEvent.map((data, i) => {
+            return <UpcomingEventCard data={data} key={i} />;
+          })}
         </div>
-      </div>
+      ) : null}
+      {pastEvent.length > 0 ? (
+        <div className={styles.event_section}>
+          <h1 className={styles.title}>
+            Past <span className={styles.red}> Events</span>
+          </h1>
+          <div className={styles.event_content_section}>
+            {pastEvent.map((data, i) => {
+              return <PastEventCard data={data} key={i} />;
+            })}
+          </div>
+        </div>
+      ) : null}
     </>
   );
 };
