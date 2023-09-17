@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classes from './EventDetails.module.css';
 import Link from 'next/link';
+import { API_HOST } from '../../utils/utils';
 
 const EventDetails = ({ event_id }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +20,7 @@ const EventDetails = ({ event_id }) => {
   const getEvents = async () => {
     console.log(event_id);
     try {
-      fetch('/api/events/eventDetails', {
+      fetch(`${API_HOST}/api/events/eventDetails`, {
         method: 'POST',
         body: JSON.stringify({ event_id: event_id }),
         headers: {
@@ -31,8 +32,8 @@ const EventDetails = ({ event_id }) => {
           return res.json();
         })
         .then((data) => {
-          console.log(data.event_details[0]);
-          setEventDetails(data.event_details[0]);
+          console.log(data.event);
+          setEventDetails(data.event);
         });
     } catch (error) {
       console.log(error);

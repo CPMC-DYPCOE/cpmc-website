@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './EventsPage.module.css';
 import UpcomingEventCard from '../UpcomingEventCard/UpcomingEventCard';
 import PastEventCard from '../PastEventCard/PastEventCard';
+import { API_HOST } from '../../utils/utils';
 // import {useLocation} from 'react-router-dom'
 const EventsPage = () => {
   const [upComingEvent, setUpcomingEvent] = useState([])
@@ -10,7 +11,7 @@ const EventsPage = () => {
 
   const getEvents = async () => {
     try {
-      fetch('/api/events')
+      fetch(`${API_HOST}/api/events`)
         .then((res) => {
           return res.json();
         })

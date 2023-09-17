@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import classes from './AdminEditEvent.module.css';
+import { API_HOST } from '../../../../utils/utils';
 
 const AdminEditEvent = () => {
   const router = useRouter();
@@ -178,7 +179,7 @@ const AdminEditEvent = () => {
   const getEvents = async () => {
     console.log(event_id)
     try {
-      fetch('/api/events/eventDetails', {
+      fetch(`${API_HOST}/api/events/eventDetails`, {
         method: 'POST',
         body: JSON.stringify({"event_id":event_id}),
         headers: {

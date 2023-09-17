@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import classes from './AdminEvents.module.css';
 import UpcomingEventCard from '../../UpcomingEventCard/UpcomingEventCard';
+import { API_HOST } from '../../../utils/utils';
 
 const AdminEvents = () => {
   const [allEvents, setAllEvents] = useState([]);
@@ -9,7 +10,7 @@ const AdminEvents = () => {
 
   const getEvents = async () => {
     try {
-      fetch('/api/events')
+      fetch(`${API_HOST}/api/events`)
         .then((res) => {
           return res.json();
         })

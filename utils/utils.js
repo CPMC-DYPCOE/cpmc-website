@@ -4,4 +4,6 @@ const validateEmail = (email) => {
   );
 };
 
-export { validateEmail };
+const API_HOST = "http://localhost:4242";
+
+export { validateEmail, API_HOST };
