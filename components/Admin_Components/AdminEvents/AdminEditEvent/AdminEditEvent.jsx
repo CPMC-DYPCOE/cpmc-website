@@ -6,16 +6,17 @@ const AdminEditEvent = () => {
   const router = useRouter();
   const { event_id } = router.query;
   const [compToShow, setCompToShow] = useState('edit');
+  const [isLoading, setIsLoading] = useState(false);
+
   const [eventDetails, setEventDetails] = useState({
-    id: 'event3',
-    event_name: 'Mastertalk',
-    caption: 'Competitive Programming Talk Show with Abhinav Awasti',
-    description: 'We invited Competitive Programming Talk Show with Abhinav Awasti',
-    event_date: '2015-11-29 - 2018-11-29',
-    event_time: '4pm - 5pm',
-    venue: 'MS Teams',
+    event_id: '',
+    event_name: '',
+    caption: '',
+    description: '',
+    event_date: '',
+    event_time: '',
+    venue: '',
     is_completed: false,
-    images: ['', '', '', '']
   });
   const [formChanged, setFormChanged] = useState(false);
 
@@ -174,41 +175,66 @@ const AdminEditEvent = () => {
       },
   ];
 
+  const getEvents = async () => {
+    console.log(event_id)
+    try {
+      fetch('/api/events/eventDetails', {
+        method: 'POST',
+        body: JSON.stringify({"event_id":event_id}),
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-token': ''}
+        })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          setEventDetails(data.event_details[0])
+        });
+    } catch (error) {
+      console.log(error);
+      alert('Something Went Wrong');
+    }
+    setIsLoading(false);
+  };
+
   useEffect(() => {
-    () =>
-      setEventDetails({
-        id: 'event3',
-        event_name: 'Mastertalk',
-        caption: 'Competitive Programming Talk Show with Abhinav Awasti',
-        description: 'We invited Competitive Programming Talk Show with Abhinav Awasti',
-        event_date: '2015-11-29 - 2018-11-29',
-        event_time: '4pm - 5pm',
-        venue: 'MS Teams',
-        is_completed: false,
-        images: ['', '', '', '']
-      });
-  }, []);
+    setIsLoading(true);
+    if(event_id){
+      getEvents();
+    }
+  }, [event_id]);
 
   // Handle changes in the form inputs
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-
-    // Update the eventDetails state based on the input type
     setEventDetails((prevDetails) => ({
       ...prevDetails,
       [name]: type === 'checkbox' ? checked : value
     }));
-
-    // Mark the form as changed
     setFormChanged(true);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send the updated eventDetails data to your API or perform any desired action here
-    // Reset the formChanged state to false to disable the Save button
     setFormChanged(false);
-    alert('changed');
+    let updated_value = eventDetails;
+    updated_value["event_id"]=event_id
+    fetch('/api/events/eventDetails', {
+      method: 'PUT',
+      body: JSON.stringify(updated_value),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        alert('Updated successfully')
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const handleToggle = (section) => {
@@ -309,7 +335,7 @@ const AdminEditEvent = () => {
         <h1 style={{ margin: '2em 0', textAlign:"center" }}>Total Registration: {sortedStudents.length}</h1>
         <div className={classes.registeredStudentCard}>
           {sortedStudents.map((student) => {
-            return <Card student={student} />;
+            return <Card student={student} key={student.email}/>;
           })}
         </div>
       </div>
@@ -373,6 +399,16 @@ const AdminEditEvent = () => {
                 type="text"
                 name="event_time"
                 value={eventDetails.event_time}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label className={classes.input_label}>Venue:</label>
+              <input
+                className={classes.input}
+                type="text"
+                name="venue"
+                value={eventDetails.venue}
                 onChange={handleInputChange}
               />
             </div>

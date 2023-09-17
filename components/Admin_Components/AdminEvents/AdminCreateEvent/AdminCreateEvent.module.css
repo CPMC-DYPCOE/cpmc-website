@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
+.adminCreateEvent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.heading {
+  color: #ffffff;
+  line-height: 1.4;
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: 'Passion one', cursive;
+  /* font-family: 'Paytone One', sans-serif; */
+  text-align: center;
+}
+
+.input option {
+  background-color: #0f263a;
+}
+
+.mandatory {
+  color: #f32053;
+}
+
+.toggle-button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  
+}
+.options{
+    height: 5em;
+    display: flex;
+    gap:1em
+}
+
+.options button{
+  position: relative;
+  margin: auto;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 7em;
+}
+
+.selectedButton {
+  background-color: #e74c3c;
+  position: relative;
+  margin: auto;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 30px;
+  background: none;
+  display: flex;
+  background: #f32053;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  /* display: flex; */
+  color: #f32053;
+  justify-content: center;
+  align-items: center;
+}
+
+.para {
+  color: #ffffff;
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 90%;
+  text-align: center;
+}
+.btn {
+  position: relative;
+  margin: auto;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 30px;
+  background: none;
+  display: flex;
+  background: #f32053;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background: #ffffff;
+  color: #f32053;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.disBtn {
+  position: relative;
+  margin: auto;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+  border: none;
+  border-radius: 30px;
+  background: none;
+  display: flex;
+  background: #3a3a3a;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #716f6f;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px;
+  padding-top: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.input_container {
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.checkboxDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  transform: scale(3);
+}
+
+.input_label {
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  padding-left: 18px;
+  font-family: 'Open Sans', sans-serif;
+  display: block; /* This makes the label and input stack vertically */
+  margin-bottom: 10px;
+}
+
+.input {
+  /* all: unset; */
+  background-color: #00000000;
+  border: 1px solid #d9d9d9;
+  padding: 10px 20px;
+  width: 50vw;
+  height: 9vh;
+  color: white;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+
+.select_input {
+  all: unset;
+  background-color: #00000000;
+  border: 1px solid #d9d9d9;
+  padding: 25px 20px;
+  color: #a8a8a8;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  width: 95%;
+}
+
+.linkBtn {
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.registerUesrComp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registeredStudentCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 15em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap:0.5em
+}
+
+.card h1{
+    font-weight: 600;
+    color: #f32053;
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    padding-left: 10px;
+    font-size: 32px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .input {
+    width: 80vw;
+  }
+
+  .input_label {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 10px;
+  }
+}
+.input {
+  text-align: left;
+}
+
+.input::-webkit-input-placeholder {
+  text-align: left;
+}
+
+.input:-moz-placeholder {
+  text-align: left;
+}
+.input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.linkBtn {
+  display: block;
+  width: 60%;
+  margin: 20px auto;
+}

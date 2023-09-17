@@ -7,7 +7,7 @@ const AdminPage = () => {
   const [students, setStudents] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [event1, setEvent1] = useState([]);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem('token');

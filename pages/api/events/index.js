@@ -14,8 +14,7 @@ const handler = async (req, res) => {
         event_date,
         event_time,
         venue,
-        is_completed,
-        images
+        is_completed
       } = req.body;
 
       // Create a new Event document
@@ -26,13 +25,23 @@ const handler = async (req, res) => {
         event_date,
         event_time,
         venue,
-        is_completed,
-        images
+        is_completed
       });
 
       await newEvent.save();
 
       res.status(200).json({ message: 'Event created successfully', event: newEvent });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  }
+
+  if(req.method === 'GET'){
+    await connectDB();
+    try {
+      const events = await Event.find({});
+      res.status(200).json({ events });
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: 'Internal server error' });
