@@ -1,0 +1,25 @@
+.teamImages{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamImages img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.teamImages p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+    color: #ffffff;
+}
