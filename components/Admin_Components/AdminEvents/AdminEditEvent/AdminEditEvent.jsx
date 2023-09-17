@@ -4,6 +4,8 @@ import classes from './AdminEditEvent.module.css';
 import { API_HOST } from '../../../../utils/utils';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UploadImage from '../../../UploadImage/UploadImage';
+
 const AdminEditEvent = () => {
   const router = useRouter();
   const { event_id } = router.query;
@@ -24,160 +26,6 @@ const AdminEditEvent = () => {
   const [formChanged, setFormChanged] = useState(false);
 
   const [RegisteredStudendData, setRegisteredStudendData] = useState([]);
-  // const RegisteredStudendData = [
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'aryan',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2017',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2016',
-  //     branch: 'comp',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'prince',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'aryan',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2017',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2016',
-  //     branch: 'comp',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'aryan',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2017',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2016',
-  //     branch: 'comp',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'aryan',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2017',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2016',
-  //     branch: 'comp',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'aryan',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2017',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2016',
-  //     branch: 'comp',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2015',
-  //     branch: 'master',
-  //     division: 'A'
-  //   },
-  //   {
-  //     name: 'aryan',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2017',
-  //     branch: 'master',
-  //     division: 'B'
-  //   },
-  //   {
-  //     name: 'John',
-  //     email: 'john@gsda',
-  //     phoneNumber: '341234',
-  //     academicYear: '2016',
-  //     branch: 'comp',
-  //     division: 'A'
-  //   }
-  // ];
 
   const getRegisteredStudents = async () => {
     try {
@@ -356,7 +204,7 @@ const AdminEditEvent = () => {
             if (additionalFields.includes(detail.label.replace(':', '').toLowerCase())) {
               return null;
             }
-            if(detail.value==''){
+            if (detail.value == '') {
               return null;
             }
             return (
@@ -409,7 +257,6 @@ const AdminEditEvent = () => {
   return (
     <div className={classes.adminEditEvent}>
       <ToastContainer />
-
       <div className={classes.options}>
         <button
           className={`${compToShow === 'edit' ? classes.selectedButton : ''}`}
@@ -422,6 +269,12 @@ const AdminEditEvent = () => {
           onClick={() => handleToggle('register')}
         >
           Register
+        </button>
+        <button
+          className={` ${compToShow === 'image' ? classes.selectedButton : ''}`}
+          onClick={() => handleToggle('image')}
+        >
+          Image
         </button>
       </div>
       {compToShow === 'edit' && (
@@ -524,6 +377,13 @@ const AdminEditEvent = () => {
           <h1 className={classes.heading}>Registered Students</h1>
 
           <RegisteredStudent RegisteredStudendData={RegisteredStudendData} />
+        </div>
+      )}
+
+      {compToShow === 'image' && (
+        <div>
+          <h1 className={classes.heading}>Registered Students</h1>
+          <UploadImage event_id={event_id}/>
         </div>
       )}
     </div>

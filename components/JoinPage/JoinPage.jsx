@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 const JoinPage = () => {
-  const [registraion, setRegistraion] = useState(false);
+  const [registraion, setRegistraion] = useState(true);
 
   const nameInput = useRef();
   const emailInput = useRef();

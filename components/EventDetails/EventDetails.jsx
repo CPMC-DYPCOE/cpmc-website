@@ -3,6 +3,7 @@ import classes from './EventDetails.module.css';
 import Link from 'next/link';
 import { API_HOST } from '../../utils/utils';
 import RenderEventImages from '../../pages/images/events/[event]';
+import Image from 'next/image';
 // import getImagePathsForEvent from '../../utils/getImgPath';
 
 // export async function getServerSideProps(context) {
@@ -28,11 +29,11 @@ const EventDetails = ({ event_id }) => {
     event_date: '',
     event_time: '',
     venue: '',
-    is_completed: false
+    is_completed: false,
+    images: []
   });
 
   const getEvents = async () => {
-    console.log(event_id);
     try {
       fetch(`${API_HOST}/api/events/eventDetails`, {
         method: 'POST',
@@ -62,12 +63,6 @@ const EventDetails = ({ event_id }) => {
       getEvents();
     }
   }, [event_id]);
-  // useEffect(() => {
-  //   if (eventDetails.event_name) {
-  //     const paths = getImagePathsForEvent(eventDetails.event_name);
-  //     setImagePaths(paths);
-  //   }
-  // }, [eventDetails.event_name]);
 
   return (
     <div className={classes.eventDetails}>
@@ -103,6 +98,16 @@ const EventDetails = ({ event_id }) => {
           </Link>
         ) : null}
       </div>
+      {eventDetails.images.length > 0 ? (
+        <div className={classes.eventImages}>
+          <h1 className={classes.heading}>Memories</h1>
+          <div className={classes.allImages}> 
+            {eventDetails.images.map((src,id) => {
+              return <img src={src} key={id}/>;
+            })}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

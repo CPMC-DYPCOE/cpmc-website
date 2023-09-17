@@ -24,7 +24,7 @@ const EventSlider = () => {
       </div>
       <div className={classes.eventmaindiv}>
         <Link href="events" className={classes.imagediv}>
-          <Image style={{ cursor: 'pointer' }} alt="eventabcde" src={img} objectFit="cover" className={classes.posterimage} />
+          <img style={{ cursor: 'pointer' }} alt="eventabcde" src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpodcast.8d2ed221.png&w=1080&q=75" objectFit="cover" className={classes.posterimage} />
         </Link>
         <div className={classes.eventcontentdiv}>
           <h1>

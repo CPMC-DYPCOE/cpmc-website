@@ -4,9 +4,16 @@
 .eventDetails{
     min-width: 100vh;
     padding: 2em 2em;
-    color:#ffffff
-}
+    color:#ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .eventDetails h1{
+    text-align: center;
+  }
 .generalInfo{
 
 }
@@ -55,6 +62,31 @@
     font-size: 20px;
     font-weight: 400;
     font-family: 'Passion one', cursive;
+}
+
+.eventImages{
+  margin:2em 0;
+}
+.eventImages .heading{
+  align-items: center;
+  text-align: center;
+  margin:0 0 1em 0;
+  color: #f32053;
+}
+
+.allImages{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.allImages img{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 

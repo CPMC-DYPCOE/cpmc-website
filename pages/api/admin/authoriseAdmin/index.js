@@ -59,7 +59,7 @@ const handler = async (req, res) => {
       };
 
       jwt.sign(payload, process.env.SECRET_KEY, (error, token) => {
-        if (error) throw error;
+        // if (error) throw error;
         res.json({ token });
       });
     } catch (error) {
