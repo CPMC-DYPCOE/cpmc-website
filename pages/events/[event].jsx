@@ -12,7 +12,8 @@ import Image from 'next/image';
 const Event = ({ imagePaths }) => {
   const router = useRouter();
   const event_id = router.query.event;
-
+  console.log(imagePaths)
+  
   return (
     <>
       <Head>
@@ -26,7 +27,7 @@ const Event = ({ imagePaths }) => {
         {imagePaths?.map((src, index) => {
           return (
             <div key={index}>
-              <Image src={src} alt={`Image ${index}`} width={400} height={300} />
+              <img src={src} alt={`Image ${index}`} width={400} height={300} />
               <div></div>
             </div>
           );
