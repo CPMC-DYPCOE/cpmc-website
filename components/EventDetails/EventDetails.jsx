@@ -32,8 +32,8 @@ const EventDetails = ({ event_id }) => {
           return res.json();
         })
         .then((data) => {
-          console.log(data.event);
-          setEventDetails(data.event);
+            console.log(data.event_details[0]);
+            setEventDetails(data.event_details[0]);
         });
     } catch (error) {
       console.log(error);
