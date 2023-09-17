@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Paytone+One&display=swap');
+
+
+.eventDetails{
+    min-width: 100vh;
+    padding: 2em 2em;
+    color:#ffffff
+}
+
+.generalInfo{
+
+}
+
+.heading{
+    color: #ffffff;
+    line-height: 1.4;
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Passion one', cursive;
+    /* font-family: 'Paytone One', sans-serif; */
+    text-align: left;
+}
+
+.caption{
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Passion one', cursive;
+    /* font-family: 'Paytone One', sans-serif; */
+    text-align: left;
+}
+
+.generalDetails{
+    color: #ffffff;
+    line-height: 1.4;
+    /* margin-top: 20px; */
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Passion one', cursive;
+    /* font-family: 'Paytone One', sans-serif; */
+    text-align: left;
+}
+.generalDetails span{
+    color: #f32053;
+}
+
+.aboutEvent{
+    margin: 30px 0;
+}
+
+.aboutEvent h1{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Passion one', cursive;
+}
+
+
+.link {
+    color: #f32053;
+    transition: all 0.3s ease-in;
+  }
+  
+  .link:hover {
+    color: #407bff;
+  }
+
+  .btn {
+    position: relative;
+    margin: auto;
+    padding: 12px 20px;
+    transition: all 0.2s ease;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    display: flex;
+    background: #f32053;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: #ffffff;
+    color: #f32053;
+  }
+  
+  
+  .btn:active {
+    transform: scale(0.95);
+  }

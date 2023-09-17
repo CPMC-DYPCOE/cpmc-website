@@ -12,40 +12,22 @@ import mastersTalkPic4 from '../../components/assets/Events/MastersTalk/pic4-min
 import mastersTalkPic5 from '../../components/assets/Events/MastersTalk/pic5-min.JPG'
 import mastersTalkPic6 from '../../components/assets/Events/MastersTalk/pic6-min.JPG'
 import mastersTalkPic7 from '../../components/assets/Events/MastersTalk/pic7-min.JPG'
+import EventDetails from '../../components/EventDetails/EventDetails'
 
 const Event = () => {
     const router = useRouter()
-    const event = router.query.event
+    const event_id = router.query.event
 
     const mastersTalk = [mastersTalkPic1, mastersTalkPic2, mastersTalkPic3, mastersTalkPic4, mastersTalkPic5, mastersTalkPic6, mastersTalkPic7]
-
-    const currentEvent = []
-    const eventName =''
-    switch (event) {
-        case 'masters-talk':
-            currentEvent = mastersTalk
-            eventName = 'MASTERS TALK'
-            break;
-    }
-
 
     return (
         <>
             <Head>
-                <title className={style.title}>CPMC {eventName}</title>
+                <title className={style.title}>CPMC </title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navbar />
-            <h1 className={style.heading}>{eventName}</h1>
-            <div className={style.eventImagesDiv}>
-                {currentEvent.map((img,index) => {
-                    return (
-                        <div key={index}>
-                            <Image className={style.image} src={img} alt={event} height={400} width={600} />
-                        </div>
-                    )
-                })}
-            </div>
+                <EventDetails event_id={event_id}/>
             <Footer />
         </>
     )

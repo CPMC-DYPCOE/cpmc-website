@@ -9,6 +9,7 @@ const eventSchema = new mongoose.Schema({
     event_time: { type: String, required: true },
     venue: { type: String, required: true },
     is_completed: { type: Boolean, required: true },
+    is_join_form: { type: Boolean, required: true },
     images: [String],
 });
 const Event = mongoose.model('Event', eventSchema);

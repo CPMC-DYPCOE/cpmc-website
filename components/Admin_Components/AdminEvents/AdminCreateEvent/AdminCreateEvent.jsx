@@ -14,6 +14,7 @@ const AdminCreateEvent = () => {
     event_time: '',
     venue: '',
     is_completed: false,
+    is_competition_form: false
   });
 
   const handleInputChange = (e) => {
@@ -124,6 +125,16 @@ const AdminCreateEvent = () => {
                 type="checkbox"
                 name="is_completed"
                 checked={eventDetails.is_completed}
+                onChange={handleInputChange}
+                className={classes.checkbox}
+              />
+            </div>
+            <div className={classes.checkboxDiv}>
+              <label className={classes.input_label}>Is competition form:</label>
+              <input
+                type="checkbox"
+                name="is_competition_form"
+                checked={eventDetails.is_competition_form}
                 onChange={handleInputChange}
                 className={classes.checkbox}
               />
