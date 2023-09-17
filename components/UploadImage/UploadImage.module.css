@@ -1,0 +1,36 @@
+.uploadImage{
+
+}
+
+
+
+.btn {
+    position: relative;
+    margin: 1em;
+    padding: 12px 20px;
+    transition: all 0.2s ease;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    display: flex;
+    background: #f32053;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #fff;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .btn:hover {
+    background: #ffffff;
+    color: #f32053;
+  }
+  
+  
+  .btn:active {
+    transform: scale(0.95);
+  }

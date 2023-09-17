@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { API_HOST } from '../../utils/utils';
 import axios from 'axios';
+import classes from './UploadImage.module.css'
+
 const UploadImage = ({ event_id }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -69,9 +71,8 @@ const UploadImage = ({ event_id }) => {
   };
 
   return (
-    <div>
+    <div className={classes.uploadImage}>
       <div>
-        <h1>Image Upload</h1>
         <input
           type="file"
           accept="image/*"
@@ -79,8 +80,8 @@ const UploadImage = ({ event_id }) => {
           style={{ display: 'none' }}
           ref={fileInputRef}
         />
-        <button onClick={handlePopImage}>Pop Last Event Image</button>
-        <button onClick={() => fileInputRef.current.click()} disabled={isUploading}>
+        <button onClick={handlePopImage} className={classes.btn}>Pop Last Event Image</button>
+        <button onClick={() => fileInputRef.current.click()} disabled={isUploading} className={classes.btn}>
           Select from Device
         </button>
         {selectedImage && (
@@ -89,7 +90,7 @@ const UploadImage = ({ event_id }) => {
             <img src={selectedImage} alt="Selected" style={{ maxWidth: '100%' }} />
           </div>
         )}
-        <button onClick={handleUpload} disabled={isUploading}>
+        <button onClick={handleUpload} disabled={isUploading} className={classes.btn}>
           {isUploading ? 'Uploading...' : 'Upload Image'}
         </button>
         {/* <input type="text" onChange={(e) => setImageKey(e.target.value)} value={imageKey}></input>
