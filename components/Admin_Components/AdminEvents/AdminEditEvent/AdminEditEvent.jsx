@@ -96,6 +96,7 @@ const AdminEditEvent = () => {
     setFormChanged(false);
     let updated_value = eventDetails;
     updated_value['event_id'] = event_id;
+    delete updated_value.images;
     fetch(`${API_HOST}/api/events/eventDetails`, {
       method: 'PUT',
       body: JSON.stringify(updated_value),
