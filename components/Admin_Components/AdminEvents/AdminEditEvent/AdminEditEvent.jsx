@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import classes from './AdminEditEvent.module.css';
 import { API_HOST } from '../../../../utils/utils';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const AdminEditEvent = () => {
   const router = useRouter();
   const { event_id } = router.query;
@@ -22,163 +23,186 @@ const AdminEditEvent = () => {
   });
   const [formChanged, setFormChanged] = useState(false);
 
-  const RegisteredStudendData = [
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'A'
-    },
-    {
-      name: 'aryan',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2017',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2016',
-      branch: 'comp',
-      division: 'A'
-    },
-    {
-      name: 'prince',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'A'
-    },
-    {
-      name: 'aryan',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2017',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2016',
-      branch: 'comp',
-      division: 'A'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'A'
-    },
-    {
-      name: 'aryan',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2017',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2016',
-      branch: 'comp',
-      division: 'A'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'A'
-    },
-    {
-      name: 'aryan',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2017',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2016',
-      branch: 'comp',
-      division: 'A'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'A'
-    },
-    {
-      name: 'aryan',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2017',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2016',
-      branch: 'comp',
-      division: 'A'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2015',
-      branch: 'master',
-      division: 'A'
-    },
-    {
-      name: 'aryan',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2017',
-      branch: 'master',
-      division: 'B'
-    },
-    {
-      name: 'John',
-      email: 'john@gsda',
-      phoneNumber: '341234',
-      academicYear: '2016',
-      branch: 'comp',
-      division: 'A'
+  const [RegisteredStudendData, setRegisteredStudendData] = useState([]);
+  // const RegisteredStudendData = [
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'aryan',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2017',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2016',
+  //     branch: 'comp',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'prince',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'aryan',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2017',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2016',
+  //     branch: 'comp',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'aryan',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2017',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2016',
+  //     branch: 'comp',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'aryan',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2017',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2016',
+  //     branch: 'comp',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'aryan',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2017',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2016',
+  //     branch: 'comp',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2015',
+  //     branch: 'master',
+  //     division: 'A'
+  //   },
+  //   {
+  //     name: 'aryan',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2017',
+  //     branch: 'master',
+  //     division: 'B'
+  //   },
+  //   {
+  //     name: 'John',
+  //     email: 'john@gsda',
+  //     phoneNumber: '341234',
+  //     academicYear: '2016',
+  //     branch: 'comp',
+  //     division: 'A'
+  //   }
+  // ];
+
+  const getRegisteredStudents = async () => {
+    try {
+      fetch(`${API_HOST}/api/events/registration`, {
+        method: 'POST',
+        body: JSON.stringify({ event_id: event_id }),
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-token': ''
+        }
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data.students);
+          setRegisteredStudendData(data.students);
+        });
+    } catch (error) {
+      toast.error(error.message);
     }
-  ];
+    setIsLoading(false);
+  };
 
   const getEvents = async () => {
-    console.log(event_id);
     try {
       fetch(`${API_HOST}/api/events/eventDetails`, {
         method: 'POST',
@@ -205,6 +229,7 @@ const AdminEditEvent = () => {
     setIsLoading(true);
     if (event_id) {
       getEvents();
+      getRegisteredStudents();
     }
   }, [event_id]);
 
@@ -232,11 +257,10 @@ const AdminEditEvent = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        alert('Updated successfully');
+        toast.success('Updated successfully');
       })
       .catch((error) => {
-        console.error(error);
+        toast.success(error.message);
       });
   };
 
@@ -286,32 +310,62 @@ const AdminEditEvent = () => {
     });
 
     const Card = ({ student }) => {
+      const additionalFields = [
+        'atCoderId',
+        'codeForcesId',
+        'codeChefId',
+        'leetCodeId',
+        'hackerRankId',
+        'hackerEarthId'
+      ];
+      const studentDetails = [
+        {
+          label: 'Name:',
+          value: student.name
+        },
+        {
+          label: 'Email:',
+          value: student.email
+        },
+        {
+          label: 'Phone Number:',
+          value: student.phoneNumber
+        },
+        {
+          label: 'Academic Year:',
+          value: student.academicYear
+        },
+        {
+          label: 'Branch:',
+          value: student.branch
+        },
+        {
+          label: 'Division:',
+          value: student.division
+        },
+        // Add additional fields dynamically
+        ...additionalFields.map((field) => ({
+          label: `${field.charAt(0).toUpperCase() + field.slice(1)}:`, // Capitalize the field name
+          value: student[field]
+        }))
+      ];
+
       return (
         <div className={classes.card}>
-          <div className={classes.cardItemDetail}>
-            <h1>Name:</h1>
-            <p>{student.name}</p>
-          </div>
-          <div className={classes.cardItemDetail}>
-            <h1>Email:</h1>
-            <p>{student.email}</p>
-          </div>
-          <div className={classes.cardItemDetail}>
-            <h1>Phone Number:</h1>
-            <p>{student.phoneNumber}</p>
-          </div>
-          <div className={classes.cardItemDetail}>
-            <h1>Academic Year:</h1>
-            <p>{student.academicYear}</p>
-          </div>
-          <div className={classes.cardItemDetail}>
-            <h1>Branch:</h1>
-            <p>{student.branch}</p>
-          </div>
-          <div className={classes.cardItemDetail}>
-            <h1>Division:</h1>
-            <p>{student.division}</p>
-          </div>
+          {studentDetails.map((detail, index) => {
+            if (additionalFields.includes(detail.label.replace(':', '').toLowerCase())) {
+              return null;
+            }
+            if(detail.value==''){
+              return null;
+            }
+            return (
+              <div key={index} className={classes.cardItemDetail}>
+                <h1>{detail.label}</h1>
+                <p>{detail.value}</p>
+              </div>
+            );
+          })}
         </div>
       );
     };
@@ -354,6 +408,8 @@ const AdminEditEvent = () => {
 
   return (
     <div className={classes.adminEditEvent}>
+      <ToastContainer />
+
       <div className={classes.options}>
         <button
           className={`${compToShow === 'edit' ? classes.selectedButton : ''}`}

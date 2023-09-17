@@ -88,8 +88,7 @@ const EventRegistration = ({ event_id }) => {
       }
       const data = await res.json();
     } catch (error) {
-      console.log(error);
-      toast.error('Something Went Wrong');
+      toast.error(error.message);
     }
 
     // Clear input fields
@@ -127,13 +126,11 @@ const EventRegistration = ({ event_id }) => {
           setEventDetails(data.event_details[0]);
         });
     } catch (error) {
-      toast.error('Something Went Wrong');
+      toast.error(error.message);
     }
-    setIsLoading(false);
   };
 
   useEffect(() => {
-    setIsLoading(true);
     if (event_id) {
       getEvents();
     }

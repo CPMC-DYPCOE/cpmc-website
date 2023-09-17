@@ -236,16 +236,25 @@
 
 .card{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 15em;
+    min-width: 20em;
     padding: 0.5em;
     display: flex;
+    min-height: 21em;
     flex-direction: column;
-    gap:0.5em
+    gap:0.5em;
+  }
+  
+  .cardItemDetail{
+    display: flex;
 }
 
 .card h1{
     font-weight: 600;
     color: #f32053;
+    text-wrap: wrap;
+}
+.card p{
+  text-wrap: wrap;
 }
 
 @keyframes fly-1 {
