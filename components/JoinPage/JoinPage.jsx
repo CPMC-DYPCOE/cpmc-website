@@ -80,13 +80,12 @@ const JoinPage = () => {
         { registraion ? (
           <>
             <h1 className={classes.heading}>
-              Registrations <span className={classes.red}>Closed</span>
+              Join us to level up your <span className={classes.red}>coding skills. </span>
             </h1>
-            <p className={classes.para}>Currently registrations are closed</p>
-            <p className={classes.para}>YOU CAN JOIN OUR WHATSAPP GROUP FOR FURTHER UPDATES </p>
-            <Link href="https://chat.whatsapp.com/KAXnEQpSSYe2L1hOltO1it" target={'_blank'}>
+            <p className={classes.para}>We've got 99 bugs, but a glitch ain't one. Join our code-tastic community today! </p>
+            <Link href="https://chat.whatsapp.com/Hbd6HIrZPheKZOFzFRYLy8" target={'_blank'}>
               <button className={classes.btn}>
-                JOIN WHATSAPP GROUP
+                JOIN COMMUNITY
               </button>
             </Link>
           </>
