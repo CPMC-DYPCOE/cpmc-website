@@ -21,6 +21,8 @@
 
 .event_content_section{
   display:flex;
+  justify-content: center;
+  align-items: center;
   gap:2rem;
   flex-wrap: wrap;
 }
