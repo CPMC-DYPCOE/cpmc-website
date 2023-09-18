@@ -42,12 +42,10 @@ const Contact = () => {
     messageInput.current.value = '';
   };
 
-  const contactPerson = () => {
+  const ContactPerson = () => {
     return (
       <div className={classes.contactPerson}>
-        <h1>We value your feedback, questions, or inquiries. Feel free to reach out to us</h1>
         <div>
-          <h2>Contact Information</h2>
           <p>
             <strong>Name:</strong> Atharva Muley
           </p>
@@ -59,7 +57,7 @@ const Contact = () => {
     );
   };
 
-  return contactPerson()
+  // return contactPerson()
 
   return (
     <>
@@ -69,10 +67,14 @@ const Contact = () => {
           CONTACT <span className={classes.red}>US</span>
         </h1>
         <p className={classes.para}>
+        We value your feedback, questions, or inquiries. Feel free to reach out to us
+        </p>
+        <ContactPerson />
+        {/* <p className={classes.para}>
           If you&#39;d like to support us, deliver a talk in our mentorship program, or have a new
           idea you&#39;d like to contribute, please fill out the form below!
-        </p>
-        <div className={classes.contact}>
+        </p> */}
+        {/* <div className={classes.contact}>
           <div className={classes.form}>
             <div className={classes.input_container}>
               <h1 className={classes.inputheading}>Name*</h1>
@@ -118,7 +120,7 @@ const Contact = () => {
               <span>SUBMIT</span>
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
