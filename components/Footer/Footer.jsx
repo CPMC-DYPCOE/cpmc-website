@@ -92,7 +92,7 @@ const Footer = () => {
                 </a>
               </Link>
               <Link
-                href="https://github.com/Spyware007/CPMC-DYPCOE-OFFICIAL"
+                href="https://github.com/CPMC-DYPCOE/"
               >
                 <a target="_blank" rel="noopener noreferrer">
                   <div className={classes.instagram}>
