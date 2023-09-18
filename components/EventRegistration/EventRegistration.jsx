@@ -85,6 +85,7 @@ const EventRegistration = ({ event_id }) => {
       }
       if (res.ok) {
         toast.success('Submitted successfully');
+        window.location.href = '/joinus'
       }
       const data = await res.json();
     } catch (error) {
