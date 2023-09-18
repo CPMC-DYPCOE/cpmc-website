@@ -3,6 +3,7 @@ import styles from './EventsPage.module.css';
 import UpcomingEventCard from '../UpcomingEventCard/UpcomingEventCard';
 import PastEventCard from '../PastEventCard/PastEventCard';
 import { API_HOST } from '../../utils/utils';
+import axios from 'axios'
 // import {useLocation} from 'react-router-dom'
 const EventsPage = () => {
   const [upComingEvent, setUpcomingEvent] = useState([]);
@@ -11,18 +12,28 @@ const EventsPage = () => {
 
   const getEvents = async () => {
     try {
-      fetch(`${API_HOST}/api/events`)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          let events = data.events;
-          const filteredUpcomingEvents = events.filter((event) => !event.is_completed);
-          const filteredPastEvents = events.filter((event) => event.is_completed);
-          setUpcomingEvent(filteredUpcomingEvents);
-          setPastEvent(filteredPastEvents);
-          setIsLoading(false);
-        });
+      axios({
+        method: 'GET',
+        url: `${API_HOST}/api/events`,
+        headers: {
+          'Content-Type': 'application/json',
+          'x-auth-token': ''
+        }
+      })
+      .then((response) => {
+        const data = response.data;
+        const events = data.events;
+        const filteredUpcomingEvents = events.filter((event) => !event.is_completed);
+        const filteredPastEvents = events.filter((event) => event.is_completed);
+        setUpcomingEvent(filteredUpcomingEvents);
+        setPastEvent(filteredPastEvents);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('Something Went Wrong');
+        setIsLoading(false);
+      });
     } catch (error) {
       console.log(error);
       alert('Something Went Wrong');
