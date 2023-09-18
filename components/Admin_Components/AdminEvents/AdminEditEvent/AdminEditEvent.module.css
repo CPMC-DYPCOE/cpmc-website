@@ -247,6 +247,17 @@
   .cardItemDetail{
     display: flex;
 }
+.copyClipboard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.copyClipboard button{
+  background-color:#f32053;
+  padding: 1em;
+  color: white;
+}
 
 .card h1{
     font-weight: 600;

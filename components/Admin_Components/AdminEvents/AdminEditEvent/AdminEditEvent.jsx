@@ -5,7 +5,7 @@ import { API_HOST } from '../../../../utils/utils';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UploadImage from '../../../UploadImage/UploadImage';
-
+import copy from 'copy-text-to-clipboard';
 const AdminEditEvent = () => {
   const router = useRouter();
   const { event_id } = router.query;
@@ -158,6 +158,15 @@ const AdminEditEvent = () => {
       }
     });
 
+    const [copied, setCopied] = useState(false);
+
+    const extractEmails = (data ) => {
+      const emails = data.map((item) => item.email).join(', ');
+      // copy(emails);
+
+      setCopied(true);
+    };
+
     const Card = ({ student }) => {
       const additionalFields = [
         'atCoderId',
@@ -246,6 +255,9 @@ const AdminEditEvent = () => {
         <h1 style={{ margin: '2em 0', textAlign: 'center' }}>
           Total Registration: {sortedStudents?.length}
         </h1>
+        <div className={classes.copyClipboard}>
+          <button onClick={()=>extractEmails(sortedStudents)}>{copied ? 'Copied!' : 'Copy Below Emails to Clipboard'}</button>
+        </div>
         <div className={classes.registeredStudentCard}>
           {sortedStudents.map((student) => {
             return <Card student={student} key={student.email} />;
@@ -384,7 +396,7 @@ const AdminEditEvent = () => {
       {compToShow === 'image' && (
         <div>
           <h1 className={classes.heading}>Registered Students</h1>
-          <UploadImage event_id={event_id}/>
+          <UploadImage event_id={event_id} />
         </div>
       )}
     </div>
