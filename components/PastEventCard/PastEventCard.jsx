@@ -6,7 +6,18 @@ import Image from 'next/image';
 const PastEventCard = (props) => {
   const name = props.data.event_name;
   const nameArr = name?.split(' ');
-  console.log(props.data);
+  var words = name?.split(' ');
+
+  var firstPart = '';
+  var secondPart = '';
+
+  if (words?.length > 1) {
+    firstPart = words.slice(0, -1).join(' ');
+
+    secondPart = words[words.length - 1];
+  } else {
+    secondPart = name;
+  }
 
   return (
     <div className={styles.event}>
@@ -15,7 +26,7 @@ const PastEventCard = (props) => {
         <div className={styles.content}>
           {nameArr?.length > 1 ? (
             <h1 className={styles.name}>
-              {nameArr[0]} <span className={styles.red}>{nameArr[1]}</span>
+              {firstPart} <span className={styles.red}>{secondPart}</span>
             </h1>
           ) : (
             <h1 className={styles.name}>

@@ -44,7 +44,6 @@ const EventsPage = () => {
           {upComingEvent.length > 0 ? (
             <div className={styles.event_section}>
               <h1 className={styles.title}>
-                {' '}
                 Upcoming <span className={styles.red}> Events</span>
               </h1>
               {upComingEvent.map((data, i) => {

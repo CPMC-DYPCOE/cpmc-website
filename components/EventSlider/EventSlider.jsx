@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/zoom';
 
-import img from './Images/podcast.png';
+import img from './Images/recruitment.png';
 import classes from './eventSlider.module.css';
 import 'swiper/css/effect-cards';
 import { Zoom, Autoplay, Navigation, Pagination } from 'swiper';
@@ -24,14 +24,14 @@ const EventSlider = () => {
       </div>
       <div className={classes.eventmaindiv}>
         <Link href="events" className={classes.imagediv}>
-          <img style={{ cursor: 'pointer' }} alt="eventabcde" src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpodcast.8d2ed221.png&w=1080&q=75" objectFit="cover" className={classes.posterimage} />
+          <Image style={{ cursor: 'pointer' }} alt="eventabcde" src={img} objectFit="cover" className={classes.posterimage} />
         </Link>
         <div className={classes.eventcontentdiv}>
           <h1>
-            MASTERS&apos; <span>TALK</span>
+          Recruitment for batch <span>2k23-2k24</span>
           </h1>
           <h3>
-          A talk on DSA and competitive programming.
+            Where Ideas Turn into Code: Join us for an Amazing Coding Journey ahead
           </h3>
           <Link href="events">
             <button className={classes.btn}>
