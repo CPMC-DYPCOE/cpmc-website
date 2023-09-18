@@ -17,13 +17,9 @@ const AdminEvents = () => {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': ''
-        }
-      })
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          setAllEvents(data.events);
+        }})
+        .then((response) => {
+          setAllEvents(response.data.events);
         });
     } catch (error) {
       console.log(error);
