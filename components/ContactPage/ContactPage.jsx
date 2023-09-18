@@ -41,6 +41,26 @@ const Contact = () => {
     emailInput.current.value = '';
     messageInput.current.value = '';
   };
+
+  const contactPerson = () => {
+    return (
+      <div className={classes.contactPerson}>
+        <h1>We value your feedback, questions, or inquiries. Feel free to reach out to us</h1>
+        <div>
+          <h2>Contact Information</h2>
+          <p>
+            <strong>Name:</strong> Atharva Muley
+          </p>
+          <p>
+            <strong>Phone Number:</strong> 99216 59885
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  return contactPerson()
+
   return (
     <>
       <div className={classes.contact_section}>
