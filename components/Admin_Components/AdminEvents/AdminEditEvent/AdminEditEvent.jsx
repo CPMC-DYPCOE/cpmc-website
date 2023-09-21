@@ -262,10 +262,9 @@ const AdminEditEvent = () => {
           {sortedStudents.map((student) => {
             return <Card student={student} key={student.email} />;
           })}
-        </div>
-          {sortedStudents.map((student) => {
-            console.log(student.email)
-            return <h1 style={{maxWidth:"100vw", textAlign:"center"}}>{student.email}</h1>
+        </div>  
+          {sortedStudents.map((student, idx) => {
+            return <h1 style={{maxWidth:"100vw", textAlign:"center"}} key={idx}>{student.email}</h1>
           })}
       </div>
     );
