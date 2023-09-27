@@ -27,6 +27,12 @@ const AdminEditEvent = () => {
 
   const [RegisteredStudendData, setRegisteredStudendData] = useState([]);
 
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token === null) window.location.href = "/admin"
+  }, [])
+
   const getRegisteredStudents = async () => {
     try {
       fetch(`${API_HOST}/api/events/registration`, {
@@ -160,7 +166,7 @@ const AdminEditEvent = () => {
 
     const [copied, setCopied] = useState(false);
 
-    const extractEmails = (data ) => {
+    const extractEmails = (data) => {
       const emails = data.map((item) => item.email).join(', ');
       // copy(emails);
 
@@ -256,16 +262,16 @@ const AdminEditEvent = () => {
           Total Registration: {sortedStudents?.length}
         </h1>
         <div className={classes.copyClipboard}>
-          <button onClick={()=>extractEmails(sortedStudents)}>{copied ? 'Copied!' : 'Copy Below Emails to Clipboard'}</button>
+          <button onClick={() => extractEmails(sortedStudents)}>{copied ? 'Copied!' : 'Copy Below Emails to Clipboard'}</button>
         </div>
         <div className={classes.registeredStudentCard}>
           {sortedStudents.map((student) => {
             return <Card student={student} key={student.email} />;
           })}
-        </div>  
-          {sortedStudents.map((student, idx) => {
-            return <h1 style={{maxWidth:"100vw", textAlign:"center"}} key={idx}>{student.email}</h1>
-          })}
+        </div>
+        {sortedStudents.map((student, idx) => {
+          return <h1 style={{ maxWidth: "100vw", textAlign: "center" }} key={idx}>{student.email}</h1>
+        })}
       </div>
     );
   };

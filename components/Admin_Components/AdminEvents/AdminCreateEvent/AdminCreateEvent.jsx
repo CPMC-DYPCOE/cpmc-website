@@ -18,6 +18,12 @@ const AdminCreateEvent = () => {
     is_competition_form: false
   });
 
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token === null) window.location.href = "/admin"
+  }, [])
+
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
 
@@ -58,97 +64,97 @@ const AdminCreateEvent = () => {
 
   return (
     <div className={classes.adminCreateEvent}>
-          <h1 className={classes.heading}>Create a new event</h1>
-          <form onSubmit={handleSubmit} className={classes.form}>
-            <div className={classes.input_container}>
-              <label className={classes.input_label}>Event Name:</label>
-              <input
-                className={classes.input}
-                type="text"
-                name="event_name"
-                value={eventDetails.event_name}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label className={classes.input_label}>Caption:</label>
-              <input
-                type="text"
-                name="caption"
-                value={eventDetails.caption}
-                onChange={handleInputChange}
-                className={classes.input}
-              />
-            </div>
-            <div>
-              <label className={classes.input_label}>Event Dates:</label>
-              <input
-                className={classes.input}
-                type="text"
-                name="event_date"
-                value={eventDetails.event_date}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label className={classes.input_label}>Event Time:</label>
-              <input
-                className={classes.input}
-                type="text"
-                name="event_time"
-                value={eventDetails.event_time}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label className={classes.input_label}>Venue:</label>
-              <input
-                className={classes.input}
-                type="text"
-                name="venue"
-                value={eventDetails.venue}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div>
-              <label className={classes.input_label}>Description:</label>
-              <textarea
-                name="description"
-                value={eventDetails.description}
-                onChange={handleInputChange}
-                className={classes.input}
-                style={{ minHeight: '200px' }}
-              />
-            </div>
-            <div className={classes.checkboxDiv}>
-              <label className={classes.input_label}>Is Completed:</label>
-              <input
-                type="checkbox"
-                name="is_completed"
-                checked={eventDetails.is_completed}
-                onChange={handleInputChange}
-                className={classes.checkbox}
-              />
-            </div>
-            <div className={classes.checkboxDiv}>
-              <label className={classes.input_label}>Is competition form:</label>
-              <input
-                type="checkbox"
-                name="is_competition_form"
-                checked={eventDetails.is_competition_form}
-                onChange={handleInputChange}
-                className={classes.checkbox}
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={!formChanged}
-              className={formChanged ? classes.btn : classes.disBtn}
-            >
-              Submit
-            </button>
-          </form>
+      <h1 className={classes.heading}>Create a new event</h1>
+      <form onSubmit={handleSubmit} className={classes.form}>
+        <div className={classes.input_container}>
+          <label className={classes.input_label}>Event Name:</label>
+          <input
+            className={classes.input}
+            type="text"
+            name="event_name"
+            value={eventDetails.event_name}
+            onChange={handleInputChange}
+          />
         </div>
+        <div>
+          <label className={classes.input_label}>Caption:</label>
+          <input
+            type="text"
+            name="caption"
+            value={eventDetails.caption}
+            onChange={handleInputChange}
+            className={classes.input}
+          />
+        </div>
+        <div>
+          <label className={classes.input_label}>Event Dates:</label>
+          <input
+            className={classes.input}
+            type="text"
+            name="event_date"
+            value={eventDetails.event_date}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+          <label className={classes.input_label}>Event Time:</label>
+          <input
+            className={classes.input}
+            type="text"
+            name="event_time"
+            value={eventDetails.event_time}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+          <label className={classes.input_label}>Venue:</label>
+          <input
+            className={classes.input}
+            type="text"
+            name="venue"
+            value={eventDetails.venue}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div>
+          <label className={classes.input_label}>Description:</label>
+          <textarea
+            name="description"
+            value={eventDetails.description}
+            onChange={handleInputChange}
+            className={classes.input}
+            style={{ minHeight: '200px' }}
+          />
+        </div>
+        <div className={classes.checkboxDiv}>
+          <label className={classes.input_label}>Is Completed:</label>
+          <input
+            type="checkbox"
+            name="is_completed"
+            checked={eventDetails.is_completed}
+            onChange={handleInputChange}
+            className={classes.checkbox}
+          />
+        </div>
+        <div className={classes.checkboxDiv}>
+          <label className={classes.input_label}>Is competition form:</label>
+          <input
+            type="checkbox"
+            name="is_competition_form"
+            checked={eventDetails.is_competition_form}
+            onChange={handleInputChange}
+            className={classes.checkbox}
+          />
+        </div>
+        <button
+          type="submit"
+          disabled={!formChanged}
+          className={formChanged ? classes.btn : classes.disBtn}
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   )
 }
 

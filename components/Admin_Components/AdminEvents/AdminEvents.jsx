@@ -9,6 +9,11 @@ const AdminEvents = () => {
   const [allEvents, setAllEvents] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token === null) window.location.href = "/admin"
+  }, [])
+
   const getEvents = async () => {
     try {
       axios({
@@ -17,7 +22,8 @@ const AdminEvents = () => {
         headers: {
           'Content-Type': 'application/json',
           'x-auth-token': ''
-        }})
+        }
+      })
         .then((response) => {
           setAllEvents(response.data.events);
         });
